@@ -9,7 +9,7 @@ const N = {
   firstMeet: { first: WON(200), later: WON(300) },
   pregVoucher: { single: WON(100), multi: WON(140) },
   parentPay: { age0: WON(100), age1: WON(50) },
-  childPay: { amt: WON(10), untilMonths: 96 },
+  childPay: { amt: WON(10), untilMonths: 108, nonMetro: WON(2) },
   leave: [
     { fromM: 1, toM: 3, rate: 1.0, cap: WON(250) },
     { fromM: 4, toM: 6, rate: 1.0, cap: WON(200) },
@@ -52,7 +52,7 @@ function buildPlan(input) {
       { label: '부모급여', m: N.parentPay.age0 }, { label: '아동수당', m: N.childPay.amt } ] },
     { key: '1', label: '1세 (12~23개월)', months: 12, items: [
       { label: '부모급여', m: N.parentPay.age1 }, { label: '아동수당', m: N.childPay.amt } ] },
-    { key: '2', label: '2~7세 (24~95개월)', months: 72, items: [
+    { key: '2', label: '2~8세 (24~107개월)', months: 84, items: [
       { label: '아동수당', m: N.childPay.amt } ] },
   ];
   phases.forEach((p) => {
@@ -234,7 +234,10 @@ function renderResult() {
     });
   }
   tl.appendChild(list1);
-  tl.appendChild(el('p', 'srcNote', '국가 수당은 2026년 법정 기준. 부모급여는 가정양육 현금 기준(어린이집 이용 시 보육료 바우처로 차감). 아동수당은 2026년 지급연령 확대가 진행 중이라 실제 수령 기간이 더 길 수 있어요.'));
+  const metro = ['서울특별시', '경기도', '인천광역시'].includes(S.sido);
+  let src = '국가 수당은 2026년 법정 기준. 부모급여는 가정양육 현금 기준(어린이집 이용 시 보육료 바우처로 차감). 아동수당은 2026년 9세 미만까지 지급(2030년 13세까지 매년 1세씩 확대 예정)으로, 지금 태어난 아이는 더 오래 받을 수 있어요.';
+  if (!metro) src += ` ${S.sido}는 비수도권이라, 인구감소지역이면 아동수당이 매월 2만원(지역사랑상품권 시 +1만원) 더 나올 수 있어요 — 위 총액에는 넣지 않았어요.`;
+  tl.appendChild(el('p', 'srcNote', src));
   wrap.appendChild(tl);
 
   // 쿠팡 슬롯 (시기별 준비물)
