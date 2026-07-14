@@ -165,6 +165,19 @@
   .bdTotal{display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding-top:14px;border-top:2px solid var(--line2)}
   .bdTotal .k{font-size:14px;font-weight:700}
   .bdTotal .v{font-size:19px;font-weight:800;color:var(--brand-d)}
+  .bdRow .bdWhen{font-size:12px;color:var(--mut);margin-top:5px}
+  .bdRow .bdWhere{font-size:12px;color:var(--dim);margin-top:2px}
+  /* 국가/지역 구분 배지 */
+  .secBadge{display:inline-block;font-size:11px;font-weight:800;border-radius:6px;padding:4px 9px;margin-bottom:10px;letter-spacing:.02em}
+  .secBadge.nat{background:#eef0fe;color:#5a4fa8}
+  .secBadge.local{background:#fff1e8;color:#c9691a}
+  /* 통상임금 슬라이더 (HECS 패턴) */
+  .wageVal{text-align:center;font-size:27px;font-weight:800;color:var(--brand-d);letter-spacing:-.02em;margin-top:2px}
+  .wageSlider{-webkit-appearance:none;appearance:none;width:100%;height:5px;margin:14px 0 2px;padding:0;background:var(--line2);border-radius:999px;cursor:pointer}
+  .wageSlider:focus{outline:none}
+  .wageSlider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:var(--brand);border:3px solid #fff;box-shadow:0 1px 5px rgba(232,78,102,.45);cursor:pointer}
+  .wageSlider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--brand);border:3px solid #fff;box-shadow:0 1px 5px rgba(232,78,102,.45);cursor:pointer}
+  .wageRange{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim);margin-top:3px}
   footer{text-align:center;font-size:12px;color:var(--dim);padding:24px 0 0;border-top:1px solid var(--line);margin-top:8px}
   footer a{color:var(--mut)}
 </style>
@@ -186,8 +199,8 @@
     <a href="/guide/">가이드</a> · <a href="/about.html">소개</a> · <a href="/privacy.html">개인정보처리방침</a> · <a href="/contact.html">문의</a>
   </footer>
 </div>
-<script src="/local-benefits.js?v=20260714c"></script>
-<script src="/published-guides.js?v=20260714c"></script>
-<script src="/app.js?v=20260714c"></script>
+<script src="/local-benefits.js?v=20260714d"></script>
+<script src="/published-guides.js?v=20260714d"></script>
+<script src="/app.js?v=20260714d"></script>
 </body>
 </html>

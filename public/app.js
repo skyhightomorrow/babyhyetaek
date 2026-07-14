@@ -215,14 +215,18 @@ function renderWizard() {
     g.appendChild(noBtn); g.appendChild(yesBtn);
     card.appendChild(g);
     if (S.useLeave) {
+      if (!S.wage) S.wage = 2500000;
       const wrap = el('div', 'wageWrap');
       wrap.appendChild(el('label', 'wageLbl', '휴직 전 월 통상임금 (세전, 대략)'));
-      const inp = el('input', 'wageInp'); inp.type = 'text'; inp.inputMode = 'numeric';
-      inp.placeholder = '예: 350만원 → 3500000';
-      inp.value = S.wage ? S.wage.toLocaleString('ko-KR') : '';
-      inp.oninput = () => { S.wage = parseInt(inp.value.replace(/[^0-9]/g, '') || '0', 10); const p = $('#wagePrev'); if (p) p.textContent = S.wage ? man(S.wage) + ' 기준' : ''; };
-      wrap.appendChild(inp);
-      wrap.appendChild(el('div', 'wagePrev', '')); wrap.lastChild.id = 'wagePrev';
+      const valEl = el('div', 'wageVal', man(S.wage));
+      const sl = document.createElement('input');
+      sl.type = 'range'; sl.className = 'wageSlider';
+      sl.min = '1000000'; sl.max = '7000000'; sl.step = '100000'; sl.value = String(S.wage);
+      sl.oninput = () => { S.wage = parseInt(sl.value, 10); valEl.textContent = man(S.wage); };
+      wrap.appendChild(valEl);
+      wrap.appendChild(sl);
+      const rng = el('div', 'wageRange'); rng.innerHTML = '<span>100만원</span><span>700만원 이상</span>';
+      wrap.appendChild(rng);
       card.appendChild(wrap);
     }
   }
@@ -264,21 +268,22 @@ function renderResult() {
   const guideHref = (slug) => ((window.PUBLISHED_GUIDES || []).includes(slug) ? `/guide/${slug}.html` : null);
   const sumBenefit = (label) => plan.phases.reduce((a, p) => a + p.items.filter((it) => it.label === label).reduce((s, it) => s + it.m * p.months, 0), 0);
   const comps = [
-    { nm: '첫만남이용권', sub: `출생 1회 · ${S.order >= 2 ? '둘째 이상' : '첫째'}`, amt: plan.oneTime[0].amount, slug: 'cheotmannam-voucher' },
-    { nm: '임신·출산 진료비 바우처', sub: `${S.multi ? '다태아' : '단태아'} · 국민행복카드`, amt: plan.oneTime[1].amount, slug: 'imsin-chulsan-voucher' },
-    { nm: '부모급여', sub: '0~1세 매월 (0세 100만·1세 50만)', amt: sumBenefit('부모급여'), slug: 'bumo-geumyeo-guide' },
-    { nm: '아동수당', sub: '8세까지 매월 10만원', amt: sumBenefit('아동수당'), slug: 'adong-sudang-2026' },
+    { nm: '첫만남이용권', when: '출생 직후 · 1회', where: '주민센터·복지로·정부24 (출생신고 때)', amt: plan.oneTime[0].amount, slug: 'cheotmannam-voucher' },
+    { nm: '임신·출산 진료비 바우처', when: '임신 확인 후 ~ 출생 후 24개월', where: '국민행복카드 (카드사·복지로)', amt: plan.oneTime[1].amount, slug: 'imsin-chulsan-voucher' },
+    { nm: '부모급여', when: '출생 ~ 생후 24개월 · 매월 25일', where: '주민센터·복지로', amt: sumBenefit('부모급여'), slug: 'bumo-geumyeo-guide' },
+    { nm: '아동수당', when: '출생 ~ 만 8세 전 · 매월 25일', where: '주민센터·복지로', amt: sumBenefit('아동수당'), slug: 'adong-sudang-2026' },
   ];
-  if (S.useLeave && plan.leave.total > 0) comps.push({ nm: '육아휴직급여', sub: '통상임금 기준 · 최대 12개월', amt: plan.leave.total, slug: 'yuga-hyujik-geumyeo-2026' });
+  if (S.useLeave && plan.leave.total > 0) comps.push({ nm: '육아휴직급여', when: '휴직한 달부터 · 최대 12개월', where: '고용24 (회사에 육아휴직 신청 후)', amt: plan.leave.total, slug: 'yuga-hyujik-geumyeo-2026' });
 
   const bd = el('div', 'card');
+  bd.appendChild(el('span', 'secBadge nat', '국가지원금 · 전국 공통'));
   bd.appendChild(el('h3', 'secTitle', '이 금액은 이렇게 구성돼요'));
   const bdList = el('div', 'bdList');
   comps.forEach((c) => {
     const href = guideHref(c.slug);
     const nm = href ? `<a href="${href}">${c.nm}</a>` : c.nm;
     const row = el('div', 'bdRow');
-    row.innerHTML = `<div class="bdL"><div class="bdNm">${nm}</div><div class="bdSub">${c.sub}</div></div><div class="bdAmt">${man(c.amt)}</div>`;
+    row.innerHTML = `<div class="bdL"><div class="bdNm">${nm}</div><div class="bdWhen">🗓 ${c.when}</div><div class="bdWhere">📍 ${c.where}</div></div><div class="bdAmt">${man(c.amt)}</div>`;
     bdList.appendChild(row);
   });
   bd.appendChild(bdList);
@@ -293,6 +298,7 @@ function renderResult() {
 
   // 지자체 지원금
   const loc = el('div', 'card');
+  loc.appendChild(el('span', 'secBadge local', '지역지원금 · 우리 동네'));
   loc.appendChild(el('h3', 'secTitle', `🏙️ ${S.sido} ${S.sgg}가 주는 추가 지원금`));
   if (list.length === 0) {
     loc.appendChild(el('p', 'qsub', '이 지역의 공공데이터 상세가 아직 확인되지 않았어요. 곧 보강됩니다.'));
