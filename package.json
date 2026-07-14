@@ -1,0 +1,10 @@
+{
+  "name": "baby-benefits",
+  "version": "0.1.0",
+  "private": true,
+  "description": "아기혜택(가칭) — 육아 지원금 타임라인 (대시보드 F)",
+  "scripts": {
+    "fetch": "node scripts/fetch-benefits.js",
+    "build": "echo TODO: build-pages.js"
+  }
+}
