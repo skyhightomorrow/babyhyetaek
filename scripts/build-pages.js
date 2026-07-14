@@ -128,7 +128,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const urls = [`${ORIGIN}/`];
 let count = 0;
 for (const [sido, bucket] of Object.entries(DB.sido)) {
-  const sggs = Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k));
+  const sggs = Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2);
   const common = bucket['(광역 공통)'] || [];
   for (const sgg of sggs) {
     const list = [...(bucket[sgg] || []), ...common].filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
