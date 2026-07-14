@@ -41,7 +41,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005767&wlfareInfoReldBztpCd=02",
-  "inqNum": 5144,
+  "inqNum": 5145,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -58,7 +58,7 @@
   "pvsn": "현물지급",
   "aply": "방문, E-mail, 팩스",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005766&wlfareInfoReldBztpCd=02",
-  "inqNum": 3641,
+  "inqNum": 3643,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -139,7 +139,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005080&wlfareInfoReldBztpCd=02",
-  "inqNum": 1581,
+  "inqNum": 1582,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -235,7 +235,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001794&wlfareInfoReldBztpCd=02",
-  "inqNum": 1296,
+  "inqNum": 1297,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -251,7 +251,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001839&wlfareInfoReldBztpCd=02",
-  "inqNum": 2401,
+  "inqNum": 2402,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -317,7 +317,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000632&wlfareInfoReldBztpCd=02",
-  "inqNum": 2222,
+  "inqNum": 2223,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -333,7 +333,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002497&wlfareInfoReldBztpCd=02",
-  "inqNum": 120284,
+  "inqNum": 120291,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -349,7 +349,7 @@
   "pvsn": "현물대여",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002178&wlfareInfoReldBztpCd=02",
-  "inqNum": 5197,
+  "inqNum": 5198,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -447,7 +447,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002373&wlfareInfoReldBztpCd=02",
-  "inqNum": 2776,
+  "inqNum": 2777,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -480,7 +480,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004133&wlfareInfoReldBztpCd=02",
-  "inqNum": 3804,
+  "inqNum": 3805,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -497,7 +497,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003058&wlfareInfoReldBztpCd=02",
-  "inqNum": 2366,
+  "inqNum": 2367,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -514,7 +514,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003662&wlfareInfoReldBztpCd=02",
-  "inqNum": 10119,
+  "inqNum": 10125,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -547,7 +547,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002257&wlfareInfoReldBztpCd=02",
-  "inqNum": 3102,
+  "inqNum": 3103,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -564,7 +564,7 @@
   "pvsn": "기타",
   "aply": "방문, 우편, E-mail",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001836&wlfareInfoReldBztpCd=02",
-  "inqNum": 2331,
+  "inqNum": 2332,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -596,7 +596,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002405&wlfareInfoReldBztpCd=02",
-  "inqNum": 12929,
+  "inqNum": 12930,
   "lastMod": "20260714",
   "lifeCodes": [
    "007"
@@ -612,7 +612,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002291&wlfareInfoReldBztpCd=02",
-  "inqNum": 3453,
+  "inqNum": 3456,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -679,7 +679,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003947&wlfareInfoReldBztpCd=02",
-  "inqNum": 7874,
+  "inqNum": 7875,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -696,7 +696,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002522&wlfareInfoReldBztpCd=02",
-  "inqNum": 10602,
+  "inqNum": 10603,
   "lastMod": "20260714",
   "lifeCodes": [
    "007",
@@ -713,7 +713,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005669&wlfareInfoReldBztpCd=02",
-  "inqNum": 6245,
+  "inqNum": 6247,
   "lastMod": "20260711",
   "lifeCodes": [
    "007"
@@ -762,7 +762,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷, 모바일",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002254&wlfareInfoReldBztpCd=02",
-  "inqNum": 15652,
+  "inqNum": 15658,
   "lastMod": "20260711",
   "lifeCodes": [
    "007",
@@ -780,7 +780,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002543&wlfareInfoReldBztpCd=02",
-  "inqNum": 12824,
+  "inqNum": 12825,
   "lastMod": "20260711",
   "lifeCodes": [
    "007"
@@ -796,7 +796,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001734&wlfareInfoReldBztpCd=02",
-  "inqNum": 3123,
+  "inqNum": 3124,
   "lastMod": "20260711",
   "lifeCodes": [
    "007",
@@ -846,7 +846,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002762&wlfareInfoReldBztpCd=02",
-  "inqNum": 3305,
+  "inqNum": 3306,
   "lastMod": "20260710",
   "lifeCodes": [
    "007",
@@ -863,7 +863,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 모바일앱",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006181&wlfareInfoReldBztpCd=02",
-  "inqNum": 15460,
+  "inqNum": 15466,
   "lastMod": "20260709",
   "lifeCodes": [
    "007"
@@ -895,7 +895,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006543&wlfareInfoReldBztpCd=02",
-  "inqNum": 161,
+  "inqNum": 162,
   "lastMod": "20260704",
   "lifeCodes": [
    "007"
@@ -911,7 +911,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006505&wlfareInfoReldBztpCd=02",
-  "inqNum": 159,
+  "inqNum": 160,
   "lastMod": "20260704",
   "lifeCodes": [
    "007"
@@ -927,7 +927,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006492&wlfareInfoReldBztpCd=02",
-  "inqNum": 218,
+  "inqNum": 220,
   "lastMod": "20260704",
   "lifeCodes": [
    "007",
@@ -944,7 +944,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005933&wlfareInfoReldBztpCd=02",
-  "inqNum": 4368,
+  "inqNum": 4369,
   "lastMod": "20260704",
   "lifeCodes": [
    "007"
@@ -1027,7 +1027,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001896&wlfareInfoReldBztpCd=02",
-  "inqNum": 2303,
+  "inqNum": 2304,
   "lastMod": "20260704",
   "lifeCodes": [
    "007",
@@ -1060,7 +1060,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002017&wlfareInfoReldBztpCd=02",
-  "inqNum": 2687,
+  "inqNum": 2688,
   "lastMod": "20260704",
   "lifeCodes": [
    "007",
@@ -1094,7 +1094,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002169&wlfareInfoReldBztpCd=02",
-  "inqNum": 2045,
+  "inqNum": 2046,
   "lastMod": "20260704",
   "lifeCodes": [
    "007"
@@ -1110,7 +1110,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001759&wlfareInfoReldBztpCd=02",
-  "inqNum": 1164,
+  "inqNum": 1165,
   "lastMod": "20260704",
   "lifeCodes": [
    "007",
@@ -1161,7 +1161,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001771&wlfareInfoReldBztpCd=02",
-  "inqNum": 3928,
+  "inqNum": 3931,
   "lastMod": "20260704",
   "lifeCodes": [
    "007",
@@ -1227,7 +1227,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006457&wlfareInfoReldBztpCd=02",
-  "inqNum": 233,
+  "inqNum": 237,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1291,7 +1291,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006382&wlfareInfoReldBztpCd=02",
-  "inqNum": 148,
+  "inqNum": 149,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1307,7 +1307,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006005&wlfareInfoReldBztpCd=02",
-  "inqNum": 3793,
+  "inqNum": 3794,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1391,7 +1391,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005227&wlfareInfoReldBztpCd=02",
-  "inqNum": 9581,
+  "inqNum": 9582,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1408,7 +1408,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005216&wlfareInfoReldBztpCd=02",
-  "inqNum": 2325,
+  "inqNum": 2326,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1442,7 +1442,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005090&wlfareInfoReldBztpCd=02",
-  "inqNum": 4742,
+  "inqNum": 4743,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1458,7 +1458,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005068&wlfareInfoReldBztpCd=02",
-  "inqNum": 6340,
+  "inqNum": 6342,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1475,7 +1475,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004906&wlfareInfoReldBztpCd=02",
-  "inqNum": 4084,
+  "inqNum": 4087,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1508,7 +1508,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004056&wlfareInfoReldBztpCd=02",
-  "inqNum": 5561,
+  "inqNum": 5562,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1540,7 +1540,7 @@
   "pvsn": "실물바우처",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003858&wlfareInfoReldBztpCd=02",
-  "inqNum": 2120,
+  "inqNum": 2121,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1620,7 +1620,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001621&wlfareInfoReldBztpCd=02",
-  "inqNum": 2559,
+  "inqNum": 2560,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1636,7 +1636,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001936&wlfareInfoReldBztpCd=02",
-  "inqNum": 1882,
+  "inqNum": 1883,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1685,7 +1685,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001939&wlfareInfoReldBztpCd=02",
-  "inqNum": 1417,
+  "inqNum": 1418,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1701,7 +1701,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001694&wlfareInfoReldBztpCd=02",
-  "inqNum": 1944,
+  "inqNum": 1945,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1734,7 +1734,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001920&wlfareInfoReldBztpCd=02",
-  "inqNum": 2696,
+  "inqNum": 2697,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1750,7 +1750,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003039&wlfareInfoReldBztpCd=02",
-  "inqNum": 2235,
+  "inqNum": 2236,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1766,7 +1766,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004136&wlfareInfoReldBztpCd=02",
-  "inqNum": 7633,
+  "inqNum": 7634,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1782,7 +1782,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001240&wlfareInfoReldBztpCd=02",
-  "inqNum": 2831,
+  "inqNum": 2833,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1799,7 +1799,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001831&wlfareInfoReldBztpCd=02",
-  "inqNum": 2012,
+  "inqNum": 2013,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1849,7 +1849,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004576&wlfareInfoReldBztpCd=02",
-  "inqNum": 9453,
+  "inqNum": 9455,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1881,7 +1881,7 @@
   "pvsn": "기타",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001576&wlfareInfoReldBztpCd=02",
-  "inqNum": 3977,
+  "inqNum": 3978,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1898,7 +1898,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000539&wlfareInfoReldBztpCd=02",
-  "inqNum": 7321,
+  "inqNum": 7322,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1915,7 +1915,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002807&wlfareInfoReldBztpCd=02",
-  "inqNum": 2856,
+  "inqNum": 2857,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1932,7 +1932,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004509&wlfareInfoReldBztpCd=02",
-  "inqNum": 3581,
+  "inqNum": 3583,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1949,7 +1949,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003121&wlfareInfoReldBztpCd=02",
-  "inqNum": 4545,
+  "inqNum": 4549,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -1965,7 +1965,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001692&wlfareInfoReldBztpCd=02",
-  "inqNum": 2532,
+  "inqNum": 2535,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -1982,7 +1982,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001381&wlfareInfoReldBztpCd=02",
-  "inqNum": 3607,
+  "inqNum": 3608,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -2031,7 +2031,7 @@
   "pvsn": "실물바우처, 현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003111&wlfareInfoReldBztpCd=02",
-  "inqNum": 2374,
+  "inqNum": 2375,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -2064,7 +2064,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001631&wlfareInfoReldBztpCd=02",
-  "inqNum": 1431,
+  "inqNum": 1432,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2081,7 +2081,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003778&wlfareInfoReldBztpCd=02",
-  "inqNum": 2871,
+  "inqNum": 2872,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -2130,7 +2130,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002967&wlfareInfoReldBztpCd=02",
-  "inqNum": 1300,
+  "inqNum": 1301,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2147,7 +2147,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002874&wlfareInfoReldBztpCd=02",
-  "inqNum": 6389,
+  "inqNum": 6390,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2164,7 +2164,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003973&wlfareInfoReldBztpCd=02",
-  "inqNum": 6905,
+  "inqNum": 6906,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2198,7 +2198,7 @@
   "pvsn": "지역화폐, 현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002609&wlfareInfoReldBztpCd=02",
-  "inqNum": 3248,
+  "inqNum": 3249,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2215,7 +2215,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003887&wlfareInfoReldBztpCd=02",
-  "inqNum": 3405,
+  "inqNum": 3406,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -2248,7 +2248,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004313&wlfareInfoReldBztpCd=02",
-  "inqNum": 13744,
+  "inqNum": 13746,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2298,7 +2298,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004126&wlfareInfoReldBztpCd=02",
-  "inqNum": 3958,
+  "inqNum": 3965,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2315,7 +2315,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002725&wlfareInfoReldBztpCd=02",
-  "inqNum": 1447,
+  "inqNum": 1448,
   "lastMod": "20260703",
   "lifeCodes": [
    "007"
@@ -2331,7 +2331,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002628&wlfareInfoReldBztpCd=02",
-  "inqNum": 5683,
+  "inqNum": 5687,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2364,7 +2364,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002532&wlfareInfoReldBztpCd=02",
-  "inqNum": 10673,
+  "inqNum": 10675,
   "lastMod": "20260703",
   "lifeCodes": [
    "007",
@@ -2414,7 +2414,7 @@
   "pvsn": "실물바우처",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006352&wlfareInfoReldBztpCd=02",
-  "inqNum": 199,
+  "inqNum": 200,
   "lastMod": "20260630",
   "lifeCodes": [
    "007"
@@ -2478,7 +2478,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005509&wlfareInfoReldBztpCd=02",
-  "inqNum": 3526,
+  "inqNum": 3527,
   "lastMod": "20260630",
   "lifeCodes": [
    "007",
@@ -2511,7 +2511,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005386&wlfareInfoReldBztpCd=02",
-  "inqNum": 3947,
+  "inqNum": 3948,
   "lastMod": "20260630",
   "lifeCodes": [
    "007",
@@ -2544,7 +2544,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004415&wlfareInfoReldBztpCd=02",
-  "inqNum": 6949,
+  "inqNum": 6954,
   "lastMod": "20260630",
   "lifeCodes": [
    "007",
@@ -2561,7 +2561,7 @@
   "pvsn": "현금지급",
   "aply": "방문, E-mail",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001775&wlfareInfoReldBztpCd=02",
-  "inqNum": 2982,
+  "inqNum": 2983,
   "lastMod": "20260630",
   "lifeCodes": [
    "007",
@@ -2610,7 +2610,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000862&wlfareInfoReldBztpCd=02",
-  "inqNum": 8207,
+  "inqNum": 8208,
   "lastMod": "20260630",
   "lifeCodes": [
    "007",
@@ -2710,7 +2710,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001806&wlfareInfoReldBztpCd=02",
-  "inqNum": 1598,
+  "inqNum": 1599,
   "lastMod": "20260619",
   "lifeCodes": [
    "007"
@@ -2760,7 +2760,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003076&wlfareInfoReldBztpCd=02",
-  "inqNum": 2544,
+  "inqNum": 2545,
   "lastMod": "20260618",
   "lifeCodes": [
    "007",
@@ -2794,7 +2794,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005866&wlfareInfoReldBztpCd=02",
-  "inqNum": 11123,
+  "inqNum": 11127,
   "lastMod": "20260312",
   "lifeCodes": [
    "007"
@@ -2810,7 +2810,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004066&wlfareInfoReldBztpCd=02",
-  "inqNum": 8823,
+  "inqNum": 8824,
   "lastMod": "20260310",
   "lifeCodes": [
    "007",
@@ -2827,7 +2827,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001707&wlfareInfoReldBztpCd=02",
-  "inqNum": 7758,
+  "inqNum": 7759,
   "lastMod": "20260227",
   "lifeCodes": [
    "007",
@@ -2845,7 +2845,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002894&wlfareInfoReldBztpCd=02",
-  "inqNum": 2767,
+  "inqNum": 2770,
   "lastMod": "20260122",
   "lifeCodes": [
    "007",
@@ -2862,7 +2862,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006111&wlfareInfoReldBztpCd=02",
-  "inqNum": 15272,
+  "inqNum": 15275,
   "lastMod": "20251022",
   "lifeCodes": [
    "007"
@@ -2878,7 +2878,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004192&wlfareInfoReldBztpCd=02",
-  "inqNum": 11965,
+  "inqNum": 11970,
   "lastMod": "20250827",
   "lifeCodes": [
    "007",
@@ -2895,7 +2895,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002747&wlfareInfoReldBztpCd=02",
-  "inqNum": 2262,
+  "inqNum": 2263,
   "lastMod": "20250822",
   "lifeCodes": [
    "007"
@@ -2927,7 +2927,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002202&wlfareInfoReldBztpCd=02",
-  "inqNum": 2540,
+  "inqNum": 2541,
   "lastMod": "20250819",
   "lifeCodes": [
    "007",
@@ -2995,7 +2995,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002118&wlfareInfoReldBztpCd=02",
-  "inqNum": 3002,
+  "inqNum": 3003,
   "lastMod": "20250815",
   "lifeCodes": [
    "007"
@@ -3046,7 +3046,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005697&wlfareInfoReldBztpCd=02",
-  "inqNum": 9001,
+  "inqNum": 9004,
   "lastMod": "20250814",
   "lifeCodes": [
    "007",
@@ -3096,7 +3096,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005116&wlfareInfoReldBztpCd=02",
-  "inqNum": 12615,
+  "inqNum": 12619,
   "lastMod": "20250814",
   "lifeCodes": [
    "007",
@@ -3130,7 +3130,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001994&wlfareInfoReldBztpCd=02",
-  "inqNum": 4390,
+  "inqNum": 4391,
   "lastMod": "20250814",
   "lifeCodes": [
    "007"
@@ -3163,7 +3163,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 우편, 전화, 모바일",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002144&wlfareInfoReldBztpCd=02",
-  "inqNum": 2286,
+  "inqNum": 2287,
   "lastMod": "20250814",
   "lifeCodes": [
    "007",
@@ -3180,7 +3180,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001749&wlfareInfoReldBztpCd=02",
-  "inqNum": 2728,
+  "inqNum": 2729,
   "lastMod": "20250814",
   "lifeCodes": [
    "007"
@@ -3281,7 +3281,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001761&wlfareInfoReldBztpCd=02",
-  "inqNum": 3483,
+  "inqNum": 3484,
   "lastMod": "20250813",
   "lifeCodes": [
    "007",
@@ -3330,7 +3330,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001623&wlfareInfoReldBztpCd=02",
-  "inqNum": 6263,
+  "inqNum": 6264,
   "lastMod": "20250812",
   "lifeCodes": [
    "007",
@@ -3363,7 +3363,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001956&wlfareInfoReldBztpCd=02",
-  "inqNum": 3833,
+  "inqNum": 3835,
   "lastMod": "20250812",
   "lifeCodes": [
    "007"
@@ -3379,7 +3379,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002864&wlfareInfoReldBztpCd=02",
-  "inqNum": 3728,
+  "inqNum": 3730,
   "lastMod": "20250812",
   "lifeCodes": [
    "007"
@@ -3395,7 +3395,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003719&wlfareInfoReldBztpCd=02",
-  "inqNum": 27484,
+  "inqNum": 27490,
   "lastMod": "20250812",
   "lifeCodes": [
    "007",
@@ -3412,7 +3412,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003083&wlfareInfoReldBztpCd=02",
-  "inqNum": 2864,
+  "inqNum": 2865,
   "lastMod": "20250812",
   "lifeCodes": [
    "007"
@@ -3445,7 +3445,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002855&wlfareInfoReldBztpCd=02",
-  "inqNum": 2071,
+  "inqNum": 2072,
   "lastMod": "20250807",
   "lifeCodes": [
    "007",
@@ -3479,7 +3479,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002947&wlfareInfoReldBztpCd=02",
-  "inqNum": 3054,
+  "inqNum": 3055,
   "lastMod": "20250807",
   "lifeCodes": [
    "007"
@@ -3512,7 +3512,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001999&wlfareInfoReldBztpCd=02",
-  "inqNum": 2891,
+  "inqNum": 2892,
   "lastMod": "20250807",
   "lifeCodes": [
    "007",
@@ -3529,7 +3529,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005762&wlfareInfoReldBztpCd=02",
-  "inqNum": 4928,
+  "inqNum": 4931,
   "lastMod": "20250806",
   "lifeCodes": [
    "007"
@@ -3545,7 +3545,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005139&wlfareInfoReldBztpCd=02",
-  "inqNum": 3288,
+  "inqNum": 3289,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3630,7 +3630,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001674&wlfareInfoReldBztpCd=02",
-  "inqNum": 6847,
+  "inqNum": 6849,
   "lastMod": "20250806",
   "lifeCodes": [
    "007"
@@ -3646,7 +3646,7 @@
   "pvsn": "현금지급",
   "aply": "방문, E-mail",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002418&wlfareInfoReldBztpCd=02",
-  "inqNum": 2763,
+  "inqNum": 2764,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3679,7 +3679,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002455&wlfareInfoReldBztpCd=02",
-  "inqNum": 2956,
+  "inqNum": 2957,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3712,7 +3712,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001788&wlfareInfoReldBztpCd=02",
-  "inqNum": 2593,
+  "inqNum": 2594,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3729,7 +3729,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002664&wlfareInfoReldBztpCd=02",
-  "inqNum": 1572,
+  "inqNum": 1573,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3763,7 +3763,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003125&wlfareInfoReldBztpCd=02",
-  "inqNum": 8972,
+  "inqNum": 8976,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3780,7 +3780,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002840&wlfareInfoReldBztpCd=02",
-  "inqNum": 4013,
+  "inqNum": 4015,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3797,7 +3797,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002667&wlfareInfoReldBztpCd=02",
-  "inqNum": 2364,
+  "inqNum": 2365,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3814,7 +3814,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002249&wlfareInfoReldBztpCd=02",
-  "inqNum": 1710,
+  "inqNum": 1711,
   "lastMod": "20250806",
   "lifeCodes": [
    "007",
@@ -3848,7 +3848,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002930&wlfareInfoReldBztpCd=02",
-  "inqNum": 2684,
+  "inqNum": 2685,
   "lastMod": "20250805",
   "lifeCodes": [
    "007"
@@ -3864,7 +3864,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002893&wlfareInfoReldBztpCd=02",
-  "inqNum": 11154,
+  "inqNum": 11157,
   "lastMod": "20250805",
   "lifeCodes": [
    "007",
@@ -3882,7 +3882,7 @@
   "pvsn": "실물바우처",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003131&wlfareInfoReldBztpCd=02",
-  "inqNum": 1376,
+  "inqNum": 1379,
   "lastMod": "20250805",
   "lifeCodes": [
    "007",
@@ -4036,7 +4036,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002942&wlfareInfoReldBztpCd=02",
-  "inqNum": 3841,
+  "inqNum": 3842,
   "lastMod": "20250801",
   "lifeCodes": [
    "007",
@@ -4236,7 +4236,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002079&wlfareInfoReldBztpCd=02",
-  "inqNum": 2694,
+  "inqNum": 2695,
   "lastMod": "20250729",
   "lifeCodes": [
    "007"
@@ -4303,7 +4303,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001828&wlfareInfoReldBztpCd=02",
-  "inqNum": 1399,
+  "inqNum": 1400,
   "lastMod": "20250726",
   "lifeCodes": [
    "007"
@@ -4319,7 +4319,7 @@
   "pvsn": "현물지급, 전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004198&wlfareInfoReldBztpCd=02",
-  "inqNum": 11826,
+  "inqNum": 11827,
   "lastMod": "20250724",
   "lifeCodes": [
    "007",
@@ -4336,7 +4336,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001741&wlfareInfoReldBztpCd=02",
-  "inqNum": 1382,
+  "inqNum": 1383,
   "lastMod": "20250724",
   "lifeCodes": [
    "007"
@@ -4352,7 +4352,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, 전화, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002123&wlfareInfoReldBztpCd=02",
-  "inqNum": 3689,
+  "inqNum": 3690,
   "lastMod": "20250724",
   "lifeCodes": [
    "007"
@@ -4384,7 +4384,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷, 방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000438&wlfareInfoReldBztpCd=02",
-  "inqNum": 2164,
+  "inqNum": 2166,
   "lastMod": "20250715",
   "lifeCodes": [
    "007",
@@ -4401,7 +4401,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001990&wlfareInfoReldBztpCd=02",
-  "inqNum": 8189,
+  "inqNum": 8190,
   "lastMod": "20250715",
   "lifeCodes": [
    "007"
@@ -4417,7 +4417,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001849&wlfareInfoReldBztpCd=02",
-  "inqNum": 2110,
+  "inqNum": 2111,
   "lastMod": "20250715",
   "lifeCodes": [
    "007"
@@ -4466,7 +4466,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003118&wlfareInfoReldBztpCd=02",
-  "inqNum": 2966,
+  "inqNum": 2967,
   "lastMod": "20250711",
   "lifeCodes": [
    "007",
@@ -4483,7 +4483,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006099&wlfareInfoReldBztpCd=02",
-  "inqNum": 8501,
+  "inqNum": 8504,
   "lastMod": "20250709",
   "lifeCodes": [
    "007"
@@ -4582,7 +4582,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006092&wlfareInfoReldBztpCd=02",
-  "inqNum": 1599,
+  "inqNum": 1600,
   "lastMod": "20250705",
   "lifeCodes": [
    "007",
@@ -4615,7 +4615,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004034&wlfareInfoReldBztpCd=02",
-  "inqNum": 6893,
+  "inqNum": 6895,
   "lastMod": "20250705",
   "lifeCodes": [
    "007",
@@ -4632,7 +4632,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001688&wlfareInfoReldBztpCd=02",
-  "inqNum": 2121,
+  "inqNum": 2122,
   "lastMod": "20250705",
   "lifeCodes": [
    "007",
@@ -4698,7 +4698,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004850&wlfareInfoReldBztpCd=02",
-  "inqNum": 7349,
+  "inqNum": 7351,
   "lastMod": "20250704",
   "lifeCodes": [
    "007"
@@ -4714,7 +4714,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001361&wlfareInfoReldBztpCd=02",
-  "inqNum": 17769,
+  "inqNum": 17779,
   "lastMod": "20250704",
   "lifeCodes": [
    "007",
@@ -4731,7 +4731,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 모바일, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002340&wlfareInfoReldBztpCd=02",
-  "inqNum": 8120,
+  "inqNum": 8122,
   "lastMod": "20250704",
   "lifeCodes": [
    "007",
@@ -4813,7 +4813,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002850&wlfareInfoReldBztpCd=02",
-  "inqNum": 1623,
+  "inqNum": 1624,
   "lastMod": "20250701",
   "lifeCodes": [
    "007",
@@ -4830,7 +4830,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 모바일, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002963&wlfareInfoReldBztpCd=02",
-  "inqNum": 4096,
+  "inqNum": 4097,
   "lastMod": "20250701",
   "lifeCodes": [
    "007",
@@ -4863,7 +4863,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002690&wlfareInfoReldBztpCd=02",
-  "inqNum": 1888,
+  "inqNum": 1889,
   "lastMod": "20250701",
   "lifeCodes": [
    "007"
@@ -4879,7 +4879,7 @@
   "pvsn": "현금지급, 프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002318&wlfareInfoReldBztpCd=02",
-  "inqNum": 2685,
+  "inqNum": 2686,
   "lastMod": "20250701",
   "lifeCodes": [
    "007",
@@ -4930,7 +4930,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002827&wlfareInfoReldBztpCd=02",
-  "inqNum": 2202,
+  "inqNum": 2203,
   "lastMod": "20250626",
   "lifeCodes": [
    "007"
@@ -4946,7 +4946,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004255&wlfareInfoReldBztpCd=02",
-  "inqNum": 3078,
+  "inqNum": 3079,
   "lastMod": "20250626",
   "lifeCodes": [
    "007",
@@ -5012,7 +5012,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003033&wlfareInfoReldBztpCd=02",
-  "inqNum": 3166,
+  "inqNum": 3168,
   "lastMod": "20250625",
   "lifeCodes": [
    "007",
@@ -5046,7 +5046,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006046&wlfareInfoReldBztpCd=02",
-  "inqNum": 8950,
+  "inqNum": 8951,
   "lastMod": "20250619",
   "lifeCodes": [
    "007",
@@ -5096,7 +5096,7 @@
   "pvsn": "지역화폐",
   "aply": "모바일앱, 인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005468&wlfareInfoReldBztpCd=02",
-  "inqNum": 10991,
+  "inqNum": 10992,
   "lastMod": "20250619",
   "lifeCodes": [
    "007"
@@ -5144,7 +5144,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002856&wlfareInfoReldBztpCd=02",
-  "inqNum": 1448,
+  "inqNum": 1449,
   "lastMod": "20250619",
   "lifeCodes": [
    "007",
@@ -5194,7 +5194,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002903&wlfareInfoReldBztpCd=02",
-  "inqNum": 2699,
+  "inqNum": 2700,
   "lastMod": "20250619",
   "lifeCodes": [
    "007",
@@ -5342,7 +5342,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005132&wlfareInfoReldBztpCd=02",
-  "inqNum": 1872,
+  "inqNum": 1874,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5374,7 +5374,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004703&wlfareInfoReldBztpCd=02",
-  "inqNum": 12364,
+  "inqNum": 12367,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5406,7 +5406,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001876&wlfareInfoReldBztpCd=02",
-  "inqNum": 1499,
+  "inqNum": 1500,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5455,7 +5455,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003923&wlfareInfoReldBztpCd=02",
-  "inqNum": 10910,
+  "inqNum": 10913,
   "lastMod": "20250614",
   "lifeCodes": [
    "007",
@@ -5473,7 +5473,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002058&wlfareInfoReldBztpCd=02",
-  "inqNum": 24178,
+  "inqNum": 24184,
   "lastMod": "20250614",
   "lifeCodes": [
    "007",
@@ -5490,7 +5490,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001630&wlfareInfoReldBztpCd=02",
-  "inqNum": 2412,
+  "inqNum": 2413,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5590,7 +5590,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000532&wlfareInfoReldBztpCd=02",
-  "inqNum": 8727,
+  "inqNum": 8728,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5690,7 +5690,7 @@
   "pvsn": "지역화폐, 현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001498&wlfareInfoReldBztpCd=02",
-  "inqNum": 4119,
+  "inqNum": 4120,
   "lastMod": "20250614",
   "lifeCodes": [
    "007",
@@ -5707,7 +5707,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 모바일",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002356&wlfareInfoReldBztpCd=02",
-  "inqNum": 2598,
+  "inqNum": 2600,
   "lastMod": "20250614",
   "lifeCodes": [
    "007"
@@ -5723,7 +5723,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002355&wlfareInfoReldBztpCd=02",
-  "inqNum": 3314,
+  "inqNum": 3315,
   "lastMod": "20250614",
   "lifeCodes": [
    "007",
@@ -5772,7 +5772,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004570&wlfareInfoReldBztpCd=02",
-  "inqNum": 2467,
+  "inqNum": 2468,
   "lastMod": "20250611",
   "lifeCodes": [
    "007"
@@ -5788,7 +5788,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002097&wlfareInfoReldBztpCd=02",
-  "inqNum": 1956,
+  "inqNum": 1957,
   "lastMod": "20250611",
   "lifeCodes": [
    "007",
@@ -5805,7 +5805,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005756&wlfareInfoReldBztpCd=02",
-  "inqNum": 5187,
+  "inqNum": 5189,
   "lastMod": "20250610",
   "lifeCodes": [
    "007",
@@ -5856,7 +5856,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001613&wlfareInfoReldBztpCd=02",
-  "inqNum": 1878,
+  "inqNum": 1880,
   "lastMod": "20250606",
   "lifeCodes": [
    "007"
@@ -5920,7 +5920,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002370&wlfareInfoReldBztpCd=02",
-  "inqNum": 3871,
+  "inqNum": 3872,
   "lastMod": "20250606",
   "lifeCodes": [
    "007"
@@ -6038,7 +6038,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002482&wlfareInfoReldBztpCd=02",
-  "inqNum": 2877,
+  "inqNum": 2878,
   "lastMod": "20250606",
   "lifeCodes": [
    "007",
@@ -6055,7 +6055,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002640&wlfareInfoReldBztpCd=02",
-  "inqNum": 2178,
+  "inqNum": 2179,
   "lastMod": "20250606",
   "lifeCodes": [
    "007",
@@ -6088,7 +6088,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004036&wlfareInfoReldBztpCd=02",
-  "inqNum": 5536,
+  "inqNum": 5538,
   "lastMod": "20250605",
   "lifeCodes": [
    "007",
@@ -6105,7 +6105,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001446&wlfareInfoReldBztpCd=02",
-  "inqNum": 7233,
+  "inqNum": 7235,
   "lastMod": "20250605",
   "lifeCodes": [
    "007",
@@ -6157,7 +6157,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002478&wlfareInfoReldBztpCd=02",
-  "inqNum": 2538,
+  "inqNum": 2539,
   "lastMod": "20250605",
   "lifeCodes": [
    "007"
@@ -6173,7 +6173,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003338&wlfareInfoReldBztpCd=02",
-  "inqNum": 2066,
+  "inqNum": 2067,
   "lastMod": "20250605",
   "lifeCodes": [
    "007"
@@ -6189,7 +6189,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005902&wlfareInfoReldBztpCd=02",
-  "inqNum": 2155,
+  "inqNum": 2158,
   "lastMod": "20250603",
   "lifeCodes": [
    "007",
@@ -6206,7 +6206,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001658&wlfareInfoReldBztpCd=02",
-  "inqNum": 4331,
+  "inqNum": 4332,
   "lastMod": "20250603",
   "lifeCodes": [
    "007",
@@ -6240,7 +6240,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002593&wlfareInfoReldBztpCd=02",
-  "inqNum": 2067,
+  "inqNum": 2068,
   "lastMod": "20250603",
   "lifeCodes": [
    "007",
@@ -6257,7 +6257,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002329&wlfareInfoReldBztpCd=02",
-  "inqNum": 2220,
+  "inqNum": 2221,
   "lastMod": "20250603",
   "lifeCodes": [
    "007"
@@ -6306,7 +6306,7 @@
   "pvsn": "지역화폐",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005870&wlfareInfoReldBztpCd=02",
-  "inqNum": 1830,
+  "inqNum": 1831,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6354,7 +6354,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005641&wlfareInfoReldBztpCd=02",
-  "inqNum": 21480,
+  "inqNum": 21481,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6370,7 +6370,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005580&wlfareInfoReldBztpCd=02",
-  "inqNum": 3346,
+  "inqNum": 3347,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6484,7 +6484,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004819&wlfareInfoReldBztpCd=02",
-  "inqNum": 2145,
+  "inqNum": 2146,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6500,7 +6500,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002800&wlfareInfoReldBztpCd=02",
-  "inqNum": 10304,
+  "inqNum": 10306,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6517,7 +6517,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001957&wlfareInfoReldBztpCd=02",
-  "inqNum": 1964,
+  "inqNum": 1965,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6533,7 +6533,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001638&wlfareInfoReldBztpCd=02",
-  "inqNum": 24569,
+  "inqNum": 24571,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6549,7 +6549,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002785&wlfareInfoReldBztpCd=02",
-  "inqNum": 4589,
+  "inqNum": 4590,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6565,7 +6565,7 @@
   "pvsn": "현금지급, 전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001892&wlfareInfoReldBztpCd=02",
-  "inqNum": 1651,
+  "inqNum": 1652,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6581,7 +6581,7 @@
   "pvsn": "현물지급, 기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001663&wlfareInfoReldBztpCd=02",
-  "inqNum": 1489,
+  "inqNum": 1490,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6597,7 +6597,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001608&wlfareInfoReldBztpCd=02",
-  "inqNum": 1519,
+  "inqNum": 1520,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6613,7 +6613,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001662&wlfareInfoReldBztpCd=02",
-  "inqNum": 2272,
+  "inqNum": 2273,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6629,7 +6629,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001585&wlfareInfoReldBztpCd=02",
-  "inqNum": 2754,
+  "inqNum": 2755,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6645,7 +6645,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001970&wlfareInfoReldBztpCd=02",
-  "inqNum": 3028,
+  "inqNum": 3029,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6677,7 +6677,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001992&wlfareInfoReldBztpCd=02",
-  "inqNum": 2006,
+  "inqNum": 2007,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6694,7 +6694,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001995&wlfareInfoReldBztpCd=02",
-  "inqNum": 1885,
+  "inqNum": 1886,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6728,7 +6728,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003556&wlfareInfoReldBztpCd=02",
-  "inqNum": 4196,
+  "inqNum": 4197,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6761,7 +6761,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002315&wlfareInfoReldBztpCd=02",
-  "inqNum": 3251,
+  "inqNum": 3254,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6777,7 +6777,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001609&wlfareInfoReldBztpCd=02",
-  "inqNum": 2231,
+  "inqNum": 2232,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6793,7 +6793,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004371&wlfareInfoReldBztpCd=02",
-  "inqNum": 4448,
+  "inqNum": 4449,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6810,7 +6810,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002316&wlfareInfoReldBztpCd=02",
-  "inqNum": 2192,
+  "inqNum": 2193,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6844,7 +6844,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002204&wlfareInfoReldBztpCd=02",
-  "inqNum": 1933,
+  "inqNum": 1934,
   "lastMod": "20250531",
   "lifeCodes": [
    "007"
@@ -6860,7 +6860,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002337&wlfareInfoReldBztpCd=02",
-  "inqNum": 5934,
+  "inqNum": 5935,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6877,7 +6877,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004101&wlfareInfoReldBztpCd=02",
-  "inqNum": 7357,
+  "inqNum": 7359,
   "lastMod": "20250531",
   "lifeCodes": [
    "007",
@@ -6928,7 +6928,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002557&wlfareInfoReldBztpCd=02",
-  "inqNum": 5534,
+  "inqNum": 5535,
   "lastMod": "20241023",
   "lifeCodes": [
    "007",
@@ -6963,7 +6963,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004022&wlfareInfoReldBztpCd=02",
-  "inqNum": 9301,
+  "inqNum": 9304,
   "lastMod": "20240709",
   "lifeCodes": [
    "007",
@@ -7013,7 +7013,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003064&wlfareInfoReldBztpCd=02",
-  "inqNum": 1973,
+  "inqNum": 1974,
   "lastMod": "20240620",
   "lifeCodes": [
    "007",
@@ -7030,7 +7030,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003009&wlfareInfoReldBztpCd=02",
-  "inqNum": 2033,
+  "inqNum": 2034,
   "lastMod": "20240614",
   "lifeCodes": [
    "007"
@@ -7046,7 +7046,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002354&wlfareInfoReldBztpCd=02",
-  "inqNum": 3236,
+  "inqNum": 3237,
   "lastMod": "20240613",
   "lifeCodes": [
    "007"
@@ -7096,7 +7096,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003657&wlfareInfoReldBztpCd=02",
-  "inqNum": 2199,
+  "inqNum": 2200,
   "lastMod": "20240613",
   "lifeCodes": [
    "007",
@@ -7113,7 +7113,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003101&wlfareInfoReldBztpCd=02",
-  "inqNum": 1864,
+  "inqNum": 1865,
   "lastMod": "20240608",
   "lifeCodes": [
    "007"
@@ -7129,7 +7129,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002607&wlfareInfoReldBztpCd=02",
-  "inqNum": 2381,
+  "inqNum": 2382,
   "lastMod": "20240606",
   "lifeCodes": [
    "007"
@@ -7145,7 +7145,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002151&wlfareInfoReldBztpCd=02",
-  "inqNum": 1773,
+  "inqNum": 1774,
   "lastMod": "20240605",
   "lifeCodes": [
    "007"
@@ -7161,7 +7161,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001411&wlfareInfoReldBztpCd=02",
-  "inqNum": 1540,
+  "inqNum": 1541,
   "lastMod": "20240604",
   "lifeCodes": [
    "007",
@@ -7212,7 +7212,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001606&wlfareInfoReldBztpCd=02",
-  "inqNum": 7470,
+  "inqNum": 7471,
   "lastMod": "20230704",
   "lifeCodes": [
    "007"
@@ -7228,7 +7228,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002550&wlfareInfoReldBztpCd=02",
-  "inqNum": 2263,
+  "inqNum": 2264,
   "lastMod": "20230704",
   "lifeCodes": [
    "007",
@@ -7245,7 +7245,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002238&wlfareInfoReldBztpCd=02",
-  "inqNum": 1711,
+  "inqNum": 1712,
   "lastMod": "20230704",
   "lifeCodes": [
    "007",
@@ -7397,7 +7397,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006561&wlfareInfoReldBztpCd=02",
-  "inqNum": 28,
+  "inqNum": 32,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7547,7 +7547,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004361&wlfareInfoReldBztpCd=02",
-  "inqNum": 3443,
+  "inqNum": 3444,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7598,7 +7598,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001958&wlfareInfoReldBztpCd=02",
-  "inqNum": 1520,
+  "inqNum": 1521,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7615,7 +7615,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001640&wlfareInfoReldBztpCd=02",
-  "inqNum": 3745,
+  "inqNum": 3746,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7663,7 +7663,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002313&wlfareInfoReldBztpCd=02",
-  "inqNum": 3049,
+  "inqNum": 3050,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7679,7 +7679,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002447&wlfareInfoReldBztpCd=02",
-  "inqNum": 2237,
+  "inqNum": 2238,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7711,7 +7711,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 전화, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002489&wlfareInfoReldBztpCd=02",
-  "inqNum": 1273,
+  "inqNum": 1274,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7745,7 +7745,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003543&wlfareInfoReldBztpCd=02",
-  "inqNum": 2870,
+  "inqNum": 2871,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7778,7 +7778,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001848&wlfareInfoReldBztpCd=02",
-  "inqNum": 1485,
+  "inqNum": 1486,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7811,7 +7811,7 @@
   "pvsn": "현물대여, 기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002407&wlfareInfoReldBztpCd=02",
-  "inqNum": 1624,
+  "inqNum": 1625,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -7827,7 +7827,7 @@
   "pvsn": "자원봉사",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002375&wlfareInfoReldBztpCd=02",
-  "inqNum": 2738,
+  "inqNum": 2739,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7878,7 +7878,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002343&wlfareInfoReldBztpCd=02",
-  "inqNum": 2972,
+  "inqNum": 2973,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7912,7 +7912,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002220&wlfareInfoReldBztpCd=02",
-  "inqNum": 1171,
+  "inqNum": 1172,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7929,7 +7929,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000189&wlfareInfoReldBztpCd=02",
-  "inqNum": 5738,
+  "inqNum": 5740,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -7963,7 +7963,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004029&wlfareInfoReldBztpCd=02",
-  "inqNum": 10737,
+  "inqNum": 10740,
   "lastMod": "20260714",
   "lifeCodes": [
    "001"
@@ -8013,7 +8013,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002227&wlfareInfoReldBztpCd=02",
-  "inqNum": 2692,
+  "inqNum": 2693,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -8030,7 +8030,7 @@
   "pvsn": "기타, 현물대여",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002832&wlfareInfoReldBztpCd=02",
-  "inqNum": 1184,
+  "inqNum": 1185,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -8081,7 +8081,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002491&wlfareInfoReldBztpCd=02",
-  "inqNum": 1145,
+  "inqNum": 1146,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -8131,7 +8131,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002252&wlfareInfoReldBztpCd=02",
-  "inqNum": 2053,
+  "inqNum": 2054,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -8148,7 +8148,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002649&wlfareInfoReldBztpCd=02",
-  "inqNum": 1479,
+  "inqNum": 1481,
   "lastMod": "20260714",
   "lifeCodes": [
    "001",
@@ -8165,7 +8165,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006559&wlfareInfoReldBztpCd=02",
-  "inqNum": 58,
+  "inqNum": 59,
   "lastMod": "20260711",
   "lifeCodes": [
    "001",
@@ -8182,7 +8182,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006558&wlfareInfoReldBztpCd=02",
-  "inqNum": 77,
+  "inqNum": 79,
   "lastMod": "20260711",
   "lifeCodes": [
    "001",
@@ -8265,7 +8265,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003846&wlfareInfoReldBztpCd=02",
-  "inqNum": 3452,
+  "inqNum": 3453,
   "lastMod": "20260711",
   "lifeCodes": [
    "001"
@@ -8297,7 +8297,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000988&wlfareInfoReldBztpCd=02",
-  "inqNum": 1223,
+  "inqNum": 1224,
   "lastMod": "20260711",
   "lifeCodes": [
    "001",
@@ -8314,7 +8314,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003416&wlfareInfoReldBztpCd=02",
-  "inqNum": 4524,
+  "inqNum": 4525,
   "lastMod": "20260711",
   "lifeCodes": [
    "001",
@@ -8331,7 +8331,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000918&wlfareInfoReldBztpCd=02",
-  "inqNum": 5896,
+  "inqNum": 5900,
   "lastMod": "20260711",
   "lifeCodes": [
    "001",
@@ -8365,7 +8365,7 @@
   "pvsn": "프로그램/서비스(서비스), 기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006556&wlfareInfoReldBztpCd=02",
-  "inqNum": 77,
+  "inqNum": 78,
   "lastMod": "20260710",
   "lifeCodes": [
    "001",
@@ -8446,7 +8446,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006539&wlfareInfoReldBztpCd=02",
-  "inqNum": 174,
+  "inqNum": 175,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8630,7 +8630,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005829&wlfareInfoReldBztpCd=02",
-  "inqNum": 2238,
+  "inqNum": 2240,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8647,7 +8647,7 @@
   "pvsn": "기타",
   "aply": "인터넷, 전화, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005199&wlfareInfoReldBztpCd=02",
-  "inqNum": 8105,
+  "inqNum": 8106,
   "lastMod": "20260704",
   "lifeCodes": [
    "001"
@@ -8663,7 +8663,7 @@
   "pvsn": "감면, 기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001866&wlfareInfoReldBztpCd=02",
-  "inqNum": 1786,
+  "inqNum": 1787,
   "lastMod": "20260704",
   "lifeCodes": [
    "001"
@@ -8679,7 +8679,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001629&wlfareInfoReldBztpCd=02",
-  "inqNum": 2989,
+  "inqNum": 2990,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8696,7 +8696,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002366&wlfareInfoReldBztpCd=02",
-  "inqNum": 1983,
+  "inqNum": 1984,
   "lastMod": "20260704",
   "lifeCodes": [
    "001"
@@ -8745,7 +8745,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002753&wlfareInfoReldBztpCd=02",
-  "inqNum": 2164,
+  "inqNum": 2165,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8779,7 +8779,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002107&wlfareInfoReldBztpCd=02",
-  "inqNum": 2197,
+  "inqNum": 2198,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8796,7 +8796,7 @@
   "pvsn": "현금지급, 기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002878&wlfareInfoReldBztpCd=02",
-  "inqNum": 1218,
+  "inqNum": 1219,
   "lastMod": "20260704",
   "lifeCodes": [
    "001",
@@ -8830,7 +8830,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, E-mail",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006447&wlfareInfoReldBztpCd=02",
-  "inqNum": 129,
+  "inqNum": 130,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -8993,7 +8993,7 @@
   "pvsn": "기타, 프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006383&wlfareInfoReldBztpCd=02",
-  "inqNum": 133,
+  "inqNum": 135,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9026,7 +9026,7 @@
   "pvsn": "감면, 기타",
   "aply": "팩스, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006169&wlfareInfoReldBztpCd=02",
-  "inqNum": 6600,
+  "inqNum": 6602,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9042,7 +9042,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006142&wlfareInfoReldBztpCd=02",
-  "inqNum": 1547,
+  "inqNum": 1548,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9075,7 +9075,7 @@
   "pvsn": "실물바우처",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005899&wlfareInfoReldBztpCd=02",
-  "inqNum": 2122,
+  "inqNum": 2123,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9156,7 +9156,7 @@
   "pvsn": "지역화폐",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005538&wlfareInfoReldBztpCd=02",
-  "inqNum": 30137,
+  "inqNum": 30142,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9206,7 +9206,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005456&wlfareInfoReldBztpCd=02",
-  "inqNum": 5425,
+  "inqNum": 5428,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9239,7 +9239,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005280&wlfareInfoReldBztpCd=02",
-  "inqNum": 2662,
+  "inqNum": 2663,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9337,7 +9337,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002022&wlfareInfoReldBztpCd=02",
-  "inqNum": 3047,
+  "inqNum": 3048,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9370,7 +9370,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000017&wlfareInfoReldBztpCd=02",
-  "inqNum": 6109,
+  "inqNum": 6111,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9419,7 +9419,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001500&wlfareInfoReldBztpCd=02",
-  "inqNum": 1863,
+  "inqNum": 1865,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9435,7 +9435,7 @@
   "pvsn": "기타",
   "aply": "방문, 모바일앱",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002707&wlfareInfoReldBztpCd=02",
-  "inqNum": 9587,
+  "inqNum": 9589,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9452,7 +9452,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "전화, 방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001590&wlfareInfoReldBztpCd=02",
-  "inqNum": 7221,
+  "inqNum": 7222,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9486,7 +9486,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002994&wlfareInfoReldBztpCd=02",
-  "inqNum": 4131,
+  "inqNum": 4132,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9503,7 +9503,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000482&wlfareInfoReldBztpCd=02",
-  "inqNum": 1396,
+  "inqNum": 1397,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9567,7 +9567,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001272&wlfareInfoReldBztpCd=02",
-  "inqNum": 2333,
+  "inqNum": 2334,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -9600,7 +9600,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000984&wlfareInfoReldBztpCd=02",
-  "inqNum": 2118,
+  "inqNum": 2119,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9617,7 +9617,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002895&wlfareInfoReldBztpCd=02",
-  "inqNum": 6416,
+  "inqNum": 6417,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9702,7 +9702,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001877&wlfareInfoReldBztpCd=02",
-  "inqNum": 1226,
+  "inqNum": 1228,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9719,7 +9719,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003088&wlfareInfoReldBztpCd=02",
-  "inqNum": 1542,
+  "inqNum": 1543,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9769,7 +9769,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002917&wlfareInfoReldBztpCd=02",
-  "inqNum": 1643,
+  "inqNum": 1644,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9786,7 +9786,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002918&wlfareInfoReldBztpCd=02",
-  "inqNum": 1647,
+  "inqNum": 1648,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9803,7 +9803,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002112&wlfareInfoReldBztpCd=02",
-  "inqNum": 2057,
+  "inqNum": 2058,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9820,7 +9820,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002645&wlfareInfoReldBztpCd=02",
-  "inqNum": 1847,
+  "inqNum": 1848,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9871,7 +9871,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002583&wlfareInfoReldBztpCd=02",
-  "inqNum": 2232,
+  "inqNum": 2233,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9905,7 +9905,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002358&wlfareInfoReldBztpCd=02",
-  "inqNum": 1155,
+  "inqNum": 1156,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9922,7 +9922,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002248&wlfareInfoReldBztpCd=02",
-  "inqNum": 2863,
+  "inqNum": 2864,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9972,7 +9972,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003003&wlfareInfoReldBztpCd=02",
-  "inqNum": 1727,
+  "inqNum": 1728,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -9989,7 +9989,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003628&wlfareInfoReldBztpCd=02",
-  "inqNum": 2619,
+  "inqNum": 2620,
   "lastMod": "20260703",
   "lifeCodes": [
    "001"
@@ -10022,7 +10022,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002626&wlfareInfoReldBztpCd=02",
-  "inqNum": 2511,
+  "inqNum": 2512,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -10089,7 +10089,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002703&wlfareInfoReldBztpCd=02",
-  "inqNum": 1602,
+  "inqNum": 1603,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -10106,7 +10106,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002760&wlfareInfoReldBztpCd=02",
-  "inqNum": 2232,
+  "inqNum": 2234,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -10123,7 +10123,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002969&wlfareInfoReldBztpCd=02",
-  "inqNum": 1602,
+  "inqNum": 1603,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -10157,7 +10157,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002682&wlfareInfoReldBztpCd=02",
-  "inqNum": 2851,
+  "inqNum": 2852,
   "lastMod": "20260703",
   "lifeCodes": [
    "001",
@@ -10275,7 +10275,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004397&wlfareInfoReldBztpCd=02",
-  "inqNum": 4126,
+  "inqNum": 4129,
   "lastMod": "20260630",
   "lifeCodes": [
    "001"
@@ -10308,7 +10308,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002743&wlfareInfoReldBztpCd=02",
-  "inqNum": 3975,
+  "inqNum": 3976,
   "lastMod": "20260630",
   "lifeCodes": [
    "001"
@@ -10341,7 +10341,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002553&wlfareInfoReldBztpCd=02",
-  "inqNum": 2363,
+  "inqNum": 2364,
   "lastMod": "20260630",
   "lifeCodes": [
    "001"
@@ -10374,7 +10374,7 @@
   "pvsn": "현물대여",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002035&wlfareInfoReldBztpCd=02",
-  "inqNum": 4243,
+  "inqNum": 4244,
   "lastMod": "20260620",
   "lifeCodes": [
    "001"
@@ -10390,7 +10390,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006328&wlfareInfoReldBztpCd=02",
-  "inqNum": 376,
+  "inqNum": 377,
   "lastMod": "20260619",
   "lifeCodes": [
    "001",
@@ -10440,7 +10440,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003149&wlfareInfoReldBztpCd=02",
-  "inqNum": 1969,
+  "inqNum": 1971,
   "lastMod": "20260619",
   "lifeCodes": [
    "001"
@@ -10456,7 +10456,7 @@
   "pvsn": "전자바우처(바우처), 기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003373&wlfareInfoReldBztpCd=02",
-  "inqNum": 4387,
+  "inqNum": 4389,
   "lastMod": "20260619",
   "lifeCodes": [
    "001",
@@ -10473,7 +10473,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002512&wlfareInfoReldBztpCd=02",
-  "inqNum": 1685,
+  "inqNum": 1686,
   "lastMod": "20260619",
   "lifeCodes": [
    "001",
@@ -10490,7 +10490,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002159&wlfareInfoReldBztpCd=02",
-  "inqNum": 1987,
+  "inqNum": 1988,
   "lastMod": "20260619",
   "lifeCodes": [
    "001",
@@ -10507,7 +10507,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002160&wlfareInfoReldBztpCd=02",
-  "inqNum": 2660,
+  "inqNum": 2661,
   "lastMod": "20260619",
   "lifeCodes": [
    "001"
@@ -10540,7 +10540,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
-  "inqNum": 42095,
+  "inqNum": 42098,
   "lastMod": "20260312",
   "lifeCodes": [
    "001"
@@ -10590,7 +10590,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002933&wlfareInfoReldBztpCd=02",
-  "inqNum": 8867,
+  "inqNum": 8869,
   "lastMod": "20260227",
   "lifeCodes": [
    "001",
@@ -10623,7 +10623,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001377&wlfareInfoReldBztpCd=02",
-  "inqNum": 10588,
+  "inqNum": 10590,
   "lastMod": "20260115",
   "lifeCodes": [
    "001"
@@ -10672,7 +10672,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006188&wlfareInfoReldBztpCd=02",
-  "inqNum": 2441,
+  "inqNum": 2443,
   "lastMod": "20251022",
   "lifeCodes": [
    "001",
@@ -10722,7 +10722,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005430&wlfareInfoReldBztpCd=02",
-  "inqNum": 4876,
+  "inqNum": 4878,
   "lastMod": "20251001",
   "lifeCodes": [
    "001"
@@ -10738,7 +10738,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004946&wlfareInfoReldBztpCd=02",
-  "inqNum": 18309,
+  "inqNum": 18311,
   "lastMod": "20250918",
   "lifeCodes": [
    "001"
@@ -10754,7 +10754,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003799&wlfareInfoReldBztpCd=02",
-  "inqNum": 3594,
+  "inqNum": 3596,
   "lastMod": "20250822",
   "lifeCodes": [
    "001",
@@ -10788,7 +10788,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002623&wlfareInfoReldBztpCd=02",
-  "inqNum": 2436,
+  "inqNum": 2437,
   "lastMod": "20250819",
   "lifeCodes": [
    "001",
@@ -10805,7 +10805,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005380&wlfareInfoReldBztpCd=02",
-  "inqNum": 11581,
+  "inqNum": 11589,
   "lastMod": "20250815",
   "lifeCodes": [
    "001"
@@ -10821,7 +10821,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002361&wlfareInfoReldBztpCd=02",
-  "inqNum": 2378,
+  "inqNum": 2379,
   "lastMod": "20250815",
   "lifeCodes": [
    "001"
@@ -10837,7 +10837,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000684&wlfareInfoReldBztpCd=02",
-  "inqNum": 1341,
+  "inqNum": 1342,
   "lastMod": "20250815",
   "lifeCodes": [
    "001",
@@ -10854,7 +10854,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002157&wlfareInfoReldBztpCd=02",
-  "inqNum": 1899,
+  "inqNum": 1900,
   "lastMod": "20250815",
   "lifeCodes": [
    "001",
@@ -10888,7 +10888,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002404&wlfareInfoReldBztpCd=02",
-  "inqNum": 13449,
+  "inqNum": 13453,
   "lastMod": "20250814",
   "lifeCodes": [
    "001"
@@ -10904,7 +10904,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001685&wlfareInfoReldBztpCd=02",
-  "inqNum": 1979,
+  "inqNum": 1980,
   "lastMod": "20250814",
   "lifeCodes": [
    "001"
@@ -10954,7 +10954,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002319&wlfareInfoReldBztpCd=02",
-  "inqNum": 2126,
+  "inqNum": 2127,
   "lastMod": "20250814",
   "lifeCodes": [
    "001",
@@ -10971,7 +10971,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001652&wlfareInfoReldBztpCd=02",
-  "inqNum": 8798,
+  "inqNum": 8799,
   "lastMod": "20250814",
   "lifeCodes": [
    "001",
@@ -11005,7 +11005,7 @@
   "pvsn": "감면",
   "aply": "우편, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005802&wlfareInfoReldBztpCd=02",
-  "inqNum": 10815,
+  "inqNum": 10819,
   "lastMod": "20250813",
   "lifeCodes": [
    "001",
@@ -11071,7 +11071,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001762&wlfareInfoReldBztpCd=02",
-  "inqNum": 981,
+  "inqNum": 982,
   "lastMod": "20250813",
   "lifeCodes": [
    "001",
@@ -11221,7 +11221,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002039&wlfareInfoReldBztpCd=02",
-  "inqNum": 4384,
+  "inqNum": 4385,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11254,7 +11254,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002421&wlfareInfoReldBztpCd=02",
-  "inqNum": 5223,
+  "inqNum": 5224,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11404,7 +11404,7 @@
   "pvsn": "현물지급, 현금지급, 기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004419&wlfareInfoReldBztpCd=02",
-  "inqNum": 2646,
+  "inqNum": 2647,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11455,7 +11455,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002134&wlfareInfoReldBztpCd=02",
-  "inqNum": 6136,
+  "inqNum": 6137,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11489,7 +11489,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001787&wlfareInfoReldBztpCd=02",
-  "inqNum": 1204,
+  "inqNum": 1205,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11522,7 +11522,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002978&wlfareInfoReldBztpCd=02",
-  "inqNum": 2484,
+  "inqNum": 2485,
   "lastMod": "20250812",
   "lifeCodes": [
    "001",
@@ -11638,7 +11638,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002797&wlfareInfoReldBztpCd=02",
-  "inqNum": 1403,
+  "inqNum": 1404,
   "lastMod": "20250807",
   "lifeCodes": [
    "001",
@@ -11655,7 +11655,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002382&wlfareInfoReldBztpCd=02",
-  "inqNum": 1436,
+  "inqNum": 1437,
   "lastMod": "20250807",
   "lifeCodes": [
    "001",
@@ -11689,7 +11689,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": "전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003026&wlfareInfoReldBztpCd=02",
-  "inqNum": 2018,
+  "inqNum": 2019,
   "lastMod": "20250807",
   "lifeCodes": [
    "001",
@@ -11757,7 +11757,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002819&wlfareInfoReldBztpCd=02",
-  "inqNum": 3786,
+  "inqNum": 3787,
   "lastMod": "20250807",
   "lifeCodes": [
    "001"
@@ -11907,7 +11907,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002955&wlfareInfoReldBztpCd=02",
-  "inqNum": 3134,
+  "inqNum": 3135,
   "lastMod": "20250806",
   "lifeCodes": [
    "001"
@@ -11939,7 +11939,7 @@
   "pvsn": "프로그램/서비스(서비스), 기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002027&wlfareInfoReldBztpCd=02",
-  "inqNum": 1270,
+  "inqNum": 1271,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -11973,7 +11973,7 @@
   "pvsn": "시설입소",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002790&wlfareInfoReldBztpCd=02",
-  "inqNum": 5510,
+  "inqNum": 5511,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12041,7 +12041,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001491&wlfareInfoReldBztpCd=02",
-  "inqNum": 12206,
+  "inqNum": 12207,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12091,7 +12091,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002052&wlfareInfoReldBztpCd=02",
-  "inqNum": 2059,
+  "inqNum": 2060,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12108,7 +12108,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001726&wlfareInfoReldBztpCd=02",
-  "inqNum": 2132,
+  "inqNum": 2133,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12125,7 +12125,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001724&wlfareInfoReldBztpCd=02",
-  "inqNum": 2463,
+  "inqNum": 2464,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12142,7 +12142,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001647&wlfareInfoReldBztpCd=02",
-  "inqNum": 1691,
+  "inqNum": 1692,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12159,7 +12159,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002621&wlfareInfoReldBztpCd=02",
-  "inqNum": 3882,
+  "inqNum": 3883,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12176,7 +12176,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002534&wlfareInfoReldBztpCd=02",
-  "inqNum": 1526,
+  "inqNum": 1527,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12210,7 +12210,7 @@
   "pvsn": "현물대여",
   "aply": "전화, 방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002168&wlfareInfoReldBztpCd=02",
-  "inqNum": 2005,
+  "inqNum": 2006,
   "lastMod": "20250806",
   "lifeCodes": [
    "001"
@@ -12226,7 +12226,7 @@
   "pvsn": "현금대여(융자)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002109&wlfareInfoReldBztpCd=02",
-  "inqNum": 2868,
+  "inqNum": 2873,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12243,7 +12243,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002841&wlfareInfoReldBztpCd=02",
-  "inqNum": 2297,
+  "inqNum": 2298,
   "lastMod": "20250806",
   "lifeCodes": [
    "001",
@@ -12344,7 +12344,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002834&wlfareInfoReldBztpCd=02",
-  "inqNum": 5093,
+  "inqNum": 5094,
   "lastMod": "20250805",
   "lifeCodes": [
    "001",
@@ -12394,7 +12394,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002900&wlfareInfoReldBztpCd=02",
-  "inqNum": 1663,
+  "inqNum": 1664,
   "lastMod": "20250802",
   "lifeCodes": [
    "001"
@@ -12427,7 +12427,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002044&wlfareInfoReldBztpCd=02",
-  "inqNum": 6466,
+  "inqNum": 6467,
   "lastMod": "20250802",
   "lifeCodes": [
    "001",
@@ -12510,7 +12510,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004546&wlfareInfoReldBztpCd=02",
-  "inqNum": 8592,
+  "inqNum": 8595,
   "lastMod": "20250801",
   "lifeCodes": [
    "001",
@@ -12527,7 +12527,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001797&wlfareInfoReldBztpCd=02",
-  "inqNum": 3937,
+  "inqNum": 3938,
   "lastMod": "20250801",
   "lifeCodes": [
    "001"
@@ -12560,7 +12560,7 @@
   "pvsn": "현물대여",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002102&wlfareInfoReldBztpCd=02",
-  "inqNum": 3282,
+  "inqNum": 3283,
   "lastMod": "20250801",
   "lifeCodes": [
    "001",
@@ -12593,7 +12593,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002914&wlfareInfoReldBztpCd=02",
-  "inqNum": 1551,
+  "inqNum": 1552,
   "lastMod": "20250801",
   "lifeCodes": [
    "001",
@@ -12610,7 +12610,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003343&wlfareInfoReldBztpCd=02",
-  "inqNum": 2473,
+  "inqNum": 2474,
   "lastMod": "20250801",
   "lifeCodes": [
    "001",
@@ -12661,7 +12661,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002629&wlfareInfoReldBztpCd=02",
-  "inqNum": 2317,
+  "inqNum": 2318,
   "lastMod": "20250731",
   "lifeCodes": [
    "001",
@@ -12678,7 +12678,7 @@
   "pvsn": "기타",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003129&wlfareInfoReldBztpCd=02",
-  "inqNum": 8837,
+  "inqNum": 8839,
   "lastMod": "20250731",
   "lifeCodes": [
    "001",
@@ -12695,7 +12695,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003044&wlfareInfoReldBztpCd=02",
-  "inqNum": 1531,
+  "inqNum": 1532,
   "lastMod": "20250731",
   "lifeCodes": [
    "001",
@@ -12763,7 +12763,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001569&wlfareInfoReldBztpCd=02",
-  "inqNum": 6982,
+  "inqNum": 6985,
   "lastMod": "20250731",
   "lifeCodes": [
    "001",
@@ -12797,7 +12797,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005816&wlfareInfoReldBztpCd=02",
-  "inqNum": 12429,
+  "inqNum": 12430,
   "lastMod": "20250730",
   "lifeCodes": [
    "001",
@@ -12933,7 +12933,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002163&wlfareInfoReldBztpCd=02",
-  "inqNum": 4242,
+  "inqNum": 4243,
   "lastMod": "20250726",
   "lifeCodes": [
    "001"
@@ -12949,7 +12949,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002167&wlfareInfoReldBztpCd=02",
-  "inqNum": 1768,
+  "inqNum": 1769,
   "lastMod": "20250726",
   "lifeCodes": [
    "001",
@@ -13000,7 +13000,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002077&wlfareInfoReldBztpCd=02",
-  "inqNum": 1265,
+  "inqNum": 1266,
   "lastMod": "20250726",
   "lifeCodes": [
    "001",
@@ -13017,7 +13017,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002450&wlfareInfoReldBztpCd=02",
-  "inqNum": 2032,
+  "inqNum": 2033,
   "lastMod": "20250725",
   "lifeCodes": [
    "001",
@@ -13034,7 +13034,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003060&wlfareInfoReldBztpCd=02",
-  "inqNum": 1820,
+  "inqNum": 1821,
   "lastMod": "20250725",
   "lifeCodes": [
    "001",
@@ -13117,7 +13117,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005561&wlfareInfoReldBztpCd=02",
-  "inqNum": 6633,
+  "inqNum": 6635,
   "lastMod": "20250718",
   "lifeCodes": [
    "001"
@@ -13133,7 +13133,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002105&wlfareInfoReldBztpCd=02",
-  "inqNum": 2775,
+  "inqNum": 2776,
   "lastMod": "20250718",
   "lifeCodes": [
    "001"
@@ -13165,7 +13165,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006143&wlfareInfoReldBztpCd=02",
-  "inqNum": 2514,
+  "inqNum": 2515,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13182,7 +13182,7 @@
   "pvsn": "기타, 프로그램/서비스(서비스)",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006141&wlfareInfoReldBztpCd=02",
-  "inqNum": 2227,
+  "inqNum": 2228,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13232,7 +13232,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003329&wlfareInfoReldBztpCd=02",
-  "inqNum": 3617,
+  "inqNum": 3619,
   "lastMod": "20250715",
   "lifeCodes": [
    "001"
@@ -13248,7 +13248,7 @@
   "pvsn": "현물대여",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000670&wlfareInfoReldBztpCd=02",
-  "inqNum": 6102,
+  "inqNum": 6103,
   "lastMod": "20250715",
   "lifeCodes": [
    "001"
@@ -13298,7 +13298,7 @@
   "pvsn": "현금대여(융자)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003313&wlfareInfoReldBztpCd=02",
-  "inqNum": 62683,
+  "inqNum": 62690,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13332,7 +13332,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003078&wlfareInfoReldBztpCd=02",
-  "inqNum": 3746,
+  "inqNum": 3747,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13383,7 +13383,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003066&wlfareInfoReldBztpCd=02",
-  "inqNum": 1371,
+  "inqNum": 1372,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13400,7 +13400,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003103&wlfareInfoReldBztpCd=02",
-  "inqNum": 1480,
+  "inqNum": 1481,
   "lastMod": "20250715",
   "lifeCodes": [
    "001",
@@ -13451,7 +13451,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003686&wlfareInfoReldBztpCd=02",
-  "inqNum": 3011,
+  "inqNum": 3012,
   "lastMod": "20250711",
   "lifeCodes": [
    "001"
@@ -13467,7 +13467,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002485&wlfareInfoReldBztpCd=02",
-  "inqNum": 5474,
+  "inqNum": 5475,
   "lastMod": "20250711",
   "lifeCodes": [
    "001"
@@ -13483,7 +13483,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003563&wlfareInfoReldBztpCd=02",
-  "inqNum": 1674,
+  "inqNum": 1675,
   "lastMod": "20250711",
   "lifeCodes": [
    "001",
@@ -13567,7 +13567,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001984&wlfareInfoReldBztpCd=02",
-  "inqNum": 1838,
+  "inqNum": 1839,
   "lastMod": "20250709",
   "lifeCodes": [
    "001"
@@ -13583,7 +13583,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001636&wlfareInfoReldBztpCd=02",
-  "inqNum": 1941,
+  "inqNum": 1942,
   "lastMod": "20250709",
   "lifeCodes": [
    "001"
@@ -13599,7 +13599,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001016&wlfareInfoReldBztpCd=02",
-  "inqNum": 1259,
+  "inqNum": 1260,
   "lastMod": "20250709",
   "lifeCodes": [
    "001",
@@ -13616,7 +13616,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002705&wlfareInfoReldBztpCd=02",
-  "inqNum": 1364,
+  "inqNum": 1365,
   "lastMod": "20250709",
   "lifeCodes": [
    "001",
@@ -13633,7 +13633,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002350&wlfareInfoReldBztpCd=02",
-  "inqNum": 2052,
+  "inqNum": 2053,
   "lastMod": "20250709",
   "lifeCodes": [
    "001",
@@ -13650,7 +13650,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003822&wlfareInfoReldBztpCd=02",
-  "inqNum": 2685,
+  "inqNum": 2686,
   "lastMod": "20250705",
   "lifeCodes": [
    "001",
@@ -13718,7 +13718,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000809&wlfareInfoReldBztpCd=02",
-  "inqNum": 1276,
+  "inqNum": 1277,
   "lastMod": "20250705",
   "lifeCodes": [
    "001",
@@ -13752,7 +13752,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002335&wlfareInfoReldBztpCd=02",
-  "inqNum": 4575,
+  "inqNum": 4576,
   "lastMod": "20250705",
   "lifeCodes": [
    "001",
@@ -13769,7 +13769,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001723&wlfareInfoReldBztpCd=02",
-  "inqNum": 1538,
+  "inqNum": 1539,
   "lastMod": "20250705",
   "lifeCodes": [
    "001"
@@ -13785,7 +13785,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006086&wlfareInfoReldBztpCd=02",
-  "inqNum": 3121,
+  "inqNum": 3123,
   "lastMod": "20250704",
   "lifeCodes": [
    "001"
@@ -13900,7 +13900,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001846&wlfareInfoReldBztpCd=02",
-  "inqNum": 2015,
+  "inqNum": 2016,
   "lastMod": "20250704",
   "lifeCodes": [
    "001"
@@ -13916,7 +13916,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001872&wlfareInfoReldBztpCd=02",
-  "inqNum": 4197,
+  "inqNum": 4198,
   "lastMod": "20250704",
   "lifeCodes": [
    "001"
@@ -13949,7 +13949,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006082&wlfareInfoReldBztpCd=02",
-  "inqNum": 3226,
+  "inqNum": 3228,
   "lastMod": "20250701",
   "lifeCodes": [
    "001"
@@ -13981,7 +13981,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005820&wlfareInfoReldBztpCd=02",
-  "inqNum": 12756,
+  "inqNum": 12760,
   "lastMod": "20250701",
   "lifeCodes": [
    "001",
@@ -14014,7 +14014,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002460&wlfareInfoReldBztpCd=02",
-  "inqNum": 1685,
+  "inqNum": 1686,
   "lastMod": "20250701",
   "lifeCodes": [
    "001"
@@ -14030,7 +14030,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002912&wlfareInfoReldBztpCd=02",
-  "inqNum": 2577,
+  "inqNum": 2578,
   "lastMod": "20250701",
   "lifeCodes": [
    "001"
@@ -14097,7 +14097,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002815&wlfareInfoReldBztpCd=02",
-  "inqNum": 3589,
+  "inqNum": 3590,
   "lastMod": "20250627",
   "lifeCodes": [
    "001"
@@ -14113,7 +14113,7 @@
   "pvsn": "현금지급",
   "aply": "우편, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001855&wlfareInfoReldBztpCd=02",
-  "inqNum": 1233,
+  "inqNum": 1234,
   "lastMod": "20250626",
   "lifeCodes": [
    "001"
@@ -14129,7 +14129,7 @@
   "pvsn": "기타",
   "aply": "우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001755&wlfareInfoReldBztpCd=02",
-  "inqNum": 16761,
+  "inqNum": 16762,
   "lastMod": "20250626",
   "lifeCodes": [
    "001",
@@ -14146,7 +14146,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001811&wlfareInfoReldBztpCd=02",
-  "inqNum": 1290,
+  "inqNum": 1291,
   "lastMod": "20250626",
   "lifeCodes": [
    "001",
@@ -14163,7 +14163,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001835&wlfareInfoReldBztpCd=02",
-  "inqNum": 1058,
+  "inqNum": 1059,
   "lastMod": "20250626",
   "lifeCodes": [
    "001",
@@ -14230,7 +14230,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003024&wlfareInfoReldBztpCd=02",
-  "inqNum": 1202,
+  "inqNum": 1203,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14247,7 +14247,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000381&wlfareInfoReldBztpCd=02",
-  "inqNum": 2658,
+  "inqNum": 2659,
   "lastMod": "20250625",
   "lifeCodes": [
    "001"
@@ -14263,7 +14263,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002029&wlfareInfoReldBztpCd=02",
-  "inqNum": 2055,
+  "inqNum": 2056,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14280,7 +14280,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003105&wlfareInfoReldBztpCd=02",
-  "inqNum": 1410,
+  "inqNum": 1411,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14331,7 +14331,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001814&wlfareInfoReldBztpCd=02",
-  "inqNum": 1427,
+  "inqNum": 1428,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14348,7 +14348,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003666&wlfareInfoReldBztpCd=02",
-  "inqNum": 4123,
+  "inqNum": 4124,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14415,7 +14415,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000385&wlfareInfoReldBztpCd=02",
-  "inqNum": 3829,
+  "inqNum": 3830,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14432,7 +14432,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003156&wlfareInfoReldBztpCd=02",
-  "inqNum": 7181,
+  "inqNum": 7182,
   "lastMod": "20250625",
   "lifeCodes": [
    "001",
@@ -14531,7 +14531,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001742&wlfareInfoReldBztpCd=02",
-  "inqNum": 5491,
+  "inqNum": 5492,
   "lastMod": "20250619",
   "lifeCodes": [
    "001"
@@ -14564,7 +14564,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002680&wlfareInfoReldBztpCd=02",
-  "inqNum": 4320,
+  "inqNum": 4321,
   "lastMod": "20250619",
   "lifeCodes": [
    "001"
@@ -14580,7 +14580,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002050&wlfareInfoReldBztpCd=02",
-  "inqNum": 2130,
+  "inqNum": 2131,
   "lastMod": "20250619",
   "lifeCodes": [
    "001"
@@ -14630,7 +14630,7 @@
   "pvsn": "기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002051&wlfareInfoReldBztpCd=02",
-  "inqNum": 3098,
+  "inqNum": 3099,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14647,7 +14647,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001815&wlfareInfoReldBztpCd=02",
-  "inqNum": 5313,
+  "inqNum": 5314,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14681,7 +14681,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002859&wlfareInfoReldBztpCd=02",
-  "inqNum": 8080,
+  "inqNum": 8082,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14698,7 +14698,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001904&wlfareInfoReldBztpCd=02",
-  "inqNum": 15360,
+  "inqNum": 15367,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14749,7 +14749,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002310&wlfareInfoReldBztpCd=02",
-  "inqNum": 2135,
+  "inqNum": 2136,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14766,7 +14766,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001790&wlfareInfoReldBztpCd=02",
-  "inqNum": 2332,
+  "inqNum": 2333,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14783,7 +14783,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004460&wlfareInfoReldBztpCd=02",
-  "inqNum": 8624,
+  "inqNum": 8626,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -14800,7 +14800,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003163&wlfareInfoReldBztpCd=02",
-  "inqNum": 15683,
+  "inqNum": 15684,
   "lastMod": "20250619",
   "lifeCodes": [
    "001",
@@ -15015,7 +15015,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001698&wlfareInfoReldBztpCd=02",
-  "inqNum": 2887,
+  "inqNum": 2888,
   "lastMod": "20250614",
   "lifeCodes": [
    "001"
@@ -15031,7 +15031,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003042&wlfareInfoReldBztpCd=02",
-  "inqNum": 2197,
+  "inqNum": 2199,
   "lastMod": "20250614",
   "lifeCodes": [
    "001"
@@ -15063,7 +15063,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001941&wlfareInfoReldBztpCd=02",
-  "inqNum": 8468,
+  "inqNum": 8476,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15080,7 +15080,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001719&wlfareInfoReldBztpCd=02",
-  "inqNum": 1917,
+  "inqNum": 1918,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15131,7 +15131,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002739&wlfareInfoReldBztpCd=02",
-  "inqNum": 1542,
+  "inqNum": 1543,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15165,7 +15165,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000003&wlfareInfoReldBztpCd=02",
-  "inqNum": 3045,
+  "inqNum": 3046,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15216,7 +15216,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000362&wlfareInfoReldBztpCd=02",
-  "inqNum": 1485,
+  "inqNum": 1486,
   "lastMod": "20250614",
   "lifeCodes": [
    "001"
@@ -15249,7 +15249,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002591&wlfareInfoReldBztpCd=02",
-  "inqNum": 1714,
+  "inqNum": 1715,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15266,7 +15266,7 @@
   "pvsn": "현금지급, 기타",
   "aply": "전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003035&wlfareInfoReldBztpCd=02",
-  "inqNum": 9155,
+  "inqNum": 9157,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15300,7 +15300,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004447&wlfareInfoReldBztpCd=02",
-  "inqNum": 4678,
+  "inqNum": 4679,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15351,7 +15351,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002009&wlfareInfoReldBztpCd=02",
-  "inqNum": 4186,
+  "inqNum": 4187,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15419,7 +15419,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001908&wlfareInfoReldBztpCd=02",
-  "inqNum": 3061,
+  "inqNum": 3062,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15453,7 +15453,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002197&wlfareInfoReldBztpCd=02",
-  "inqNum": 3166,
+  "inqNum": 3167,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15486,7 +15486,7 @@
   "pvsn": "감면",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002701&wlfareInfoReldBztpCd=02",
-  "inqNum": 1885,
+  "inqNum": 1886,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15535,7 +15535,7 @@
   "pvsn": "현물지급, 현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000610&wlfareInfoReldBztpCd=02",
-  "inqNum": 1069,
+  "inqNum": 1070,
   "lastMod": "20250614",
   "lifeCodes": [
    "001",
@@ -15619,7 +15619,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004354&wlfareInfoReldBztpCd=02",
-  "inqNum": 3632,
+  "inqNum": 3633,
   "lastMod": "20250611",
   "lifeCodes": [
    "001"
@@ -15652,7 +15652,7 @@
   "pvsn": "시설입소, 기타, 현물지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002597&wlfareInfoReldBztpCd=02",
-  "inqNum": 4864,
+  "inqNum": 4865,
   "lastMod": "20250611",
   "lifeCodes": [
    "001",
@@ -15669,7 +15669,7 @@
   "pvsn": "현금지급",
   "aply": "방문, E-mail, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003911&wlfareInfoReldBztpCd=02",
-  "inqNum": 2802,
+  "inqNum": 2804,
   "lastMod": "20250610",
   "lifeCodes": [
    "001",
@@ -15686,7 +15686,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004584&wlfareInfoReldBztpCd=02",
-  "inqNum": 5559,
+  "inqNum": 5560,
   "lastMod": "20250610",
   "lifeCodes": [
    "001"
@@ -15702,7 +15702,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002477&wlfareInfoReldBztpCd=02",
-  "inqNum": 3265,
+  "inqNum": 3266,
   "lastMod": "20250610",
   "lifeCodes": [
    "001"
@@ -15769,7 +15769,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002602&wlfareInfoReldBztpCd=02",
-  "inqNum": 10365,
+  "inqNum": 10366,
   "lastMod": "20250610",
   "lifeCodes": [
    "001",
@@ -15786,7 +15786,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002461&wlfareInfoReldBztpCd=02",
-  "inqNum": 3104,
+  "inqNum": 3105,
   "lastMod": "20250610",
   "lifeCodes": [
    "001",
@@ -15836,7 +15836,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004248&wlfareInfoReldBztpCd=02",
-  "inqNum": 4230,
+  "inqNum": 4231,
   "lastMod": "20250606",
   "lifeCodes": [
    "001",
@@ -15886,7 +15886,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002207&wlfareInfoReldBztpCd=02",
-  "inqNum": 2553,
+  "inqNum": 2556,
   "lastMod": "20250606",
   "lifeCodes": [
    "001"
@@ -15902,7 +15902,7 @@
   "pvsn": "실물바우처",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002828&wlfareInfoReldBztpCd=02",
-  "inqNum": 1678,
+  "inqNum": 1679,
   "lastMod": "20250606",
   "lifeCodes": [
    "001",
@@ -15919,7 +15919,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002712&wlfareInfoReldBztpCd=02",
-  "inqNum": 2606,
+  "inqNum": 2607,
   "lastMod": "20250606",
   "lifeCodes": [
    "001"
@@ -15935,7 +15935,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002547&wlfareInfoReldBztpCd=02",
-  "inqNum": 15963,
+  "inqNum": 15968,
   "lastMod": "20250606",
   "lifeCodes": [
    "001",
@@ -15952,7 +15952,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002565&wlfareInfoReldBztpCd=02",
-  "inqNum": 5491,
+  "inqNum": 5492,
   "lastMod": "20250606",
   "lifeCodes": [
    "001"
@@ -16120,7 +16120,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004788&wlfareInfoReldBztpCd=02",
-  "inqNum": 7266,
+  "inqNum": 7268,
   "lastMod": "20250603",
   "lifeCodes": [
    "001"
@@ -16136,7 +16136,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004540&wlfareInfoReldBztpCd=02",
-  "inqNum": 2477,
+  "inqNum": 2478,
   "lastMod": "20250603",
   "lifeCodes": [
    "001",
@@ -16169,7 +16169,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002369&wlfareInfoReldBztpCd=02",
-  "inqNum": 2006,
+  "inqNum": 2007,
   "lastMod": "20250603",
   "lifeCodes": [
    "001"
@@ -16218,7 +16218,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002968&wlfareInfoReldBztpCd=02",
-  "inqNum": 1924,
+  "inqNum": 1925,
   "lastMod": "20250603",
   "lifeCodes": [
    "001"
@@ -16268,7 +16268,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002595&wlfareInfoReldBztpCd=02",
-  "inqNum": 1187,
+  "inqNum": 1188,
   "lastMod": "20250603",
   "lifeCodes": [
    "001",
@@ -16336,7 +16336,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002983&wlfareInfoReldBztpCd=02",
-  "inqNum": 14788,
+  "inqNum": 14789,
   "lastMod": "20250603",
   "lifeCodes": [
    "001",
@@ -16353,7 +16353,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001832&wlfareInfoReldBztpCd=02",
-  "inqNum": 11924,
+  "inqNum": 11925,
   "lastMod": "20250603",
   "lifeCodes": [
    "001",
@@ -16387,7 +16387,7 @@
   "pvsn": "감면",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002824&wlfareInfoReldBztpCd=02",
-  "inqNum": 3470,
+  "inqNum": 3471,
   "lastMod": "20250603",
   "lifeCodes": [
    "001",
@@ -16469,7 +16469,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005235&wlfareInfoReldBztpCd=02",
-  "inqNum": 4587,
+  "inqNum": 4588,
   "lastMod": "20250531",
   "lifeCodes": [
    "001"
@@ -16533,7 +16533,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001680&wlfareInfoReldBztpCd=02",
-  "inqNum": 4061,
+  "inqNum": 4063,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16550,7 +16550,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002176&wlfareInfoReldBztpCd=02",
-  "inqNum": 2870,
+  "inqNum": 2871,
   "lastMod": "20250531",
   "lifeCodes": [
    "001"
@@ -16615,7 +16615,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002722&wlfareInfoReldBztpCd=02",
-  "inqNum": 3529,
+  "inqNum": 3530,
   "lastMod": "20250531",
   "lifeCodes": [
    "001"
@@ -16648,7 +16648,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001976&wlfareInfoReldBztpCd=02",
-  "inqNum": 3021,
+  "inqNum": 3023,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16716,7 +16716,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002125&wlfareInfoReldBztpCd=02",
-  "inqNum": 1815,
+  "inqNum": 1816,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16733,7 +16733,7 @@
   "pvsn": "기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002126&wlfareInfoReldBztpCd=02",
-  "inqNum": 1990,
+  "inqNum": 1991,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16750,7 +16750,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001570&wlfareInfoReldBztpCd=02",
-  "inqNum": 1501,
+  "inqNum": 1502,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16784,7 +16784,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001650&wlfareInfoReldBztpCd=02",
-  "inqNum": 1156,
+  "inqNum": 1157,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16801,7 +16801,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002573&wlfareInfoReldBztpCd=02",
-  "inqNum": 1081,
+  "inqNum": 1082,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16869,7 +16869,7 @@
   "pvsn": "현금지급, 프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002055&wlfareInfoReldBztpCd=02",
-  "inqNum": 11653,
+  "inqNum": 11654,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16886,7 +16886,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003106&wlfareInfoReldBztpCd=02",
-  "inqNum": 1564,
+  "inqNum": 1565,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16954,7 +16954,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002585&wlfareInfoReldBztpCd=02",
-  "inqNum": 1571,
+  "inqNum": 1572,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -16971,7 +16971,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 전화, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002836&wlfareInfoReldBztpCd=02",
-  "inqNum": 2691,
+  "inqNum": 2692,
   "lastMod": "20250531",
   "lifeCodes": [
    "001",
@@ -17005,7 +17005,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002444&wlfareInfoReldBztpCd=02",
-  "inqNum": 12146,
+  "inqNum": 12150,
   "lastMod": "20250531",
   "lifeCodes": [
    "001"
@@ -17088,7 +17088,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000445&wlfareInfoReldBztpCd=02",
-  "inqNum": 1982,
+  "inqNum": 1984,
   "lastMod": "20240723",
   "lifeCodes": [
    "001",
@@ -17105,7 +17105,7 @@
   "pvsn": "현금지급, 기타",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002866&wlfareInfoReldBztpCd=02",
-  "inqNum": 1382,
+  "inqNum": 1383,
   "lastMod": "20240723",
   "lifeCodes": [
    "001",
@@ -17138,7 +17138,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 전화, 우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003395&wlfareInfoReldBztpCd=02",
-  "inqNum": 1391,
+  "inqNum": 1392,
   "lastMod": "20240709",
   "lifeCodes": [
    "001",
@@ -17155,7 +17155,7 @@
   "pvsn": "기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005632&wlfareInfoReldBztpCd=02",
-  "inqNum": 1699,
+  "inqNum": 1700,
   "lastMod": "20240706",
   "lifeCodes": [
    "001"
@@ -17171,7 +17171,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001779&wlfareInfoReldBztpCd=02",
-  "inqNum": 1673,
+  "inqNum": 1674,
   "lastMod": "20240706",
   "lifeCodes": [
    "001",
@@ -17238,7 +17238,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002347&wlfareInfoReldBztpCd=02",
-  "inqNum": 1665,
+  "inqNum": 1666,
   "lastMod": "20240615",
   "lifeCodes": [
    "001"
@@ -17271,7 +17271,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000558&wlfareInfoReldBztpCd=02",
-  "inqNum": 2262,
+  "inqNum": 2263,
   "lastMod": "20240614",
   "lifeCodes": [
    "001"
@@ -17287,7 +17287,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003012&wlfareInfoReldBztpCd=02",
-  "inqNum": 1449,
+  "inqNum": 1450,
   "lastMod": "20240614",
   "lifeCodes": [
    "001",
@@ -17304,7 +17304,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002613&wlfareInfoReldBztpCd=02",
-  "inqNum": 2326,
+  "inqNum": 2327,
   "lastMod": "20240614",
   "lifeCodes": [
    "001"
@@ -17337,7 +17337,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002679&wlfareInfoReldBztpCd=02",
-  "inqNum": 5007,
+  "inqNum": 5008,
   "lastMod": "20240614",
   "lifeCodes": [
    "001",
@@ -17354,7 +17354,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002750&wlfareInfoReldBztpCd=02",
-  "inqNum": 2307,
+  "inqNum": 2308,
   "lastMod": "20240613",
   "lifeCodes": [
    "001",
@@ -17388,7 +17388,7 @@
   "pvsn": "기타",
   "aply": "우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002542&wlfareInfoReldBztpCd=02",
-  "inqNum": 1670,
+  "inqNum": 1671,
   "lastMod": "20240606",
   "lifeCodes": [
    "001",
@@ -17455,7 +17455,7 @@
   "pvsn": "현금지급",
   "aply": "E-mail, 팩스, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001756&wlfareInfoReldBztpCd=02",
-  "inqNum": 1622,
+  "inqNum": 1623,
   "lastMod": "20240531",
   "lifeCodes": [
    "001",
@@ -17505,7 +17505,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002113&wlfareInfoReldBztpCd=02",
-  "inqNum": 1523,
+  "inqNum": 1524,
   "lastMod": "20231017",
   "lifeCodes": [
    "001",
@@ -17522,7 +17522,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001700&wlfareInfoReldBztpCd=02",
-  "inqNum": 2162,
+  "inqNum": 2163,
   "lastMod": "20231017",
   "lifeCodes": [
    "001",
@@ -17689,7 +17689,7 @@
   "pvsn": "기타",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003481&wlfareInfoReldBztpCd=02",
-  "inqNum": 2496,
+  "inqNum": 2498,
   "lastMod": "20230623",
   "lifeCodes": [
    "001",
@@ -17791,7 +17791,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002480&wlfareInfoReldBztpCd=02",
-  "inqNum": 1772,
+  "inqNum": 1773,
   "lastMod": "20220711",
   "lifeCodes": [
    "001",
@@ -17825,7 +17825,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006562&wlfareInfoReldBztpCd=02",
-  "inqNum": 29,
+  "inqNum": 31,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -17873,7 +17873,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 우편, E-mail",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005279&wlfareInfoReldBztpCd=02",
-  "inqNum": 2002,
+  "inqNum": 2003,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -17921,7 +17921,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004799&wlfareInfoReldBztpCd=02",
-  "inqNum": 5909,
+  "inqNum": 5910,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18001,7 +18001,7 @@
   "pvsn": "현물지급, 현금지급",
   "aply": "인터넷, 우편, 방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003363&wlfareInfoReldBztpCd=02",
-  "inqNum": 4652,
+  "inqNum": 4653,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18017,7 +18017,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002222&wlfareInfoReldBztpCd=02",
-  "inqNum": 1144,
+  "inqNum": 1145,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18081,7 +18081,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002221&wlfareInfoReldBztpCd=02",
-  "inqNum": 1516,
+  "inqNum": 1517,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18097,7 +18097,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002326&wlfareInfoReldBztpCd=02",
-  "inqNum": 1175,
+  "inqNum": 1176,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18129,7 +18129,7 @@
   "pvsn": "현물지급, 현금지급",
   "aply": "전화, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002127&wlfareInfoReldBztpCd=02",
-  "inqNum": 2473,
+  "inqNum": 2474,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18145,7 +18145,7 @@
   "pvsn": "실물바우처",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002258&wlfareInfoReldBztpCd=02",
-  "inqNum": 1081,
+  "inqNum": 1082,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18161,7 +18161,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002260&wlfareInfoReldBztpCd=02",
-  "inqNum": 1245,
+  "inqNum": 1246,
   "lastMod": "20260714",
   "lifeCodes": [
    "002"
@@ -18225,7 +18225,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006557&wlfareInfoReldBztpCd=02",
-  "inqNum": 66,
+  "inqNum": 67,
   "lastMod": "20260710",
   "lifeCodes": [
    "002"
@@ -18241,7 +18241,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006553&wlfareInfoReldBztpCd=02",
-  "inqNum": 65,
+  "inqNum": 66,
   "lastMod": "20260710",
   "lifeCodes": [
    "002"
@@ -18353,7 +18353,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005409&wlfareInfoReldBztpCd=02",
-  "inqNum": 33098,
+  "inqNum": 33102,
   "lastMod": "20260709",
   "lifeCodes": [
    "002"
@@ -18369,7 +18369,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005356&wlfareInfoReldBztpCd=02",
-  "inqNum": 5150,
+  "inqNum": 5151,
   "lastMod": "20260709",
   "lifeCodes": [
    "002"
@@ -18385,7 +18385,7 @@
   "pvsn": "기타",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001764&wlfareInfoReldBztpCd=02",
-  "inqNum": 1665,
+  "inqNum": 1666,
   "lastMod": "20260709",
   "lifeCodes": [
    "002"
@@ -18513,7 +18513,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006007&wlfareInfoReldBztpCd=02",
-  "inqNum": 1795,
+  "inqNum": 1796,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18593,7 +18593,7 @@
   "pvsn": "감면",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005267&wlfareInfoReldBztpCd=02",
-  "inqNum": 2622,
+  "inqNum": 2624,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18609,7 +18609,7 @@
   "pvsn": "기타",
   "aply": "방문, 모바일앱",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005244&wlfareInfoReldBztpCd=02",
-  "inqNum": 32570,
+  "inqNum": 32572,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18625,7 +18625,7 @@
   "pvsn": "감면",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005240&wlfareInfoReldBztpCd=02",
-  "inqNum": 4030,
+  "inqNum": 4032,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18673,7 +18673,7 @@
   "pvsn": "감면",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002414&wlfareInfoReldBztpCd=02",
-  "inqNum": 1722,
+  "inqNum": 1723,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18705,7 +18705,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002796&wlfareInfoReldBztpCd=02",
-  "inqNum": 2012,
+  "inqNum": 2013,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18737,7 +18737,7 @@
   "pvsn": "프로그램/서비스(서비스), 전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001965&wlfareInfoReldBztpCd=02",
-  "inqNum": 2461,
+  "inqNum": 2463,
   "lastMod": "20260704",
   "lifeCodes": [
    "002"
@@ -18961,7 +18961,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006389&wlfareInfoReldBztpCd=02",
-  "inqNum": 126,
+  "inqNum": 130,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19057,7 +19057,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005883&wlfareInfoReldBztpCd=02",
-  "inqNum": 13373,
+  "inqNum": 13374,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19217,7 +19217,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005410&wlfareInfoReldBztpCd=02",
-  "inqNum": 12083,
+  "inqNum": 12084,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19249,7 +19249,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005341&wlfareInfoReldBztpCd=02",
-  "inqNum": 3555,
+  "inqNum": 3560,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19281,7 +19281,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005318&wlfareInfoReldBztpCd=02",
-  "inqNum": 3912,
+  "inqNum": 3913,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19297,7 +19297,7 @@
   "pvsn": "감면",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005317&wlfareInfoReldBztpCd=02",
-  "inqNum": 3844,
+  "inqNum": 3846,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19329,7 +19329,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": "전화, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005273&wlfareInfoReldBztpCd=02",
-  "inqNum": 1554,
+  "inqNum": 1555,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19361,7 +19361,7 @@
   "pvsn": "감면",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005166&wlfareInfoReldBztpCd=02",
-  "inqNum": 1183,
+  "inqNum": 1184,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19473,7 +19473,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002957&wlfareInfoReldBztpCd=02",
-  "inqNum": 3361,
+  "inqNum": 3362,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19553,7 +19553,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002934&wlfareInfoReldBztpCd=02",
-  "inqNum": 2114,
+  "inqNum": 2115,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19633,7 +19633,7 @@
   "pvsn": "감면",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001574&wlfareInfoReldBztpCd=02",
-  "inqNum": 3706,
+  "inqNum": 3707,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19681,7 +19681,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001575&wlfareInfoReldBztpCd=02",
-  "inqNum": 3725,
+  "inqNum": 3726,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19697,7 +19697,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004008&wlfareInfoReldBztpCd=02",
-  "inqNum": 2661,
+  "inqNum": 2662,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19777,7 +19777,7 @@
   "pvsn": "실물바우처",
   "aply": "방문, 인터넷, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003820&wlfareInfoReldBztpCd=02",
-  "inqNum": 17581,
+  "inqNum": 17584,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19793,7 +19793,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002794&wlfareInfoReldBztpCd=02",
-  "inqNum": 1482,
+  "inqNum": 1483,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19825,7 +19825,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003122&wlfareInfoReldBztpCd=02",
-  "inqNum": 2119,
+  "inqNum": 2120,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19857,7 +19857,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002888&wlfareInfoReldBztpCd=02",
-  "inqNum": 1855,
+  "inqNum": 1856,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19873,7 +19873,7 @@
   "pvsn": "현금지급",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002533&wlfareInfoReldBztpCd=02",
-  "inqNum": 1266,
+  "inqNum": 1267,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19889,7 +19889,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002577&wlfareInfoReldBztpCd=02",
-  "inqNum": 2341,
+  "inqNum": 2342,
   "lastMod": "20260703",
   "lifeCodes": [
    "002"
@@ -19937,7 +19937,7 @@
   "pvsn": "현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005954&wlfareInfoReldBztpCd=02",
-  "inqNum": 2537,
+  "inqNum": 2538,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20017,7 +20017,7 @@
   "pvsn": "프로그램/서비스(서비스), 전자바우처(바우처), 실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002695&wlfareInfoReldBztpCd=02",
-  "inqNum": 8025,
+  "inqNum": 8032,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20033,7 +20033,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001847&wlfareInfoReldBztpCd=02",
-  "inqNum": 2361,
+  "inqNum": 2362,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20049,7 +20049,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002142&wlfareInfoReldBztpCd=02",
-  "inqNum": 1958,
+  "inqNum": 1959,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20065,7 +20065,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000552&wlfareInfoReldBztpCd=02",
-  "inqNum": 1714,
+  "inqNum": 1715,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20097,7 +20097,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002754&wlfareInfoReldBztpCd=02",
-  "inqNum": 2166,
+  "inqNum": 2170,
   "lastMod": "20260630",
   "lifeCodes": [
    "002"
@@ -20161,7 +20161,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002720&wlfareInfoReldBztpCd=02",
-  "inqNum": 1578,
+  "inqNum": 1580,
   "lastMod": "20260619",
   "lifeCodes": [
    "002"
@@ -20369,7 +20369,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005659&wlfareInfoReldBztpCd=02",
-  "inqNum": 3654,
+  "inqNum": 3657,
   "lastMod": "20250814",
   "lifeCodes": [
    "002"
@@ -20433,7 +20433,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004013&wlfareInfoReldBztpCd=02",
-  "inqNum": 7114,
+  "inqNum": 7116,
   "lastMod": "20250814",
   "lifeCodes": [
    "002"
@@ -20449,7 +20449,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003723&wlfareInfoReldBztpCd=02",
-  "inqNum": 1298,
+  "inqNum": 1300,
   "lastMod": "20250814",
   "lifeCodes": [
    "002"
@@ -20561,7 +20561,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005566&wlfareInfoReldBztpCd=02",
-  "inqNum": 14175,
+  "inqNum": 14179,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20593,7 +20593,7 @@
   "pvsn": "감면",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005226&wlfareInfoReldBztpCd=02",
-  "inqNum": 7902,
+  "inqNum": 7903,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20641,7 +20641,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001646&wlfareInfoReldBztpCd=02",
-  "inqNum": 1908,
+  "inqNum": 1909,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20657,7 +20657,7 @@
   "pvsn": "기타",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002332&wlfareInfoReldBztpCd=02",
-  "inqNum": 6155,
+  "inqNum": 6156,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20689,7 +20689,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003084&wlfareInfoReldBztpCd=02",
-  "inqNum": 1869,
+  "inqNum": 1870,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20705,7 +20705,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "방문, 우편, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000246&wlfareInfoReldBztpCd=02",
-  "inqNum": 1645,
+  "inqNum": 1646,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20753,7 +20753,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002230&wlfareInfoReldBztpCd=02",
-  "inqNum": 1448,
+  "inqNum": 1449,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20769,7 +20769,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002441&wlfareInfoReldBztpCd=02",
-  "inqNum": 2102,
+  "inqNum": 2103,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20785,7 +20785,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002279&wlfareInfoReldBztpCd=02",
-  "inqNum": 1651,
+  "inqNum": 1652,
   "lastMod": "20250812",
   "lifeCodes": [
    "002"
@@ -20817,7 +20817,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001765&wlfareInfoReldBztpCd=02",
-  "inqNum": 1945,
+  "inqNum": 1946,
   "lastMod": "20250807",
   "lifeCodes": [
    "002"
@@ -20833,7 +20833,7 @@
   "pvsn": "현금지급, 자원봉사",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001902&wlfareInfoReldBztpCd=02",
-  "inqNum": 3956,
+  "inqNum": 3957,
   "lastMod": "20250807",
   "lifeCodes": [
    "002"
@@ -20849,7 +20849,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003597&wlfareInfoReldBztpCd=02",
-  "inqNum": 17014,
+  "inqNum": 17015,
   "lastMod": "20250807",
   "lifeCodes": [
    "002"
@@ -20913,7 +20913,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002561&wlfareInfoReldBztpCd=02",
-  "inqNum": 2184,
+  "inqNum": 2185,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -20929,7 +20929,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003290&wlfareInfoReldBztpCd=02",
-  "inqNum": 5321,
+  "inqNum": 5322,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -20961,7 +20961,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000871&wlfareInfoReldBztpCd=02",
-  "inqNum": 1518,
+  "inqNum": 1519,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -20977,7 +20977,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002764&wlfareInfoReldBztpCd=02",
-  "inqNum": 3294,
+  "inqNum": 3295,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -20993,7 +20993,7 @@
   "pvsn": "현물지급",
   "aply": "방문, 전화, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002025&wlfareInfoReldBztpCd=02",
-  "inqNum": 4099,
+  "inqNum": 4100,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -21009,7 +21009,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002053&wlfareInfoReldBztpCd=02",
-  "inqNum": 2557,
+  "inqNum": 2558,
   "lastMod": "20250806",
   "lifeCodes": [
    "002"
@@ -21041,7 +21041,7 @@
   "pvsn": "전자바우처(바우처), 현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000290&wlfareInfoReldBztpCd=02",
-  "inqNum": 3285,
+  "inqNum": 3286,
   "lastMod": "20250805",
   "lifeCodes": [
    "002"
@@ -21089,7 +21089,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002892&wlfareInfoReldBztpCd=02",
-  "inqNum": 1249,
+  "inqNum": 1250,
   "lastMod": "20250802",
   "lifeCodes": [
    "002"
@@ -21105,7 +21105,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002615&wlfareInfoReldBztpCd=02",
-  "inqNum": 5253,
+  "inqNum": 5254,
   "lastMod": "20250802",
   "lifeCodes": [
    "002"
@@ -21169,7 +21169,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004542&wlfareInfoReldBztpCd=02",
-  "inqNum": 2927,
+  "inqNum": 2928,
   "lastMod": "20250801",
   "lifeCodes": [
    "002"
@@ -21185,7 +21185,7 @@
   "pvsn": "실물바우처",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002106&wlfareInfoReldBztpCd=02",
-  "inqNum": 3278,
+  "inqNum": 3279,
   "lastMod": "20250801",
   "lifeCodes": [
    "002"
@@ -21361,7 +21361,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001773&wlfareInfoReldBztpCd=02",
-  "inqNum": 1251,
+  "inqNum": 1252,
   "lastMod": "20250729",
   "lifeCodes": [
    "002"
@@ -21393,7 +21393,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005726&wlfareInfoReldBztpCd=02",
-  "inqNum": 6760,
+  "inqNum": 6761,
   "lastMod": "20250715",
   "lifeCodes": [
    "002"
@@ -21441,7 +21441,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003065&wlfareInfoReldBztpCd=02",
-  "inqNum": 3608,
+  "inqNum": 3609,
   "lastMod": "20250715",
   "lifeCodes": [
    "002"
@@ -21473,7 +21473,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004543&wlfareInfoReldBztpCd=02",
-  "inqNum": 3481,
+  "inqNum": 3482,
   "lastMod": "20250711",
   "lifeCodes": [
    "002"
@@ -21505,7 +21505,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002054&wlfareInfoReldBztpCd=02",
-  "inqNum": 2108,
+  "inqNum": 2110,
   "lastMod": "20250711",
   "lifeCodes": [
    "002"
@@ -21537,7 +21537,7 @@
   "pvsn": "지역화폐",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006021&wlfareInfoReldBztpCd=02",
-  "inqNum": 2973,
+  "inqNum": 2974,
   "lastMod": "20250709",
   "lifeCodes": [
    "002"
@@ -21569,7 +21569,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001582&wlfareInfoReldBztpCd=02",
-  "inqNum": 1255,
+  "inqNum": 1256,
   "lastMod": "20250709",
   "lifeCodes": [
    "002"
@@ -21617,7 +21617,7 @@
   "pvsn": "현금지급, 기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004715&wlfareInfoReldBztpCd=02",
-  "inqNum": 2457,
+  "inqNum": 2458,
   "lastMod": "20250705",
   "lifeCodes": [
    "002"
@@ -21633,7 +21633,7 @@
   "pvsn": "감면",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003967&wlfareInfoReldBztpCd=02",
-  "inqNum": 33742,
+  "inqNum": 33745,
   "lastMod": "20250705",
   "lifeCodes": [
    "002"
@@ -21649,7 +21649,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002858&wlfareInfoReldBztpCd=02",
-  "inqNum": 1617,
+  "inqNum": 1618,
   "lastMod": "20250705",
   "lifeCodes": [
    "002"
@@ -21713,7 +21713,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 모바일",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001975&wlfareInfoReldBztpCd=02",
-  "inqNum": 1666,
+  "inqNum": 1667,
   "lastMod": "20250704",
   "lifeCodes": [
    "002"
@@ -21729,7 +21729,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002552&wlfareInfoReldBztpCd=02",
-  "inqNum": 2915,
+  "inqNum": 2916,
   "lastMod": "20250704",
   "lifeCodes": [
    "002"
@@ -21777,7 +21777,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001916&wlfareInfoReldBztpCd=02",
-  "inqNum": 2010,
+  "inqNum": 2011,
   "lastMod": "20250701",
   "lifeCodes": [
    "002"
@@ -21857,7 +21857,7 @@
   "pvsn": "현금지급, 실물바우처, 전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002907&wlfareInfoReldBztpCd=02",
-  "inqNum": 100448,
+  "inqNum": 100449,
   "lastMod": "20250627",
   "lifeCodes": [
    "002"
@@ -21889,7 +21889,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002244&wlfareInfoReldBztpCd=02",
-  "inqNum": 1360,
+  "inqNum": 1361,
   "lastMod": "20250626",
   "lifeCodes": [
    "002"
@@ -21905,7 +21905,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005482&wlfareInfoReldBztpCd=02",
-  "inqNum": 15086,
+  "inqNum": 15093,
   "lastMod": "20250625",
   "lifeCodes": [
    "002"
@@ -21953,7 +21953,7 @@
   "pvsn": "현물지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004300&wlfareInfoReldBztpCd=02",
-  "inqNum": 16638,
+  "inqNum": 16639,
   "lastMod": "20250625",
   "lifeCodes": [
    "002"
@@ -22033,7 +22033,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000349&wlfareInfoReldBztpCd=02",
-  "inqNum": 1367,
+  "inqNum": 1368,
   "lastMod": "20250619",
   "lifeCodes": [
    "002"
@@ -22049,7 +22049,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 우편",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003601&wlfareInfoReldBztpCd=02",
-  "inqNum": 3355,
+  "inqNum": 3357,
   "lastMod": "20250619",
   "lifeCodes": [
    "002"
@@ -22065,7 +22065,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000410&wlfareInfoReldBztpCd=02",
-  "inqNum": 2697,
+  "inqNum": 2698,
   "lastMod": "20250619",
   "lifeCodes": [
    "002"
@@ -22097,7 +22097,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003581&wlfareInfoReldBztpCd=02",
-  "inqNum": 14606,
+  "inqNum": 14607,
   "lastMod": "20250619",
   "lifeCodes": [
    "002"
@@ -22209,7 +22209,7 @@
   "pvsn": "현금지급",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006014&wlfareInfoReldBztpCd=02",
-  "inqNum": 28442,
+  "inqNum": 28447,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22257,7 +22257,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005963&wlfareInfoReldBztpCd=02",
-  "inqNum": 2910,
+  "inqNum": 2912,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22305,7 +22305,7 @@
   "pvsn": "현물지급",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005581&wlfareInfoReldBztpCd=02",
-  "inqNum": 4056,
+  "inqNum": 4065,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22401,7 +22401,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002424&wlfareInfoReldBztpCd=02",
-  "inqNum": 3582,
+  "inqNum": 3583,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22481,7 +22481,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000726&wlfareInfoReldBztpCd=02",
-  "inqNum": 3321,
+  "inqNum": 3322,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22513,7 +22513,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003099&wlfareInfoReldBztpCd=02",
-  "inqNum": 1587,
+  "inqNum": 1588,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22561,7 +22561,7 @@
   "pvsn": "현금지급, 현물지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001693&wlfareInfoReldBztpCd=02",
-  "inqNum": 2357,
+  "inqNum": 2358,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22641,7 +22641,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002110&wlfareInfoReldBztpCd=02",
-  "inqNum": 2120,
+  "inqNum": 2121,
   "lastMod": "20250614",
   "lifeCodes": [
    "002"
@@ -22673,7 +22673,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001799&wlfareInfoReldBztpCd=02",
-  "inqNum": 961,
+  "inqNum": 962,
   "lastMod": "20250611",
   "lifeCodes": [
    "002"
@@ -22721,7 +22721,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "인터넷, 우편, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004239&wlfareInfoReldBztpCd=02",
-  "inqNum": 4559,
+  "inqNum": 4561,
   "lastMod": "20250611",
   "lifeCodes": [
    "002"
@@ -22785,7 +22785,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005072&wlfareInfoReldBztpCd=02",
-  "inqNum": 10274,
+  "inqNum": 10278,
   "lastMod": "20250606",
   "lifeCodes": [
    "002"
@@ -22817,7 +22817,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002032&wlfareInfoReldBztpCd=02",
-  "inqNum": 3769,
+  "inqNum": 3770,
   "lastMod": "20250606",
   "lifeCodes": [
    "002"
@@ -22897,7 +22897,7 @@
   "pvsn": "프로그램/서비스(서비스)",
   "aply": "전화",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005421&wlfareInfoReldBztpCd=02",
-  "inqNum": 2263,
+  "inqNum": 2264,
   "lastMod": "20250603",
   "lifeCodes": [
    "002"
@@ -22929,7 +22929,7 @@
   "pvsn": "지역화폐",
   "aply": "인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004680&wlfareInfoReldBztpCd=02",
-  "inqNum": 8997,
+  "inqNum": 8998,
   "lastMod": "20250603",
   "lifeCodes": [
    "002"
@@ -22945,7 +22945,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002688&wlfareInfoReldBztpCd=02",
-  "inqNum": 3355,
+  "inqNum": 3356,
   "lastMod": "20250603",
   "lifeCodes": [
    "002"
@@ -22977,7 +22977,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004314&wlfareInfoReldBztpCd=02",
-  "inqNum": 5762,
+  "inqNum": 5763,
   "lastMod": "20250603",
   "lifeCodes": [
    "002"
@@ -23041,7 +23041,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002982&wlfareInfoReldBztpCd=02",
-  "inqNum": 9267,
+  "inqNum": 9268,
   "lastMod": "20250603",
   "lifeCodes": [
    "002"
@@ -23121,7 +23121,7 @@
   "pvsn": "감면",
   "aply": "인터넷, 방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005512&wlfareInfoReldBztpCd=02",
-  "inqNum": 4507,
+  "inqNum": 4508,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23201,7 +23201,7 @@
   "pvsn": "지역화폐",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002004&wlfareInfoReldBztpCd=02",
-  "inqNum": 2229,
+  "inqNum": 2230,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23233,7 +23233,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001579&wlfareInfoReldBztpCd=02",
-  "inqNum": 1620,
+  "inqNum": 1621,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23313,7 +23313,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001951&wlfareInfoReldBztpCd=02",
-  "inqNum": 19110,
+  "inqNum": 19111,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23329,7 +23329,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001783&wlfareInfoReldBztpCd=02",
-  "inqNum": 8348,
+  "inqNum": 8349,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23345,7 +23345,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002504&wlfareInfoReldBztpCd=02",
-  "inqNum": 1347,
+  "inqNum": 1348,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23361,7 +23361,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002594&wlfareInfoReldBztpCd=02",
-  "inqNum": 9524,
+  "inqNum": 9527,
   "lastMod": "20250531",
   "lifeCodes": [
    "002"
@@ -23505,7 +23505,7 @@
   "pvsn": "현금지급, 기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001974&wlfareInfoReldBztpCd=02",
-  "inqNum": 1530,
+  "inqNum": 1531,
   "lastMod": "20240604",
   "lifeCodes": [
    "002"
@@ -23537,7 +23537,7 @@
   "pvsn": "현금지급",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002416&wlfareInfoReldBztpCd=02",
-  "inqNum": 1750,
+  "inqNum": 1751,
   "lastMod": "20240530",
   "lifeCodes": [
    "002"
@@ -23633,7 +23633,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001583&wlfareInfoReldBztpCd=02",
-  "inqNum": 7751,
+  "inqNum": 7753,
   "lastMod": "20230718",
   "lifeCodes": [
    "002"
@@ -23681,7 +23681,7 @@
   "pvsn": "프로그램/서비스(서비스), 기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002363&wlfareInfoReldBztpCd=02",
-  "inqNum": 1808,
+  "inqNum": 1809,
   "lastMod": "20230526",
   "lifeCodes": [
    "002"
@@ -23729,7 +23729,7 @@
   "pvsn": "현금지급",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004624&wlfareInfoReldBztpCd=02",
-  "inqNum": 3484,
+  "inqNum": 3490,
   "lastMod": "20220823",
   "lifeCodes": [
    "002"
@@ -23745,7 +23745,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002016&wlfareInfoReldBztpCd=02",
-  "inqNum": 5174,
+  "inqNum": 5175,
   "lastMod": "20220823",
   "lifeCodes": [
    "002"
@@ -23761,7 +23761,7 @@
   "pvsn": "기타",
   "aply": "방문",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002558&wlfareInfoReldBztpCd=02",
-  "inqNum": 2499,
+  "inqNum": 2501,
   "lastMod": "20220822",
   "lifeCodes": [
    "002"
@@ -23777,7 +23777,7 @@
   "pvsn": "전자바우처(바우처)",
   "aply": "방문, 인터넷",
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000718&wlfareInfoReldBztpCd=02",
-  "inqNum": 6047,
+  "inqNum": 6048,
   "lastMod": "20220822",
   "lifeCodes": [
    "002"
@@ -23809,7 +23809,7 @@
   "pvsn": "기타",
   "aply": null,
   "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002953&wlfareInfoReldBztpCd=02",
-  "inqNum": 11275,
+  "inqNum": 11277,
   "lastMod": "20220711",
   "lifeCodes": [
    "002"
