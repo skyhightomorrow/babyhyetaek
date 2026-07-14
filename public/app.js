@@ -305,17 +305,24 @@ function renderResult() {
   } else {
     loc.appendChild(el('p', 'qsub', `${list.length}개 지원금 (조회 많은 순) · 출처: 한국사회보장정보원 공공데이터`));
     const ul = el('div', 'locList');
-    list.slice(0, 12).forEach((b) => {
+    const renderItem = (b) => {
       const item = el('div', 'locItem');
       const modTxt = b.mod ? `갱신 ${b.mod.slice(0, 4)}.${b.mod.slice(4, 6)}` : '';
       item.innerHTML =
         `<div class="locNm">${b.nm}</div>` +
         (b.amt ? `<div class="locAmt">${b.amt}</div>` : (b.dgst ? `<div class="locDgst">${b.dgst}</div>` : '')) +
         `<div class="locMeta">${b.law ? `📜 ${b.law}` : ''} ${modTxt ? `· ${modTxt}` : ''} ${b.link ? `· <a href="${b.link}" target="_blank" rel="noopener">복지로 상세 →</a>` : ''}</div>`;
-      ul.appendChild(item);
-    });
+      return item;
+    };
+    const INIT = 12;
+    list.slice(0, INIT).forEach((b) => ul.appendChild(renderItem(b)));
     loc.appendChild(ul);
-    if (list.length > 12) loc.appendChild(el('p', 'moreNote', `외 ${list.length - 12}개 더 · 전체 보기는 준비 중`));
+    if (list.length > INIT) {
+      const more = el('button', 'btn ghost wide', `지원금 ${list.length - INIT}개 더 보기`);
+      more.style.marginTop = '10px';
+      more.onclick = () => { list.slice(INIT).forEach((b) => ul.appendChild(renderItem(b))); more.remove(); };
+      loc.appendChild(more);
+    }
   }
   wrap.appendChild(loc);
 
