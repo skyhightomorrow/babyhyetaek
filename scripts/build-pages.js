@@ -35,7 +35,7 @@ function natTable() {
   return `<table class="natTable">
     <tr><td>첫만남이용권 <span class="muted">출생 1회</span></td><td>${man(NATIONAL.firstMeet.firstChild)}~${man(NATIONAL.firstMeet.laterChild)}</td></tr>
     <tr><td>임신·출산 진료비 바우처 <span class="muted">국민행복카드</span></td><td>${man(NATIONAL.pregnancyVoucher.single)}~${man(NATIONAL.pregnancyVoucher.multi)}</td></tr>
-    <tr><td>부모급여 <span class="muted">0세 월100만·1세 월50만</span></td><td>2,160만원</td></tr>
+    <tr><td>부모급여 <span class="muted">0세 월100만·1세 월50만</span></td><td>1,800만원</td></tr>
     <tr><td>아동수당 <span class="muted">월10만·9세 미만</span></td><td>1,080만원</td></tr>
     <tr><td>육아휴직급여 <span class="muted">근로자·통상임금 기준</span></td><td>별도</td></tr>
   </table>`;

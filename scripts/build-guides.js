@@ -73,6 +73,9 @@ const hub = head('육아 지원금 가이드 — 베이비혜택', '출산지원
 fs.writeFileSync(path.join(OUT, 'index.html'), hub);
 guideUrls.push(`${ORIGIN}/guide/`);
 
+// 발행된 가이드 slug 목록 (app.js가 미발행 글 링크 방지에 사용)
+fs.writeFileSync(path.join(PUB, 'published-guides.js'), 'window.PUBLISHED_GUIDES=' + JSON.stringify(published.map((g) => g.slug)) + ';\n');
+
 // sitemap 병합 (지역 페이지 sitemap이 이미 있으면 guide URL 추가)
 const smPath = path.join(PUB, 'sitemap.xml');
 let existing = [];

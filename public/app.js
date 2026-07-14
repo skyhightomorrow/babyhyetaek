@@ -110,26 +110,43 @@ function setFreshPill() {
   }
 }
 
-// 홈 하단 예시 지원금 (국가 수당 기준)
+// 홈 하단 예시 — 적게 받을 때 / 많이 받을 때 (분별력)
+function exComps(input) {
+  const p = buildPlan(input);
+  const sb = (label) => p.phases.reduce((a, ph) => a + ph.items.filter((it) => it.label === label).reduce((s, it) => s + it.m * ph.months, 0), 0);
+  const arr = [
+    ['첫만남이용권', p.oneTime[0].amount],
+    ['임신·출산 바우처', p.oneTime[1].amount],
+    ['부모급여', sb('부모급여')],
+    ['아동수당', sb('아동수당')],
+  ];
+  if (input.useLeave) arr.push(['육아휴직급여', p.leave.total]);
+  return { total: p.grandTotal, arr };
+}
+function bdRows(c) {
+  return c.arr.map(([k, v]) => `<div class="r"><span>${k}</span><b>${man(v)}</b></div>`).join('');
+}
 function renderExamples() {
   const box = $('#examples');
   if (!box) return;
-  const first = buildPlan({ order: 1, multi: false, useLeave: false }).nationalTotal;
-  const second = buildPlan({ order: 2, multi: false, useLeave: false }).nationalTotal;
+  const low = exComps({ order: 1, multi: false, useLeave: false });
+  const high = exComps({ order: 2, multi: true, useLeave: true, wage: 3500000 });
   box.innerHTML = `<div class="exWrap">
-    <div class="exTitle">💡 예시로 미리 보기</div>
-    <div class="exSub">국가 수당만 합친 8세까지 총액이에요. 여기에 우리 동네 지원금이 더해져요.</div>
-    <div class="exCards">
-      <div class="exCard"><div class="lbl">첫째 아이</div><div class="num">약 ${man(first)}</div><div class="note">국가 수당 · 8세까지</div></div>
-      <div class="exCard"><div class="lbl">둘째 이상</div><div class="num">약 ${man(second)}</div><div class="note">첫만남 300만원 반영</div></div>
+    <div class="exTitle">💡 이만큼 차이 나요</div>
+    <div class="exSub">같은 국가 수당이라도 조건에 따라 총액이 크게 달라져요. 여기에 우리 동네 지원금이 더 붙어요.</div>
+    <div class="exScenario low">
+      <span class="stag">적게 받을 때</span>
+      <div class="cond">첫째 · 단태아 · 육아휴직 미사용</div>
+      <div class="big">약 ${man(low.total)}</div>
+      <div class="exBd">${bdRows(low)}</div>
     </div>
-    <div class="exTable">
-      <div class="exRow"><span class="k">첫만남이용권 <span style="color:var(--dim);font-weight:400">출생 1회</span></span><span class="v">첫째 200만 · 둘째+ 300만</span></div>
-      <div class="exRow"><span class="k">부모급여 <span style="color:var(--dim);font-weight:400">매월</span></span><span class="v">0세 100만 · 1세 50만</span></div>
-      <div class="exRow"><span class="k">아동수당 <span style="color:var(--dim);font-weight:400">매월·9세 미만</span></span><span class="v">10만 (비수도권 +2만)</span></div>
-      <div class="exRow"><span class="k">임신·출산 바우처 <span style="color:var(--dim);font-weight:400">국민행복카드</span></span><span class="v">단태 100만 · 다태 140만</span></div>
+    <div class="exScenario high">
+      <span class="stag">많이 받을 때</span>
+      <div class="cond">둘째 이상 · 다태아 · 육아휴직 사용(월 통상임금 350만원 가정)</div>
+      <div class="big">약 ${man(high.total)}</div>
+      <div class="exBd">${bdRows(high)}</div>
     </div>
-    <div class="exRegionNote">🏙️ <b>지자체 지원금은 지역마다 달라요.</b> 첫째부터 수십만~수백만원, 셋째 이상은 1,000만원이 넘는 곳도 있어요. 위에서 우리 동네를 선택하면 실제 지원금을 확인할 수 있어요.</div>
+    <div class="exRegionNote">🏙️ 여기에 <b>우리 동네 지자체 지원금</b>이 더해져요. 첫째부터 수십만~수백만원, 셋째 이상은 1,000만원이 넘는 곳도 있어요. 비수도권은 아동수당도 매월 2만원 더 나와요. 위에서 지역을 선택하면 실제 지원금을 확인할 수 있어요.</div>
   </div>`;
 }
 
@@ -243,48 +260,36 @@ function renderResult() {
   hero.appendChild(el('p', 'heroCap', `아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b>${S.useLeave ? ' (육아휴직급여 포함)' : ''}<br>여기에 <b>${S.sido} ${S.sgg}</b>가 주는 아래 지원금이 <b>추가</b>돼요.`));
   wrap.appendChild(hero);
 
-  // 광고 슬롯 1 (애드센스 자리)
-  wrap.appendChild(adSlot('결과 상단'));
+  // 구성 항목 breakdown (혜택별 합계 + 발행된 가이드로 링크)
+  const guideHref = (slug) => ((window.PUBLISHED_GUIDES || []).includes(slug) ? `/guide/${slug}.html` : null);
+  const sumBenefit = (label) => plan.phases.reduce((a, p) => a + p.items.filter((it) => it.label === label).reduce((s, it) => s + it.m * p.months, 0), 0);
+  const comps = [
+    { nm: '첫만남이용권', sub: `출생 1회 · ${S.order >= 2 ? '둘째 이상' : '첫째'}`, amt: plan.oneTime[0].amount, slug: 'cheotmannam-voucher' },
+    { nm: '임신·출산 진료비 바우처', sub: `${S.multi ? '다태아' : '단태아'} · 국민행복카드`, amt: plan.oneTime[1].amount, slug: 'imsin-chulsan-voucher' },
+    { nm: '부모급여', sub: '0~1세 매월 (0세 100만·1세 50만)', amt: sumBenefit('부모급여'), slug: 'bumo-geumyeo-guide' },
+    { nm: '아동수당', sub: '8세까지 매월 10만원', amt: sumBenefit('아동수당'), slug: 'adong-sudang-2026' },
+  ];
+  if (S.useLeave && plan.leave.total > 0) comps.push({ nm: '육아휴직급여', sub: '통상임금 기준 · 최대 12개월', amt: plan.leave.total, slug: 'yuga-hyujik-geumyeo-2026' });
 
-  // 타임라인
-  const tl = el('div', 'card');
-  tl.appendChild(el('h3', 'secTitle', '📅 월별 현금 타임라인'));
-  const list1 = el('div', 'timeline');
-  // 출생 시점
-  plan.oneTime.forEach((o) => {
-    const row = el('div', 'tlRow once');
-    row.innerHTML = `<div class="tlWhen">${o.when}</div><div class="tlBody"><div class="tlNm">${o.label} <span class="tlTag">1회</span></div><div class="tlNote">${o.note}</div></div><div class="tlAmt">${man(o.amount)}</div>`;
-    list1.appendChild(row);
+  const bd = el('div', 'card');
+  bd.appendChild(el('h3', 'secTitle', '이 금액은 이렇게 구성돼요'));
+  const bdList = el('div', 'bdList');
+  comps.forEach((c) => {
+    const href = guideHref(c.slug);
+    const nm = href ? `<a href="${href}">${c.nm}</a>` : c.nm;
+    const row = el('div', 'bdRow');
+    row.innerHTML = `<div class="bdL"><div class="bdNm">${nm}</div><div class="bdSub">${c.sub}</div></div><div class="bdAmt">${man(c.amt)}</div>`;
+    bdList.appendChild(row);
   });
-  plan.phases.forEach((p) => {
-    const row = el('div', 'tlRow');
-    const items = p.items.map((it) => `${it.label} ${man(it.m)}`).join(' + ');
-    row.innerHTML = `<div class="tlWhen">${p.label}</div><div class="tlBody"><div class="tlNm">매월 ${man(p.perMonth)}</div><div class="tlNote">${items} · ${p.months}개월</div></div><div class="tlAmt">${man(p.subtotal)}</div>`;
-    list1.appendChild(row);
-  });
-  if (S.useLeave && plan.leave.total > 0) {
-    plan.leave.rows.forEach((r) => {
-      const row = el('div', 'tlRow leave');
-      row.innerHTML = `<div class="tlWhen">육아휴직 ${r.label}</div><div class="tlBody"><div class="tlNm">매월 ${man(r.perMonth)}</div><div class="tlNote">통상임금 ${r.rate * 100}%${r.capped ? ' · 상한 적용' : ''} · ${r.months}개월</div></div><div class="tlAmt">${man(r.perMonth * r.months)}</div>`;
-      list1.appendChild(row);
-    });
-  }
-  tl.appendChild(list1);
+  bd.appendChild(bdList);
+  const bdTotal = el('div', 'bdTotal');
+  bdTotal.innerHTML = `<span class="k">국가 지원금 합계${S.useLeave ? ' (육아휴직 포함)' : ''}</span><span class="v">${man(plan.grandTotal)}</span>`;
+  bd.appendChild(bdTotal);
   const metro = ['서울특별시', '경기도', '인천광역시'].includes(S.sido);
-  let src = '국가 수당은 2026년 법정 기준. 부모급여는 가정양육 현금 기준(어린이집 이용 시 보육료 바우처로 차감). 아동수당은 2026년 9세 미만까지 지급(2030년 13세까지 매년 1세씩 확대 예정)으로, 지금 태어난 아이는 더 오래 받을 수 있어요.';
-  if (!metro) src += ` ${S.sido}는 비수도권이라, 인구감소지역이면 아동수당이 매월 2만원(지역사랑상품권 시 +1만원) 더 나올 수 있어요 — 위 총액에는 넣지 않았어요.`;
-  tl.appendChild(el('p', 'srcNote', src));
-  wrap.appendChild(tl);
-
-  // 쿠팡 슬롯 (시기별 준비물)
-  const coupang = el('div', 'card coupangCard');
-  coupang.appendChild(el('h3', 'secTitle', '🍼 이 시기, 뭐부터 준비할까요?'));
-  coupang.appendChild(el('p', 'qsub', '출산 준비물 체크리스트 — 곧 큐레이션과 함께 열립니다.'));
-  const chips = el('div', 'prepChips');
-  ['임신 중 · 산모용품', '출생 직후 · 배냇/기저귀', '3~6개월 · 수유/수면', '6개월~ · 이유식'].forEach((t) => chips.appendChild(el('span', 'prepChip', t)));
-  coupang.appendChild(chips);
-  coupang.appendChild(el('div', 'slotTag', '쿠팡파트너스 제휴 예정 슬롯'));
-  wrap.appendChild(coupang);
+  let src = '부모급여는 가정양육 현금 기준(어린이집 이용 시 보육료 바우처로 차감). 아동수당은 2026년 9세 미만까지 지급(2030년 13세까지 단계 확대)이라 실제로는 더 오래 받을 수 있어요.';
+  if (!metro) src += ` ${S.sido}는 비수도권이라, 인구감소지역이면 아동수당이 매월 2만원 더 나올 수 있어요(위 합계엔 미포함).`;
+  bd.appendChild(el('p', 'srcNote', src));
+  wrap.appendChild(bd);
 
   // 지자체 지원금
   const loc = el('div', 'card');
@@ -308,16 +313,6 @@ function renderResult() {
   }
   wrap.appendChild(loc);
 
-  // 보험 CPA 슬롯
-  const ins = el('div', 'card insCard');
-  ins.appendChild(el('h3', 'secTitle', '🛡️ 출산 전 챙기면 좋은 것'));
-  ins.appendChild(el('p', 'qsub', '태아보험은 출산 전(임신 22주 이내)에 가입해야 보장 범위가 넓어요. 여러 상품을 비교해 보세요.'));
-  ins.appendChild(el('div', 'slotTag', '태아·어린이보험 비교 제휴 예정 슬롯'));
-  wrap.appendChild(ins);
-
-  // 광고 슬롯 2
-  wrap.appendChild(adSlot('결과 하단'));
-
   // 다시
   const again = el('button', 'btn ghost wide', '조건 바꿔서 다시 계산');
   again.onclick = () => { S.step = 0; render(); window.scrollTo(0, 0); };
@@ -325,12 +320,6 @@ function renderResult() {
 
   wrap.appendChild(el('p', 'disclaimer', '※ 참고용 추정치입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기에 따라 달라질 수 있어요. 지자체 지원금은 조례 개정으로 변경될 수 있으니 복지로·주민센터에서 최종 확인하세요. 회원가입·개인정보 저장은 하지 않습니다.'));
   return wrap;
-}
-
-function adSlot(where) {
-  const d = el('div', 'adSlot');
-  d.innerHTML = `<span>광고 영역 (${where})</span>`;
-  return d;
 }
 
 document.addEventListener('DOMContentLoaded', () => { setFreshPill(); renderExamples(); render(); });

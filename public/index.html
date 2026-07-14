@@ -141,13 +141,37 @@
   .exRow .k{color:var(--ink);font-weight:600}
   .exRow .v{color:var(--brand-d);font-weight:700;text-align:right;white-space:nowrap}
   .exRegionNote{font-size:12.5px;color:var(--mut);background:#fff7f8;border:1px solid #ffe1e6;border-radius:12px;padding:13px 15px;line-height:1.6}
+  .exScenario{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+  .exScenario .stag{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:8px}
+  .exScenario.low .stag{background:#eef1f6;color:#697588}
+  .exScenario.high .stag{background:var(--brand-soft);color:var(--brand-d)}
+  .exScenario .cond{font-size:12px;color:var(--dim);margin-bottom:2px}
+  .exScenario .big{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:2px 0 10px}
+  .exScenario.low .big{color:#4a5468}
+  .exScenario.high .big{color:var(--brand-d)}
+  .exBd{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);padding-top:8px}
+  .exBd .r{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;color:var(--mut)}
+  .exBd .r b{color:var(--ink);font-weight:600}
+  /* 결과 구성 breakdown */
+  .bdList{display:flex;flex-direction:column}
+  .bdRow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .bdRow:last-of-type{border-bottom:none}
+  .bdRow .bdL{min-width:0}
+  .bdRow .bdNm{font-size:14.5px;font-weight:700}
+  .bdRow .bdNm a{color:var(--brand-d);text-decoration:none}
+  .bdRow .bdNm a::after{content:" ›";color:var(--brand)}
+  .bdRow .bdSub{font-size:12px;color:var(--dim);margin-top:2px}
+  .bdRow .bdAmt{font-size:15px;font-weight:800;white-space:nowrap}
+  .bdTotal{display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding-top:14px;border-top:2px solid var(--line2)}
+  .bdTotal .k{font-size:14px;font-weight:700}
+  .bdTotal .v{font-size:19px;font-weight:800;color:var(--brand-d)}
   footer{text-align:center;font-size:12px;color:var(--dim);padding:24px 0 0;border-top:1px solid var(--line);margin-top:8px}
   footer a{color:var(--mut)}
 </style>
 </head>
 <body>
 <div class="shell">
-  <header><div class="logo">베이비<b>혜택</b></div></header>
+  <header><a href="/" class="logo" style="text-decoration:none;color:inherit">베이비<b>혜택</b></a></header>
   <div class="hero">
     <span class="pill" id="freshPill">🍼 최신 데이터</span>
     <h1>우리 아이, 받을 수 있는<br><span class="hl">지원금은 뭐가 있을까?</span></h1>
@@ -162,7 +186,8 @@
     <a href="/guide/">가이드</a> · <a href="/about.html">소개</a> · <a href="/privacy.html">개인정보처리방침</a> · <a href="/contact.html">문의</a>
   </footer>
 </div>
-<script src="/local-benefits.js?v=20260714b"></script>
-<script src="/app.js?v=20260714b"></script>
+<script src="/local-benefits.js?v=20260714c"></script>
+<script src="/published-guides.js?v=20260714c"></script>
+<script src="/app.js?v=20260714c"></script>
 </body>
 </html>
