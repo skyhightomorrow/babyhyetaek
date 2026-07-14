@@ -95,6 +95,42 @@ function render() {
   root.innerHTML = '';
   if (S.step < 4) root.appendChild(renderWizard());
   else root.appendChild(renderResult());
+  // 예시 섹션은 홈(위저드)에서만 노출
+  const ex = $('#examples');
+  if (ex) ex.style.display = S.step < 4 ? 'block' : 'none';
+}
+
+// 최신 데이터 날짜 배지
+function setFreshPill() {
+  const pill = document.getElementById('freshPill');
+  const db = window.LOCAL_BENEFITS;
+  if (pill && db && db.builtAt) {
+    const d = db.builtAt.replace(/-/g, '.');
+    pill.textContent = `🍼 ${d} 기준 · 최신 데이터`;
+  }
+}
+
+// 홈 하단 예시 지원금 (국가 수당 기준)
+function renderExamples() {
+  const box = $('#examples');
+  if (!box) return;
+  const first = buildPlan({ order: 1, multi: false, useLeave: false }).nationalTotal;
+  const second = buildPlan({ order: 2, multi: false, useLeave: false }).nationalTotal;
+  box.innerHTML = `<div class="exWrap">
+    <div class="exTitle">💡 예시로 미리 보기</div>
+    <div class="exSub">국가 수당만 합친 8세까지 총액이에요. 여기에 우리 동네 지원금이 더해져요.</div>
+    <div class="exCards">
+      <div class="exCard"><div class="lbl">첫째 아이</div><div class="num">약 ${man(first)}</div><div class="note">국가 수당 · 8세까지</div></div>
+      <div class="exCard"><div class="lbl">둘째 이상</div><div class="num">약 ${man(second)}</div><div class="note">첫만남 300만원 반영</div></div>
+    </div>
+    <div class="exTable">
+      <div class="exRow"><span class="k">첫만남이용권 <span style="color:var(--dim);font-weight:400">출생 1회</span></span><span class="v">첫째 200만 · 둘째+ 300만</span></div>
+      <div class="exRow"><span class="k">부모급여 <span style="color:var(--dim);font-weight:400">매월</span></span><span class="v">0세 100만 · 1세 50만</span></div>
+      <div class="exRow"><span class="k">아동수당 <span style="color:var(--dim);font-weight:400">매월·9세 미만</span></span><span class="v">10만 (비수도권 +2만)</span></div>
+      <div class="exRow"><span class="k">임신·출산 바우처 <span style="color:var(--dim);font-weight:400">국민행복카드</span></span><span class="v">단태 100만 · 다태 140만</span></div>
+    </div>
+    <div class="exRegionNote">🏙️ <b>지자체 지원금은 지역마다 달라요.</b> 첫째부터 수십만~수백만원, 셋째 이상은 1,000만원이 넘는 곳도 있어요. 위에서 우리 동네를 선택하면 실제 지원금을 확인할 수 있어요.</div>
+  </div>`;
 }
 
 function stepDots(active) {
@@ -109,7 +145,7 @@ function renderWizard() {
 
   if (S.step === 0) {
     card.appendChild(el('h2', 'q', '어느 지역에 사세요?'));
-    card.appendChild(el('p', 'qsub', '주민등록상 거주지 기준으로 우리 동네 지원금을 찾아드려요.'));
+    card.appendChild(el('p', 'qsub', '지역과 몇째 아이인지만 고르면 돼요. 이름·연락처·로그인은 필요 없어요.'));
     const sidoSel = el('select', 'sel');
     sidoSel.appendChild(el('option', '', '<option value="">시 / 도 선택</option>'.replace(/^<option[^>]*>|<\/option>$/g, '') && ''));
     sidoSel.innerHTML = '<option value="">시 / 도 선택</option>' + sidoList().map((s) => `<option ${s === S.sido ? 'selected' : ''}>${s}</option>`).join('');
@@ -297,4 +333,4 @@ function adSlot(where) {
   return d;
 }
 
-document.addEventListener('DOMContentLoaded', render);
+document.addEventListener('DOMContentLoaded', () => { setFreshPill(); renderExamples(); render(); });
