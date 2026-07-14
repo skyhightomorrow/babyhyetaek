@@ -73,13 +73,14 @@ function page(sido, sgg, list, nearby) {
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="${url}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="article"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${ORIGIN}/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="stylesheet" href="/assets/region.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CZCXLHZVB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CZCXLHZVB');</script>
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
 </head><body>
 <div class="shell">

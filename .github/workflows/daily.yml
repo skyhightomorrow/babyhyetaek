@@ -1,0 +1,37 @@
+name: daily-guide-publish
+
+# 매일 06:30 KST(21:30 UTC 전일) — 예약된 가이드 date-gate 발행.
+# 다른 사이트 수집 크론과 20분 이상 어긋나게(무료 빌드 동시성 1).
+on:
+  schedule:
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build pages + guides (date-gated · pages first so guide sitemap merges)
+        run: |
+          node scripts/build-pages.js
+          node scripts/build-guides.js
+        env:
+          SITE_ORIGIN: https://babyhyetaek.com
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 발행할 예약 글 없음"
+          else
+            git commit -m "chore: 가이드 예약발행 (자동)"
+            git push
+          fi
