@@ -265,7 +265,7 @@ function renderResult() {
   wrap.appendChild(hero);
 
   // 구성 항목 breakdown (혜택별 합계 + 발행된 가이드로 링크)
-  const guideHref = (slug) => ((window.PUBLISHED_GUIDES || []).includes(slug) ? `/guide/${slug}.html` : null);
+  const guideHref = (slug) => ((window.PUBLISHED_GUIDES || []).includes(slug) ? `/guide/${slug}` : null);
   const sumBenefit = (label) => plan.phases.reduce((a, p) => a + p.items.filter((it) => it.label === label).reduce((s, it) => s + it.m * p.months, 0), 0);
   const comps = [
     { nm: '첫만남이용권', when: '출생 직후 · 1회', where: '주민센터·복지로·정부24 (출생신고 때)', amt: plan.oneTime[0].amount, slug: 'cheotmannam-voucher' },

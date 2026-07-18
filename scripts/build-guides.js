@@ -38,19 +38,19 @@ ${extraLd || ''}
 </head><body><div class="shell">`;
 }
 
-const footer = `<footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about.html">소개</a> · <a href="/privacy.html">개인정보처리방침</a> · <a href="/contact.html">문의</a></footer></div></body></html>`;
+const footer = `<footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer></div></body></html>`;
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 
 const guideUrls = [];
 published.forEach((g, i) => {
-  const url = `${ORIGIN}/guide/${g.slug}.html`;
+  const url = `${ORIGIN}/guide/${g.slug}`;
   // 관련 글 = 이미 발행된 다른 글 중 최대 3개
   const related = published.filter((x) => x.slug !== g.slug).slice(0, 3);
   const ld = `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.desc, datePublished: g.date, publisher: { '@type': 'Organization', name: '베이비혜택' } })}</script>`;
   const relatedHtml = related.length
-    ? `<div class="card"><h2 class="secTitle">함께 보면 좋은 글</h2><div class="related">${related.map((r) => `<a href="/guide/${r.slug}.html">${esc(r.title)}</a>`).join('')}</div></div>`
+    ? `<div class="card"><h2 class="secTitle">함께 보면 좋은 글</h2><div class="related">${related.map((r) => `<a href="/guide/${r.slug}">${esc(r.title)}</a>`).join('')}</div></div>`
     : '';
   const html = head(g.title + ' — 베이비혜택', g.desc, url, ld) +
     `<header><div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div><div class="crumb"><a href="/">홈</a> › <a href="/guide/">가이드</a></div></header>
@@ -65,7 +65,7 @@ ${relatedHtml}
 });
 
 // 가이드 허브
-const hubItems = published.map((g) => `<a href="/guide/${g.slug}.html" class="locItem" style="display:block"><div class="locNm">${esc(g.title)}</div><div class="locMeta">${g.date}</div></a>`).join('');
+const hubItems = published.map((g) => `<a href="/guide/${g.slug}" class="locItem" style="display:block"><div class="locNm">${esc(g.title)}</div><div class="locMeta">${g.date}</div></a>`).join('');
 const hub = head('육아 지원금 가이드 — 베이비혜택', '출산지원금·부모급여·육아휴직급여·지자체 지원금까지, 2026년 육아 지원 제도를 쉽게 정리했어요.', `${ORIGIN}/guide/`) +
   `<header><div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div></header>
 <h1>육아 지원금 가이드</h1><p class="sub">2026년 출산·육아 지원 제도를 쉽게 정리했어요.</p>

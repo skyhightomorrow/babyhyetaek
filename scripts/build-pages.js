@@ -57,8 +57,8 @@ function localSection(sido, sgg, list) {
 function page(sido, sgg, list, nearby) {
   const title = `${sido} ${sgg} 출산지원금·육아 지원금 ${YEAR} — 총 얼마 받나요?`;
   const desc = `${sido} ${sgg}에서 ${YEAR}년 받을 수 있는 출산·육아 지원금 총정리. 국가 수당(부모급여·첫만남이용권·아동수당)에 ${sgg} 지자체 지원금까지 합쳐 8세까지 총액을 계산해 드려요. 최신 공공데이터 기반.`;
-  const url = `${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}.html`;
-  const nearbyLinks = nearby.map((n) => `<a href="/r/${encodeURIComponent(slug(sido, n))}.html">${esc(n)}</a>`).join('');
+  const url = `${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`;
+  const nearbyLinks = nearby.map((n) => `<a href="/r/${encodeURIComponent(slug(sido, n))}">${esc(n)}</a>`).join('');
 
   const jsonld = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -116,7 +116,7 @@ function page(sido, sgg, list, nearby) {
   ${nearbyLinks ? `<div class="card"><h2 class="secTitle">📍 ${esc(sido)} 다른 지역</h2><div class="nearby">${nearbyLinks}</div></div>` : ''}
 
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 지자체 지원금은 복지로·주민센터에서 최종 확인하세요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
-  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about.html">소개</a> · <a href="/privacy.html">개인정보처리방침</a> · <a href="/contact.html">문의</a></footer>
+  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
 </body></html>`;
 }
@@ -135,7 +135,7 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
     const list = [...(bucket[sgg] || []), ...common].filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
     const nearby = sggs.filter((s) => s !== sgg).slice(0, 12);
     fs.writeFileSync(path.join(outDir, `${slug(sido, sgg)}.html`), page(sido, sgg, list, nearby));
-    urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}.html`);
+    urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`);
     count++;
   }
 }
