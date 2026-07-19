@@ -128,6 +128,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const urls = [`${ORIGIN}/`];
 let count = 0;
+const hubIndex = []; // [sido, sggs[]] — 허브 페이지용 (지역 페이지가 홈에서 고아가 되지 않도록)
 for (const [sido, bucket] of Object.entries(DB.sido)) {
   const sggs = Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2);
   const common = bucket['(광역 공통)'] || [];
@@ -138,6 +139,49 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
     urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`);
     count++;
   }
+  if (sggs.length) hubIndex.push([sido, sggs]);
+}
+
+// ── 지역 허브 (/r/) ──
+// 홈에서 지역 페이지로 가는 정적 링크가 0개라 사이트맵으로만 발견되던 문제를 해소한다.
+// 홈 → /r/ → 시군구 페이지 전체로 링크가 흐르게 하는 것이 목적.
+{
+  const title = `전국 시군구 출산지원금·육아 지원금 ${YEAR} — 우리 동네 찾기`;
+  const desc = `전국 ${count}개 시군구의 ${YEAR}년 출산지원금·육아 지원금을 지역별로 정리했습니다. 우리 동네를 골라 국가 수당과 지자체 지원금을 합친 8세까지 총액을 확인하세요.`;
+  const url = `${ORIGIN}/r/`;
+  const groups = hubIndex.slice().sort((a, b) => b[1].length - a[1].length).map(([sido, sggs]) =>
+    `<div class="card"><h2 class="secTitle">${esc(sido)} <span style="color:var(--dim);font-weight:600;font-size:13px">${sggs.length}곳</span></h2>
+<div class="nearby">${sggs.map((s) => `<a href="/r/${encodeURIComponent(slug(sido, s))}">${esc(s)}</a>`).join('')}</div></div>`).join('\n');
+
+  const hub = `<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
+<meta property="og:type" content="website"><meta property="og:url" content="${url}">
+<meta property="og:image" content="${ORIGIN}/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="stylesheet" href="/assets/region.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CZCXLHZVB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CZCXLHZVB');</script>
+</head><body>
+<div class="shell">
+  <header>
+    <div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div>
+    <div class="crumb"><a href="/">홈</a> › 지역별</div>
+  </header>
+  <h1>우리 동네<br>출산·육아 지원금 (${YEAR})</h1>
+  <p class="sub">전국 ${count}개 시군구별로 국가 수당과 지자체 지원금을 합친 8세까지 총액을 정리했어요. 사는 지역을 골라보세요.</p>
+${groups}
+  <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
+  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
+</div>
+</body></html>`;
+  fs.writeFileSync(path.join(outDir, 'index.html'), hub);
+  urls.push(url);
+  console.log(`[build-pages] 지역 허브 /r/ 생성 — ${hubIndex.length}개 시도 · ${count}개 시군구 링크`);
 }
 
 // sitemap

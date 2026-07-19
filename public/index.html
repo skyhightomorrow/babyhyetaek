@@ -178,7 +178,13 @@
   .wageSlider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:var(--brand);border:3px solid #fff;box-shadow:0 1px 5px rgba(232,78,102,.45);cursor:pointer}
   .wageSlider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--brand);border:3px solid #fff;box-shadow:0 1px 5px rgba(232,78,102,.45);cursor:pointer}
   .wageRange{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim);margin-top:3px}
-  footer{text-align:center;font-size:12px;color:var(--dim);padding:24px 0 0;border-top:1px solid var(--line);margin-top:8px}
+  .regionEntry{background:var(--card);border:1px solid var(--line2);border-radius:var(--radius);padding:20px 18px;margin:18px 0 6px}
+    .regionEntry h2{font-size:17px;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+    .regionEntry p{color:var(--mut);font-size:14px;margin:0 0 14px;line-height:1.6}
+    .regionEntryBtn{display:block;text-align:center;background:var(--brand);color:#fff;font-weight:700;font-size:15px;
+      text-decoration:none;border-radius:12px;padding:14px;transition:.15s}
+    .regionEntryBtn:hover{background:var(--brand-d)}
+    footer{text-align:center;font-size:12px;color:var(--dim);padding:24px 0 0;border-top:1px solid var(--line);margin-top:8px}
   footer a{color:var(--mut)}
 </style>
 </head>
@@ -193,6 +199,13 @@
 
   <div id="app"><!-- 위저드/결과 렌더 --></div>
   <div id="examples"><!-- 예시 지원금 (홈에서만) --></div>
+
+  <!-- 지역 허브 진입점: 시군구 페이지가 사이트맵으로만 발견되던 문제 해소(검색엔진 크롤 경로 확보) -->
+  <section class="regionEntry">
+    <h2>지역별로 찾아보기</h2>
+    <p>우리 시군구가 주는 출산·육아 지원금을 지역 페이지에서 바로 확인할 수 있어요.</p>
+    <a class="regionEntryBtn" href="/r/">전국 시군구 지원금 보기 →</a>
+  </section>
 
   <footer>
     baby<b>hyetaek</b>.com · 공공데이터(한국사회보장정보원·복지부) 기반<br>
