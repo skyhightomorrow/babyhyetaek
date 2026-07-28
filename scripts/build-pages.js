@@ -20,6 +20,19 @@ const PUB = path.join(ROOT, 'public');
 const lbRaw = fs.readFileSync(path.join(PUB, 'local-benefits.js'), 'utf8');
 const DB = JSON.parse(lbRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replace(/;\s*$/, ''));
 
+// 2026-07-01 행정구역 개편 정규화.
+// 「전남광주통합특별시 설치를 위한 특별법」(공포 2026-06-02·시행 2026-07-01)로 광주광역시+전라남도가 통합됐고,
+// 인천은 동구→제물포구, 서구→서해구 분리·검단구 신설.
+// 공공데이터포털은 아직 옛 이름을 주므로 빌드 시점에 현행 명칭으로 바꿔 페이지를 만든다.
+// 옛 URL은 public/_redirects에서 301로 넘긴다.
+const SIDO_RENAME = { 전라남도: '전남광주통합특별시', 광주광역시: '전남광주통합특별시' };
+const SGG_RENAME = { '인천광역시|동구': '제물포구', '인천광역시|서구': '서해구' };
+function normRegion(sido, sgg) {
+  const s2 = SIDO_RENAME[sido] || sido;
+  const g2 = SGG_RENAME[`${sido}|${sgg}`] || sgg;
+  return { sido: s2, sgg: g2, renamed: s2 !== sido || g2 !== sgg };
+}
+
 const man = (n) => Math.round(n / 10000).toLocaleString('ko-KR') + '만원';
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const slug = (sido, sgg) => `${sido}-${sgg}`.replace(/[()]/g, '').replace(/\s+/g, '');
@@ -52,6 +65,16 @@ function localSection(sido, sgg, list) {
     </div>`;
   }).join('');
   return `<div class="locList">${items}</div>` + (list.length > 20 ? `<p class="sub" style="text-align:center;margin-top:12px">외 ${list.length - 20}개 더</p>` : '');
+}
+
+// 개편된 지역에는 안내를 붙인다. 지원사업·조례 이름에는 옛 지자체명이 그대로 남아 있어
+// (예: '전라남도 출생기본수당 지원 조례') 그대로 두는 것이 정확한데, 설명이 없으면 이용자가 혼동한다.
+function mergeNote(sido, sgg) {
+  if (sido === '전남광주통합특별시')
+    return `<p class="disclaimer">※ 2026년 7월 1일 <b>광주광역시와 전라남도가 전남광주통합특별시로 통합</b>됐습니다(전남광주통합특별시 설치를 위한 특별법). 아래 지원사업 이름에 '전라남도'가 남아 있는 것은 <b>조례의 정식 명칭</b>이기 때문이며, ${esc(sgg)} 주민이 그대로 신청할 수 있습니다.</p>`;
+  if (sido === '인천광역시' && (sgg === '제물포구' || sgg === '서해구'))
+    return `<p class="disclaimer">※ 2026년 7월 1일 인천 자치구가 개편돼 <b>${sgg === '제물포구' ? '동구가 제물포구로' : '서구가 서해구와 검단구로'}</b> 바뀌었습니다. 지원사업 이름에 옛 구 이름이 남아 있을 수 있습니다.</p>`;
+  return '';
 }
 
 function page(sido, sgg, list, nearby) {
@@ -115,6 +138,7 @@ function page(sido, sgg, list, nearby) {
 
   ${nearbyLinks ? `<div class="card"><h2 class="secTitle">📍 ${esc(sido)} 다른 지역</h2><div class="nearby">${nearbyLinks}</div></div>` : ''}
 
+  ${mergeNote(sido, sgg)}
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 지자체 지원금은 복지로·주민센터에서 최종 확인하세요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
   <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
@@ -122,6 +146,24 @@ function page(sido, sgg, list, nearby) {
 }
 
 // ── 빌드 ──
+// ── 행정구역 개편 정규화: DB의 시도·시군구 키를 현행 명칭으로 바꾼 뒤 페이지를 만든다 ──
+// 옛 이름으로 이미 색인된 URL이 있으므로 (구슬러그 → 신슬러그) 쌍을 모아 _redirects를 쓴다.
+const redirectPairs = [];
+{
+  const merged = {};
+  for (const [sido, bucket] of Object.entries(DB.sido)) {
+    for (const [sgg, list] of Object.entries(bucket)) {
+      const n = normRegion(sido, sgg);
+      const dst = (merged[n.sido] = merged[n.sido] || {});
+      dst[n.sgg] = [...(dst[n.sgg] || []), ...list];
+      if (n.renamed && sgg !== '(광역 공통)' && !/교육청/.test(sgg) && sgg.trim().length >= 2) {
+        redirectPairs.push([slug(sido, sgg), slug(n.sido, n.sgg)]);
+      }
+    }
+  }
+  DB.sido = merged;
+}
+
 const outDir = path.join(PUB, 'r');
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
@@ -191,6 +233,15 @@ ${urls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}
 </urlset>`;
 fs.writeFileSync(path.join(PUB, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(PUB, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+
+// 행정구역 개편으로 URL이 바뀐 지역은 옛 주소를 301로 넘긴다(이미 색인된 링크 보존)
+if (redirectPairs.length) {
+  const lines = redirectPairs
+    .map(([from, to]) => `/r/${encodeURIComponent(from)} /r/${encodeURIComponent(to)} 301`)
+    .join('\n');
+  fs.writeFileSync(path.join(PUB, '_redirects'), lines + '\n');
+  console.log(`[build-pages] _redirects ${redirectPairs.length}건 (행정구역 개편 전 URL → 현행 URL)`);
+}
 
 console.log(`[build-pages] 지역 페이지 ${count}개 + sitemap(${urls.length} URL) + robots.txt`);
 console.log(`[build-pages] 국가수당 헤드라인(첫째): ${man(NAT_HEADLINE)}`);
