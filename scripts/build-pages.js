@@ -25,13 +25,8 @@ const DB = JSON.parse(lbRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replac
 // 인천은 동구→제물포구, 서구→서해구 분리·검단구 신설.
 // 공공데이터포털은 아직 옛 이름을 주므로 빌드 시점에 현행 명칭으로 바꿔 페이지를 만든다.
 // 옛 URL은 public/_redirects에서 301로 넘긴다.
-const SIDO_RENAME = { 전라남도: '전남광주통합특별시', 광주광역시: '전남광주통합특별시' };
-const SGG_RENAME = { '인천광역시|동구': '제물포구', '인천광역시|서구': '서해구' };
-function normRegion(sido, sgg) {
-  const s2 = SIDO_RENAME[sido] || sido;
-  const g2 = SGG_RENAME[`${sido}|${sgg}`] || sgg;
-  return { sido: s2, sgg: g2, renamed: s2 !== sido || g2 !== sgg };
-}
+// (맵 본체는 build-local.js와 공유 — scripts/regions.js)
+const { normRegion, legacyNames } = require('./regions');
 
 const man = (n) => Math.round(n / 10000).toLocaleString('ko-KR') + '만원';
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -147,8 +142,7 @@ function page(sido, sgg, list, nearby) {
 
 // ── 빌드 ──
 // ── 행정구역 개편 정규화: DB의 시도·시군구 키를 현행 명칭으로 바꾼 뒤 페이지를 만든다 ──
-// 옛 이름으로 이미 색인된 URL이 있으므로 (구슬러그 → 신슬러그) 쌍을 모아 _redirects를 쓴다.
-const redirectPairs = [];
+// build-local.js가 이미 정규화하므로 대개 no-op이지만, 옛 이름이 섞인 DB로도 빌드되게 남겨둔다(멱등).
 {
   const merged = {};
   for (const [sido, bucket] of Object.entries(DB.sido)) {
@@ -156,12 +150,22 @@ const redirectPairs = [];
       const n = normRegion(sido, sgg);
       const dst = (merged[n.sido] = merged[n.sido] || {});
       dst[n.sgg] = [...(dst[n.sgg] || []), ...list];
-      if (n.renamed && sgg !== '(광역 공통)' && !/교육청/.test(sgg) && sgg.trim().length >= 2) {
-        redirectPairs.push([slug(sido, sgg), slug(n.sido, n.sgg)]);
-      }
     }
   }
   DB.sido = merged;
+}
+
+// 옛 이름으로 이미 색인된 URL이 있으므로 (구슬러그 → 신슬러그) 쌍을 모아 _redirects를 쓴다.
+// ⚠️ 입력이 이미 정규화돼 있어도 리디렉션이 사라지면 안 되므로, "이번 빌드에서 이름이 바뀐 것"이 아니라
+//    현행 지역명에 대응하는 개편 전 이름(regions.js의 정적 맵)으로 만든다.
+const redirectPairs = [];
+for (const [sido, bucket] of Object.entries(DB.sido)) {
+  for (const sgg of Object.keys(bucket)) {
+    if (sgg === '(광역 공통)' || /교육청/.test(sgg) || sgg.trim().length < 2) continue;
+    for (const [oldSido, oldSgg] of legacyNames(sido, sgg)) {
+      redirectPairs.push([slug(oldSido, oldSgg), slug(sido, sgg)]);
+    }
+  }
 }
 
 const outDir = path.join(PUB, 'r');

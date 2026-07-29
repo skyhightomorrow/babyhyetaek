@@ -6,6 +6,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { normRegion } = require('./regions');
 
 const src = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'benefits.json'), 'utf8'));
 
@@ -22,18 +23,16 @@ function cleanAmt(s) {
     .replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240);
 }
 
-// 원본 데이터 오류: 실존하지 않는 인천 구역(2026 개편 검토중 명칭이 섞임)
-const BAD_SGG = new Set(['서해구', '제물포구']);
-
 const bySido = {};
 let kept = 0;
 for (const s of src.items) {
   if (!INCLUDE.test(s.servNm)) continue;
   if (EXCLUDE.test(s.servNm)) continue;
-  if (BAD_SGG.has(s.sgg)) continue;
-  const sido = s.ctpv || '기타';
+  const rawSido = s.ctpv || '기타';
   // 세종은 시군구가 없어 서비스 sgg가 비어있음 → 세종 자체를 지역 단위로
-  const sgg = s.sgg || (s.ctpv === '세종특별자치시' ? '세종특별자치시' : '(광역 공통)');
+  const rawSgg = s.sgg || (s.ctpv === '세종특별자치시' ? '세종특별자치시' : '(광역 공통)');
+  // 2026-07-01 개편명으로 통일 — 홈 위저드 선택지와 /r/ 지역 페이지의 지역명이 어긋나지 않게 한다
+  const { sido, sgg } = normRegion(rawSido, rawSgg);
   bySido[sido] = bySido[sido] || {};
   bySido[sido][sgg] = bySido[sido][sgg] || [];
   bySido[sido][sgg].push({
