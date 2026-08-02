@@ -61,6 +61,7 @@ for (const sido of Object.values(bySido))
 // 그런 시도는 직전 빌드 결과를 그대로 이어받아 페이지가 사라지지 않게 한다.
 const outPath = path.join(__dirname, '..', 'public', 'local-benefits.js');
 const carried = [];
+const staleAsOf = {}; // 이월된 시도 → 그 데이터가 실제로 수집된 날짜(페이지에 이 날짜를 표시한다)
 if (fs.existsSync(outPath)) {
   const prevRaw = fs.readFileSync(outPath, 'utf8');
   const prev = JSON.parse(prevRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replace(/;\s*$/, ''));
@@ -68,6 +69,9 @@ if (fs.existsSync(outPath)) {
     if (!bySido[sido] && Object.keys(bucket).length) {
       bySido[sido] = bucket;
       carried.push(sido);
+      // 이미 이월된 적 있으면 그때 날짜를 유지한다 — 매일 이월될 때마다 날짜가 따라 밀리면
+      // 실제로는 낡은 데이터가 계속 "오늘 갱신"으로 보이게 된다.
+      staleAsOf[sido] = (prev.staleAsOf && prev.staleAsOf[sido]) || prev.builtAt;
     }
   }
 }
@@ -75,8 +79,8 @@ if (fs.existsSync(outPath)) {
 const out = {
   builtAt: src.fetchedAt,
   detailCoverage: `${src.detailCount}/${src.count}`,
-  // 이번 수집에서 통째로 누락돼 직전 데이터를 유지한 시도(있으면 소스 점검 필요)
-  staleSido: carried,
+  // 이번 수집에서 통째로 누락돼 직전 데이터를 유지한 시도 → 실제 수집일(있으면 소스 점검 필요)
+  staleAsOf,
   sido: bySido,
 };
 

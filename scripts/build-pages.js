@@ -110,7 +110,7 @@ function page(sido, sgg, list, nearby) {
   <p class="sub">${esc(sgg)}에 사는 우리 집이 아이 태어나서 8세까지 받는 지원금을 국가 수당 + 지자체 지원금으로 정리했어요.</p>
 
   <div class="card">
-    <div class="freshBadge">${YEAR}년 기준 · 지자체 데이터 ${esc(DB.builtAt)} 갱신</div>
+    <div class="freshBadge">${YEAR}년 기준 · 지자체 데이터 ${esc((DB.staleAsOf || {})[sido] || DB.builtAt)} 갱신</div>
     <p class="sumCap">${esc(sgg)} · 첫째 아이 기준</p>
     <div class="sumNum">약 ${man(NAT_HEADLINE)}</div>
     <p class="sumCap">아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b><br>여기에 아래 <b>${esc(sgg)} 지자체 지원금</b>이 추가돼요.</p>
