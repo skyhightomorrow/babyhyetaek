@@ -6,6 +6,7 @@
   "scripts": {
     "fetch": "node scripts/fetch-benefits.js",
     "build-local": "node scripts/build-local.js",
+    "build": "node scripts/build-local.js && node scripts/build-pages.js && node scripts/build-guides.js",
     "serve": "npx -y serve public -l 8630"
   }
 }

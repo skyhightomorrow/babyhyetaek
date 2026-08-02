@@ -54,14 +54,37 @@ for (const s of src.items) {
 for (const sido of Object.values(bySido))
   for (const arr of Object.values(sido)) arr.sort((a, b) => b.hot - a.hot);
 
+// 소스 결손 방어: 공공데이터포털이 특정 시도를 통째로 안 주는 날이 있다
+// (2026-08-01 실측 — 행정구역 개편 이관 중이라 전남·광주 88건이 응답에서 통째로 빠졌고,
+//  그대로 빌드가 돌아 /r/ 지역 페이지 22개와 301 리디렉션이 삭제됐다).
+// 개별 사업이 끝나 빠지는 건 정상 감소지만 "시도 하나가 통째로 0건"은 소스 장애 신호이므로,
+// 그런 시도는 직전 빌드 결과를 그대로 이어받아 페이지가 사라지지 않게 한다.
+const outPath = path.join(__dirname, '..', 'public', 'local-benefits.js');
+const carried = [];
+if (fs.existsSync(outPath)) {
+  const prevRaw = fs.readFileSync(outPath, 'utf8');
+  const prev = JSON.parse(prevRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replace(/;\s*$/, ''));
+  for (const [sido, bucket] of Object.entries(prev.sido || {})) {
+    if (!bySido[sido] && Object.keys(bucket).length) {
+      bySido[sido] = bucket;
+      carried.push(sido);
+    }
+  }
+}
+
 const out = {
   builtAt: src.fetchedAt,
   detailCoverage: `${src.detailCount}/${src.count}`,
+  // 이번 수집에서 통째로 누락돼 직전 데이터를 유지한 시도(있으면 소스 점검 필요)
+  staleSido: carried,
   sido: bySido,
 };
 
 const js = 'window.LOCAL_BENEFITS = ' + JSON.stringify(out) + ';\n';
-fs.writeFileSync(path.join(__dirname, '..', 'public', 'local-benefits.js'), js);
+fs.writeFileSync(outPath, js);
+
+if (carried.length)
+  console.warn(`[build-local] ⚠️ 소스에서 통째로 누락된 시도 ${carried.length}곳 — 직전 데이터 유지: ${carried.join(', ')}`);
 
 const sidoCount = Object.keys(bySido).length;
 const sggCount = Object.values(bySido).reduce((a, s) => a + Object.keys(s).length, 0);
