@@ -34,7 +34,7 @@ function head(title, desc, url, extraLd) {
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA}');</script>
 ${extraLd || ''}
-<style>.guideBody h2{font-size:18px;margin:24px 0 8px}.guideBody p{margin:0 0 12px;color:#3d4759;font-size:15.5px;line-height:1.75}.guideBody ul{margin:0 0 14px;padding-left:20px;color:#3d4759}.guideBody li{margin-bottom:6px;font-size:15px;line-height:1.7}.guideBody strong{color:#191f2e}.gdate{font-size:12.5px;color:#9aa4b2;margin-bottom:6px}.related{margin-top:8px}.related a{display:block;padding:12px 14px;background:#fafbfc;border:1px solid #eef0f4;border-radius:11px;margin-bottom:8px;color:#191f2e;font-size:14px;font-weight:600}</style>
+<style>.guideBody h2{font-size:18px;margin:24px 0 8px}.guideBody h3{font-size:15.5px;margin:18px 0 6px;color:#191f2e}.guideBody p{margin:0 0 12px;color:#3d4759;font-size:15.5px;line-height:1.75}.guideBody ul{margin:0 0 14px;padding-left:20px;color:#3d4759}.guideBody li{margin-bottom:6px;font-size:15px;line-height:1.7}.guideBody strong{color:#191f2e}.gdate{font-size:12.5px;color:#9aa4b2;margin-bottom:6px}.authorBox{margin-top:18px;padding-top:14px;border-top:1px solid #eef0f4;font-size:13px;color:#697588}.authorBox a{color:#7c6cf0;text-decoration:none}.related{margin-top:8px}.related a{display:block;padding:12px 14px;background:#fafbfc;border:1px solid #eef0f4;border-radius:11px;margin-bottom:8px;color:#191f2e;font-size:14px;font-weight:600}</style>
 </head><body><div class="shell">`;
 }
 
@@ -48,15 +48,16 @@ published.forEach((g, i) => {
   const url = `${ORIGIN}/guide/${g.slug}`;
   // 관련 글 = 이미 발행된 다른 글 중 최대 3개
   const related = published.filter((x) => x.slug !== g.slug).slice(0, 3);
-  const ld = `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.desc, datePublished: g.date, publisher: { '@type': 'Organization', name: '베이비혜택' } })}</script>`;
+  const ld = `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.desc, datePublished: g.date, author: { '@type': 'Person', name: 'Jason Jung', url: `${ORIGIN}/about` }, publisher: { '@type': 'Organization', name: '베이비혜택', url: ORIGIN } })}</script>`;
   const relatedHtml = related.length
     ? `<div class="card"><h2 class="secTitle">함께 보면 좋은 글</h2><div class="related">${related.map((r) => `<a href="/guide/${r.slug}">${esc(r.title)}</a>`).join('')}</div></div>`
     : '';
   const html = head(g.title + ' — 베이비혜택', g.desc, url, ld) +
     `<header><div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div><div class="crumb"><a href="/">홈</a> › <a href="/guide/">가이드</a></div></header>
 <h1>${esc(g.title)}</h1>
-<div class="card"><div class="gdate">${g.date} · 베이비혜택</div><div class="guideBody">${g.body}</div>
-<p style="margin-top:18px"><a class="cta" href="/">우리 동네 지원금 계산해보기 →</a></p></div>
+<div class="card"><div class="gdate">${g.date} · 작성 Jason Jung</div><div class="guideBody">${g.body}</div>
+<p style="margin-top:18px"><a class="cta" href="/">우리 동네 지원금 계산해보기 →</a></p>
+<div class="authorBox">작성: <a href="/about">Jason Jung</a> · 베이비혜택 운영자 (1인 개발) · ${g.date} 발행. 지원금 수치는 법정 기준과 공공데이터를 근거로 작성하며, 오류 제보는 <a href="/contact">문의</a>로 받고 있어요.</div></div>
 <div class="adSlot"><span>광고 영역</span></div>
 ${relatedHtml}
 <p class="disclaimer">※ 제도와 금액은 개정될 수 있어요. 신청 전 복지로(bokjiro.go.kr)와 주민센터에서 최신 정보를 확인하세요.</p>` + footer;

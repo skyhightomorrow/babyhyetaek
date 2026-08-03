@@ -3,22 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>소개 — 베이비혜택</title>
-<meta name="description" content="베이비혜택은 국가 육아 수당과 우리 동네 지자체 지원금을 합쳐 8세까지 받는 총액을 계산해 주는 무료 서비스입니다.">
+<title>소개 — 베이비혜택은 누가, 어떻게 만드나요</title>
+<meta name="description" content="베이비혜택은 1인 개발자 Jason Jung이 만들고 운영합니다. 왜 만들었는지, 지자체 공공데이터와 법정 수치를 어떻게 관리하는지, 그리고 이 사이트가 하지 않는 것을 투명하게 정리했어요.">
+<link rel="canonical" href="https://babyhyetaek.com/about">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CZCXLHZVB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CZCXLHZVB');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://babyhyetaek.com/about",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Jason Jung",
+    "jobTitle": "Web developer",
+    "email": "skyhightomorrow@gmail.com",
+    "url": "https://babyhyetaek.com/about",
+    "knowsAbout": [
+      "한국 출산·육아 지원금 제도",
+      "지자체 복지서비스 공공데이터",
+      "육아휴직급여·부모급여·아동수당 법정 기준"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "베이비혜택",
+      "url": "https://babyhyetaek.com"
+    }
+  }
+}
+</script>
 <style>
   body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:#191f2e;line-height:1.7;background:#f7f8fa;margin:0}
   .shell{max-width:560px;margin:0 auto;padding:28px 20px 64px}
   a{color:#7c6cf0;text-decoration:none}
   h1{font-size:23px;letter-spacing:-.02em;margin:0 0 6px}
+  .updated{font-size:12.5px;color:#9aa4b2}
   .logo{font-size:18px;font-weight:800;margin-bottom:20px}
   .logo b{color:#ff6b81}
   h2{font-size:16px;margin:26px 0 8px}
   p{color:#3d4759;font-size:15px;margin:0 0 12px}
   .box{background:#fff;border:1px solid #eef0f4;border-radius:14px;padding:20px;margin-top:16px}
-  ul{color:#3d4759;font-size:15px;padding-left:20px}
+  .box p:last-child{margin-bottom:0}
+  ul{color:#3d4759;font-size:15px;padding-left:20px;margin:0 0 12px}
   li{margin-bottom:6px}
+  .mail{font-size:16px;font-weight:700;color:#ff6b81}
   footer{margin-top:32px;font-size:12.5px;color:#9aa4b2;border-top:1px solid #eef0f4;padding-top:16px}
 </style>
 </head>
@@ -26,25 +54,55 @@
 <div class="shell">
   <div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div>
   <h1>소개</h1>
-  <p>베이비혜택은 출산·육아를 앞둔 부모가 <b>정부와 우리 동네에서 실제로 받을 수 있는 지원금이 얼마인지</b> 한 번에 확인하도록 돕는 무료 서비스입니다.</p>
+  <p class="updated">2026-08-03 갱신 · 작성 Jason Jung</p>
+  <p>베이비혜택은 출산·육아를 앞둔 부모가 <b>정부와 우리 동네에서 실제로 받을 수 있는 지원금이 얼마인지</b> 한 번에 확인하도록 돕는 무료 서비스입니다. 부모급여·첫만남이용권·아동수당 같은 국가 수당에, 시·군·구가 조례로 주는 지자체 지원금까지 더해 8세까지 받는 총액을 보여드려요.</p>
 
-  <h2>무엇이 다른가요?</h2>
+  <h2>만드는 사람</h2>
+  <div class="box">
+    <p>제 이름은 <b>Jason Jung</b>입니다. 혼자서 웹서비스를 만드는 1인 개발자이고, 베이비혜택의 데이터 수집 파이프라인부터 계산기, 지역 페이지, 가이드 글까지 전부 직접 만들고 관리하고 있어요.</p>
+    <p>분명히 해 둘 것이 있습니다. <b>저는 보육 전문가도, 복지 담당 공무원도 아니에요.</b> 육아 정책을 권위 있게 해석해 줄 자격이 있는 사람이 아니라, 공공데이터와 법정 기준을 꼼꼼히 읽고 교차 검증하는 습관이 있는 개발자입니다. 그래서 이 사이트는 제 의견을 말하는 대신 <b>출처를 보여주는 방식</b>으로 만들었어요. 지자체 지원금 항목마다 근거 조례명과 데이터 갱신일을 함께 표시하는 이유입니다.</p>
+    <p>숫자가 틀렸다고 생각되면 아래 이메일로 알려주세요. 확인해서 맞으면 고치고, 아니면 근거 출처를 보여드릴게요.</p>
+  </div>
+
+  <h2>왜 만들었나요</h2>
+  <div class="box">
+    <p>출산·육아 지원금 정보는 크게 두 덩어리로 흩어져 있어요. 국가 공통 수당(부모급여·첫만남이용권·아동수당·육아휴직급여)은 정부 사이트마다 따로 안내되고, 시·군·구가 조례로 주는 지자체 지원금은 지역마다 금액과 조건이 완전히 다릅니다. 이 둘을 <b>합쳐서 "우리 집은 총 얼마"를 보여주는 곳</b>은 찾기 어려웠어요.</p>
+    <p>더 큰 문제는 최신성이었습니다. 지자체 지원금을 정리해 둔 페이지는 많지만, 한 번 만들어진 뒤 방치되어 몇 년 전 금액이 그대로 남아 있는 경우가 흔했어요. 조례는 수시로 바뀌는데 말이죠. 그래서 사람이 손으로 옮겨 적는 대신 <b>공공데이터를 정기적으로 다시 받아 와 페이지를 자동으로 다시 만드는</b> 구조로 이 사이트를 만들었고, 2026년 7월에 공개했습니다.</p>
+  </div>
+
+  <h2>데이터를 어떻게 관리하나요</h2>
   <div class="box">
     <ul>
-      <li><b>합산 총액</b> — 부모급여·첫만남이용권·아동수당·육아휴직급여 같은 국가 수당에, 시·군·구가 조례로 주는 지자체 지원금까지 더해 8세까지 총액을 보여줍니다. 이 둘을 합쳐 계산해 주는 곳은 드뭅니다.</li>
-      <li><b>최신 데이터</b> — 지자체 지원금은 공공데이터(한국사회보장정보원)에서 정기적으로 가져오며, 각 항목에 근거 조례와 갱신일을 함께 표시합니다.</li>
-      <li><b>가입 없이</b> — 회원가입도, 개인정보 저장도 없습니다. 입력값은 계산에만 쓰이고 저장되지 않습니다.</li>
+      <li><b>지자체 지원금은 한국사회보장정보원 지자체복지서비스 공공데이터(복지로)</b>에서 정기 수집해요. 전국 시군구별 페이지가 이 데이터로 빌드 때마다 다시 생성되고, 항목마다 근거 조례명과 갱신일을 표시합니다.</li>
+      <li><b>수집이 누락된 지역은 낡은 데이터를 "오늘 갱신"으로 속이지 않아요.</b> 공공데이터 응답에서 특정 시도가 통째로 빠지는 날이 있는데, 그 경우 직전 데이터를 유지하되 페이지에는 그 데이터가 실제로 수집된 날짜를 그대로 표시합니다.</li>
+      <li><b>국가 수당은 법정 기준을 코드에 반영</b>해요. 보건복지부·고용노동부·국민행복카드(voucher.go.kr)의 2026년 기준을 항목별 출처와 함께 기록해 두고 매년 재검증합니다.</li>
+      <li><b>8세까지 총액은 타이핑이 아니라 계산이에요.</b> 지역 페이지와 계산기가 같은 데이터에서 빌드 시점에 자동 계산되기 때문에, 페이지마다 숫자가 어긋날 수 없는 구조입니다.</li>
+      <li><b>2026년 7월 1일 행정구역 개편</b>(전남광주통합특별시 출범, 인천 자치구 개편)을 반영해 현행 지역명으로 페이지를 만들고, 옛 주소는 새 주소로 연결합니다.</li>
     </ul>
   </div>
 
-  <h2>데이터 출처</h2>
-  <p>국가 수당은 보건복지부·고용노동부·국민행복카드(voucher.go.kr)의 2026년 법정 기준을 반영합니다. 지자체 지원금은 <b>한국사회보장정보원 지자체복지서비스</b> 공공데이터(복지로)에서 수집합니다.</p>
+  <h2>이 사이트가 하지 않는 것</h2>
+  <div class="box">
+    <ul>
+      <li><b>정부·지자체 공식 서비스가 아니에요.</b> 정부 및 어떤 지자체와도 관련이 없는 독립 사이트입니다.</li>
+      <li><b>회원가입도, 개인정보 저장도 없어요.</b> 계산에 입력한 값은 저장되지 않아요. 자세한 내용은 <a href="/privacy">개인정보처리방침</a>에 있습니다.</li>
+      <li><b>현재 유료 광고·제휴 링크가 없어요.</b> 앞으로 운영비를 위해 광고나 제휴 링크를 게재하게 될 수 있으며, 그 경우 이 페이지에 그 사실을 고지하겠습니다.</li>
+      <li><b>개별 상담이나 신청 대행을 하지 않아요.</b> 이 사이트는 제도가 정한 기준으로 얼마가 나오는지 보여줄 뿐, 우리 가족이 무엇을 해야 하는지는 복지로와 주민센터에서 최종 확인하셔야 해요.</li>
+    </ul>
+  </div>
+
+  <h2>문의·오류 제보</h2>
+  <div class="box">
+    <p style="margin:0 0 4px;color:#697588;font-size:13px">이메일</p>
+    <p class="mail"><a href="mailto:skyhightomorrow@gmail.com" style="color:inherit">skyhightomorrow@gmail.com</a></p>
+    <p style="margin-top:10px">특히 <b>"우리 동네 금액이 실제와 달라요"</b> 같은 제보는 데이터 품질에 큰 도움이 됩니다. 확인되는 대로 반영해요.</p>
+  </div>
 
   <h2>유의사항</h2>
-  <p>계산 결과는 <b>참고용 추정치</b>입니다. 실제 수급 여부와 금액은 소득·재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있습니다. 신청 전 복지로와 관할 주민센터에서 최종 확인하시기 바랍니다. 본 서비스는 정부·지자체의 공식 서비스가 아닙니다.</p>
+  <p>계산 결과는 <b>참고용 추정치</b>입니다. 실제 수급 여부와 금액은 소득·재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있습니다. 신청 전 복지로(bokjiro.go.kr)와 관할 주민센터에서 최종 확인하시기 바랍니다.</p>
 
   <footer>
-    baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a>
+    baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a>
   </footer>
 </div>
 </body>
