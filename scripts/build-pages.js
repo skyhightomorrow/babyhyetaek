@@ -10,6 +10,7 @@
 const fs = require('fs');
 const path = require('path');
 const { NATIONAL } = require('../lib/national');
+const lastmod = require('./lastmod');
 
 const ORIGIN = process.env.SITE_ORIGIN || 'https://babyhyetaek.com';
 const YEAR = 2026;
@@ -172,7 +173,9 @@ const outDir = path.join(PUB, 'r');
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
+// urls와 짝을 이루는 실제 파일 경로 — lastmod를 내용 해시로 판정하는 데 쓴다
 const urls = [`${ORIGIN}/`];
+const files = [path.join(PUB, 'index.html')];
 let count = 0;
 const hubIndex = []; // [sido, sggs[]] — 허브 페이지용 (지역 페이지가 홈에서 고아가 되지 않도록)
 for (const [sido, bucket] of Object.entries(DB.sido)) {
@@ -183,6 +186,7 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
     const nearby = sggs.filter((s) => s !== sgg).slice(0, 12);
     fs.writeFileSync(path.join(outDir, `${slug(sido, sgg)}.html`), page(sido, sgg, list, nearby));
     urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`);
+    files.push(path.join(outDir, `${slug(sido, sgg)}.html`));
     count++;
   }
   if (sggs.length) hubIndex.push([sido, sggs]);
@@ -227,15 +231,13 @@ ${groups}
 </body></html>`;
   fs.writeFileSync(path.join(outDir, 'index.html'), hub);
   urls.push(url);
+  files.push(path.join(outDir, 'index.html'));
   console.log(`[build-pages] 지역 허브 /r/ 생성 — ${hubIndex.length}개 시도 · ${count}개 시군구 링크`);
 }
 
-// sitemap
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}
-</urlset>`;
-fs.writeFileSync(path.join(PUB, 'sitemap.xml'), sitemap);
+// sitemap — lastmod는 페이지 내용이 실제로 바뀐 URL만 오늘 날짜로 올라간다(scripts/lastmod.js 주석 참고)
+const rows = lastmod.stamp(urls.map((u, i) => ({ url: u, file: files[i] })));
+fs.writeFileSync(path.join(PUB, 'sitemap.xml'), lastmod.xml(rows));
 fs.writeFileSync(path.join(PUB, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // 행정구역 개편으로 URL이 바뀐 지역은 옛 주소를 301로 넘긴다(이미 색인된 링크 보존)

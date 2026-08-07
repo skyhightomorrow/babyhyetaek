@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const GUIDES = require('../lib/guides');
+const lastmod = require('./lastmod');
 
 const ORIGIN = process.env.SITE_ORIGIN || 'https://babyhyetaek.com';
 const GA = 'G-6CZCXLHZVB';
@@ -44,6 +45,7 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 
 const guideUrls = [];
+const guideFiles = []; // guideUrls와 같은 순서 — lastmod 해시 판정용
 published.forEach((g, i) => {
   const url = `${ORIGIN}/guide/${g.slug}`;
   // 관련 글 = 이미 발행된 다른 글 중 최대 3개
@@ -63,6 +65,7 @@ ${relatedHtml}
 <p class="disclaimer">※ 제도와 금액은 개정될 수 있어요. 신청 전 복지로(bokjiro.go.kr)와 주민센터에서 최신 정보를 확인하세요.</p>` + footer;
   fs.writeFileSync(path.join(OUT, `${g.slug}.html`), html);
   guideUrls.push(url);
+  guideFiles.push(path.join(OUT, `${g.slug}.html`));
 });
 
 // 가이드 허브
@@ -73,16 +76,19 @@ const hub = head('육아 지원금 가이드 — 베이비혜택', '출산지원
 <div class="card"><div class="locList">${hubItems || '<p class="sub">준비 중입니다.</p>'}</div></div>` + footer;
 fs.writeFileSync(path.join(OUT, 'index.html'), hub);
 guideUrls.push(`${ORIGIN}/guide/`);
+guideFiles.push(path.join(OUT, 'index.html'));
 
 // 발행된 가이드 slug 목록 (app.js가 미발행 글 링크 방지에 사용)
 fs.writeFileSync(path.join(PUB, 'published-guides.js'), 'window.PUBLISHED_GUIDES=' + JSON.stringify(published.map((g) => g.slug)) + ';\n');
 
 // sitemap 병합 (지역 페이지 sitemap이 이미 있으면 guide URL 추가)
+// build-pages가 이미 찍어둔 지역 URL의 lastmod는 그대로 보존하고, 가이드 URL만 새로 판정해 이어붙인다
 const smPath = path.join(PUB, 'sitemap.xml');
-let existing = [];
-if (fs.existsSync(smPath)) existing = (fs.readFileSync(smPath, 'utf8').match(/<loc>(.*?)<\/loc>/g) || []).map((m) => m.replace(/<\/?loc>/g, ''));
-const allUrls = [...new Set([...existing, ...guideUrls])];
-fs.writeFileSync(smPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${allUrls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>`);
+const existing = lastmod.parse(smPath);
+const seen = new Set(existing.map((r) => r.url));
+const guideRows = lastmod.stamp(guideUrls.map((u, i) => ({ url: u, file: guideFiles[i] })));
+const allRows = [...existing, ...guideRows.filter((r) => !seen.has(r.url))];
+fs.writeFileSync(smPath, lastmod.xml(allRows));
 
-console.log(`[build-guides] 발행 ${published.length}/${GUIDES.length}편 (기준일 ${today}) → public/guide/ · sitemap ${allUrls.length} URL`);
+console.log(`[build-guides] 발행 ${published.length}/${GUIDES.length}편 (기준일 ${today}) → public/guide/ · sitemap ${allRows.length} URL`);
 published.forEach((g) => console.log(`  ${g.date} ${g.slug}`));
