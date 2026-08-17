@@ -46,6 +46,14 @@ for (const s of src.items) {
     mod: s.lastMod || (s.detail && s.detail.lastMod) || null,
     link: s.link,
     hot: s.inqNum || 0,
+    // 2026-08-17 추가 — 아래 4개는 원본이 100% 갖고 있는데도 여태 페이지에 한 번도 안 나갔다.
+    // /r/ 조건 표와 집계 문장의 재료다(scripts/_local-stats.js).
+    pvsn: s.pvsn || null,          // 지급수단: 현금지급 / 지역화폐 / 현물지급 / 바우처 …
+    cyc: s.cyc || null,            // 주기: 1회성 / 월 / 년 …
+    aply: s.aply || null,          // 신청방식: 방문 / 인터넷 …
+    crit: s.detail ? cleanAmt(s.detail.crit) : null,   // 소득기준 (표 컬럼 전용 — 집계 문장 금지, 지역 간 편차 없음)
+    target: s.detail ? cleanAmt(s.detail.target) : null,
+    tel: s.detail && s.detail.contacts && s.detail.contacts[0] ? cleanAmt(s.detail.contacts[0]) : null,
   });
   kept++;
 }
