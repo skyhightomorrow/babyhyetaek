@@ -8,6 +8,7 @@
  * 전제: public/local-benefits.js (build-local.js가 먼저 생성)
  */
 const fs = require('fs');
+const { guardPages } = require('./_page-guard');
 const path = require('path');
 const { NATIONAL } = require('../lib/national');
 const lastmod = require('./lastmod');
@@ -314,6 +315,17 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
 }
 
 const outDir = path.join(PUB, 'r');
+// 지우기 전에 무엇이 사라질지 본다. 2026-08-01에 이 자리에서 /r/ 22개가 조용히 삭제됐다.
+// 정상 churn은 0건(50커밋 실측)이라 허용 5면 충분하다.
+{
+  const willBuild = [];
+  for (const [sido, bucket] of Object.entries(DB.sido)) {
+    for (const sgg of Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2)) {
+      willBuild.push(slug(sido, sgg));
+    }
+  }
+  guardPages(outDir, willBuild, { label: '지역', max: 5 });
+}
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
