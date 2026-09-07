@@ -28,13 +28,13 @@ const DB = JSON.parse(lbRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replac
 // 공공데이터포털은 아직 옛 이름을 주므로 빌드 시점에 현행 명칭으로 바꿔 페이지를 만든다.
 // 옛 URL은 public/_redirects에서 301로 넘긴다.
 // (맵 본체는 build-local.js와 공유 — scripts/regions.js)
-const { normRegion, legacyNames } = require('./regions');
+const { normRegion, legacyNames, isCommonKey, commonFor } = require('./regions');
 // 조건 표·집계 문장용 (2026-08-17). 지역 페이지가 "나열"에서 "집계·해석"으로 넘어가는 부분.
 const ST = require('./_local-stats');
 
 // 시군구 페이지를 만드는 키인지 — 교육청·(광역 공통)은 시군구가 아니라 페이지를 만들지 않는다.
 // 집계 모수도 같은 기준이어야 "전국 N곳 중 M위" 문장이 실제 페이지 수와 맞는다.
-const isRealSgg = (k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2;
+const isRealSgg = (k) => !isCommonKey(k) && !/교육청/.test(k) && k.trim().length >= 2;
 
 // 전국·시도 집계는 페이지마다 다시 돌면 214번 반복되므로 빌드 시작 때 한 번만 만든다(정규화 직후 대입).
 let STATS = { perRegion: {}, bySido: {}, amounts: [] };
@@ -307,7 +307,7 @@ console.log(`[build-pages] 집계 — 지역 ${Object.keys(STATS.perRegion).leng
 const redirectPairs = [];
 for (const [sido, bucket] of Object.entries(DB.sido)) {
   for (const sgg of Object.keys(bucket)) {
-    if (sgg === '(광역 공통)' || /교육청/.test(sgg) || sgg.trim().length < 2) continue;
+    if (!isRealSgg(sgg)) continue;
     for (const [oldSido, oldSgg] of legacyNames(sido, sgg)) {
       redirectPairs.push([slug(oldSido, oldSgg), slug(sido, sgg)]);
     }
@@ -320,7 +320,7 @@ const outDir = path.join(PUB, 'r');
 {
   const willBuild = [];
   for (const [sido, bucket] of Object.entries(DB.sido)) {
-    for (const sgg of Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2)) {
+    for (const sgg of Object.keys(bucket).filter(isRealSgg)) {
       willBuild.push(slug(sido, sgg));
     }
   }
@@ -335,10 +335,11 @@ const files = [path.join(PUB, 'index.html')];
 let count = 0;
 const hubIndex = []; // [sido, sggs[]] — 허브 페이지용 (지역 페이지가 홈에서 고아가 되지 않도록)
 for (const [sido, bucket] of Object.entries(DB.sido)) {
-  const sggs = Object.keys(bucket).filter((k) => k !== '(광역 공통)' && !/교육청/.test(k) && k.trim().length >= 2);
-  const common = bucket['(광역 공통)'] || [];
+  const sggs = Object.keys(bucket).filter(isRealSgg);
   for (const sgg of sggs) {
-    const list = [...(bucket[sgg] || []), ...common].filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
+    // 광역 사업은 권역별로 갈라 붙인다 — 전남광주는 옛 광주/전남 사업이 섞여 있다(regions.js).
+    const list = [...(bucket[sgg] || []), ...commonFor(bucket, sido, sgg)]
+      .filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
     const nearby = sggs.filter((s) => s !== sgg).slice(0, 12);
     fs.writeFileSync(path.join(outDir, `${slug(sido, sgg)}.html`), page(sido, sgg, list, nearby));
     urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`);

@@ -67,14 +67,27 @@ function buildPlan(input) {
 }
 
 /* ── 지자체 조회 ── */
+// 광역 사업 버킷은 보통 「(광역 공통)」 하나지만, 2026-07-01 통합으로 생긴 전남광주만
+// 옛 광주광역시 사업과 옛 전라남도 사업이 갈려 있다(scripts/regions.js·build-local.js와 같은 규칙).
+// 그대로 합치면 광주 조례 사업이 전남 시군에, 전남 조례 사업이 광주 구에 표시된다.
+const UNIFIED_SIDO = '전남광주통합특별시';
+const GWANGJU_GU = ['동구', '서구', '남구', '북구', '광산구'];
+const isCommonKey = (k) => k.indexOf('(광역 공통') === 0;
+
+function commonFor(bucket, sido, sgg) {
+  const base = bucket['(광역 공통)'] || [];
+  if (sido !== UNIFIED_SIDO) return base;
+  const key = GWANGJU_GU.indexOf(sgg) > -1 ? '(광역 공통·광주)' : '(광역 공통·전남)';
+  return bucket[key] ? base.concat(bucket[key]) : base;
+}
+
 function localFor(sido, sgg) {
   const db = window.LOCAL_BENEFITS;
   if (!db || !db.sido[sido]) return { list: [], meta: db };
   const bucket = db.sido[sido];
-  const common = bucket['(광역 공통)'] || [];
   const local = bucket[sgg] || [];
-  // 시군구 지원금 + 광역 공통, 조회수순
-  const list = [...local, ...common].filter((x, i, arr) => arr.findIndex((y) => y.id === x.id) === i);
+  // 시군구 지원금 + 그 권역에 해당하는 광역 사업, 조회수순
+  const list = [...local, ...commonFor(bucket, sido, sgg)].filter((x, i, arr) => arr.findIndex((y) => y.id === x.id) === i);
   return { list, meta: db };
 }
 
@@ -87,7 +100,7 @@ function sidoList() { return Object.keys(window.LOCAL_BENEFITS ? window.LOCAL_BE
 function sggList(sido) {
   const b = window.LOCAL_BENEFITS && window.LOCAL_BENEFITS.sido[sido];
   if (!b) return [];
-  return Object.keys(b).filter((k) => k !== '(광역 공통)').sort();
+  return Object.keys(b).filter((k) => !isCommonKey(k)).sort();
 }
 
 function render() {

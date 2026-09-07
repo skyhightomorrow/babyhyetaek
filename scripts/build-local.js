@@ -6,7 +6,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { normRegion } = require('./regions');
+const { normRegion, isCommonKey } = require('./regions');
 
 const src = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'benefits.json'), 'utf8'));
 
@@ -58,6 +58,45 @@ for (const s of src.items) {
   kept++;
 }
 
+// ── 전남광주통합특별시 광역 사업 권역 분리 (2026-09-07) ──
+// 2026-07-01 통합으로 옛 광주광역시와 옛 전라남도의 광역 사업이 「(광역 공통)」 한 풀에 섞였다.
+// 그대로 두면 광주 조례 사업이 전남 22개 시군 페이지에, 전남 조례 사업이 광주 5개 구 페이지에 실린다
+// (실제로 09-07까지 「여수시 출생기본수당」이 전남 22곳 전부에 남의 동네 사업으로 표시되고 있었다).
+// 근거 조례와 담당부서 지역번호로 갈라 각 권역에만 붙이고, 판별 불가면 양쪽 모두 유지한다(기존 동작).
+// ⚠️ 이 분리는 두 옛 시도가 합쳐진 전남광주에만 해당한다. 다른 시도의 (광역 공통)은 그 시도 전역이 맞다.
+const UNIFIED = '전남광주통합특별시';
+if (bySido[UNIFIED]) {
+  const bucket = bySido[UNIFIED];
+  const common = bucket['(광역 공통)'] || [];
+  // ⚠️ 두 글자 자치구명(동구·서구·남구·북구)은 사업명에 우연히 섞일 수 있어 귀속 판정에서 뺀다.
+  //    그런 사업은 아래 지역번호 규칙으로 걸러진다.
+  const owners = Object.keys(bucket)
+    .filter((k) => !k.startsWith('(광역 공통') && !/교육청/.test(k) && k.length >= 3)
+    .sort((a, b) => b.length - a.length);
+  const gj = [];   // 광주 권역 전용
+  const jn = [];   // 전남 권역 전용
+  const both = []; // 판별 불가 → 양쪽 모두
+  let owned = 0;
+  for (const it of common) {
+    // ① 사업명에 특정 시군이 박힌 광역 사업은 그 시군 것이다 (예: 「여수시 출생기본소득」)
+    const owner = owners.find((n) => (it.nm || '').includes(n));
+    if (owner) { bucket[owner].push(it); owned++; continue; }
+    // ② 담당부서 지역번호 — 062 광주 / 061 전남. 가장 신뢰도 높은 신호다.
+    const tel = it.tel || '';
+    // ③ 근거 조례·사업개요. tel에는 「전남광주통합특별시」가 들어가므로 조례 판정에 tel을 섞지 않는다.
+    const law = `${it.law || ''} ${it.dgst || ''}`;
+    if (/062[-\s]/.test(tel)) gj.push(it);
+    else if (/061[-\s]/.test(tel)) jn.push(it);
+    else if (/광주광역시|광주권역/.test(law)) gj.push(it);
+    else if (/전라남도|전남/.test(law)) jn.push(it);
+    else both.push(it);
+  }
+  bucket['(광역 공통)'] = both;
+  if (gj.length) bucket['(광역 공통·광주)'] = gj;
+  if (jn.length) bucket['(광역 공통·전남)'] = jn;
+  console.log(`[build-local] 전남광주 광역 분리 — 광주 ${gj.length} · 전남 ${jn.length} · 양쪽 ${both.length} · 시군 귀속 ${owned}`);
+}
+
 // 각 시군구 내 조회수순 정렬
 for (const sido of Object.values(bySido))
   for (const arr of Object.values(sido)) arr.sort((a, b) => b.hot - a.hot);
@@ -99,5 +138,6 @@ if (carried.length)
   console.warn(`[build-local] ⚠️ 소스에서 통째로 누락된 시도 ${carried.length}곳 — 직전 데이터 유지: ${carried.join(', ')}`);
 
 const sidoCount = Object.keys(bySido).length;
-const sggCount = Object.values(bySido).reduce((a, s) => a + Object.keys(s).length, 0);
+// 광역 버킷((광역 공통)·권역별)은 시군구가 아니므로 세지 않는다 — 실제 페이지 수와 맞춘다.
+const sggCount = Object.values(bySido).reduce((a, s) => a + Object.keys(s).filter((k) => !isCommonKey(k)).length, 0);
 console.log(`[build-local] 육아/출산 관련 ${kept}건 · ${sidoCount}개 시도 · ${sggCount}개 시군구 → public/local-benefits.js (${(js.length / 1024).toFixed(0)}KB)`);

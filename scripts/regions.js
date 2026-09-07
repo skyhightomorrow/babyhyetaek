@@ -29,9 +29,26 @@ function legacyNames(sido, sgg) {
     if (GWANGJU_GU.has(sgg)) out.push(['광주광역시', sgg]);
     else out.push(['전라남도', sgg]);
   }
-  if (sido === '인천광역시' && sgg === '제물포구') out.push(['인천광역시', '동구']);
+  // 인천 중구·동구는 폐지됐다 — 중구 내륙 + 동구 = 제물포구, 중구의 영종도·용유도 = 영종구.
+  // 중구 URL 하나를 두 곳으로 나눌 수는 없으므로 인구가 많은 구도심 쪽(제물포구)으로 넘긴다.
+  // (2026-09-07 추가 — 소스가 영종구를 주기 시작하면서 중구 페이지가 사라져 라이브 URL이 404가 될 뻔했다.)
+  if (sido === '인천광역시' && sgg === '제물포구') out.push(['인천광역시', '동구'], ['인천광역시', '중구']);
   if (sido === '인천광역시' && sgg === '서해구') out.push(['인천광역시', '서구']);
   return out;
 }
 
-module.exports = { SIDO_RENAME, SGG_RENAME, normRegion, legacyNames };
+// ── 광역 공통 버킷 (2026-09-07) ──
+// 보통 시도의 광역 사업은 그 시도 전역에 적용되므로 버킷이 하나뿐이다.
+// 전남광주만 두 옛 시도(광주광역시+전라남도)가 합쳐져 권역별 버킷이 더 붙는다 — build-local.js 참고.
+const UNIFIED_SIDO = '전남광주통합특별시';
+const isCommonKey = (k) => k.startsWith('(광역 공통');
+
+/** 그 시군구 페이지에 얹을 광역 사업 목록 (전역 공통 + 해당 권역 전용) */
+function commonFor(bucket, sido, sgg) {
+  const base = bucket['(광역 공통)'] || [];
+  if (sido !== UNIFIED_SIDO) return base;
+  const key = GWANGJU_GU.has(sgg) ? '(광역 공통·광주)' : '(광역 공통·전남)';
+  return bucket[key] ? [...base, ...bucket[key]] : base;
+}
+
+module.exports = { SIDO_RENAME, SGG_RENAME, normRegion, legacyNames, GWANGJU_GU, UNIFIED_SIDO, isCommonKey, commonFor };

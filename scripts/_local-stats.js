@@ -22,6 +22,8 @@
 // ⚠️ 커버리지를 올리려고 정규식을 느슨하게 만들지 말 것. 오탐이 하나 생기면 그 지역 페이지가 거짓말을 한다.
 
 // 「장애인가정/차상위」처럼 대상이 한정된 사업은 그 지역의 일반 출산지원금이 아니므로 분포에서 뺀다.
+const { commonFor } = require('./regions');
+
 const NARROW = /장애인|차상위|저소득|기초생활|한부모|다문화|미혼모|난임/;
 const CASH_NM = /출산지원금|출산장려금|출생축하|출산축하|출생장려|양육지원금/;
 
@@ -100,10 +102,11 @@ function buildIndex(regions, isRealSgg) {
   const perRegion = {}; // "시도|시군구" → summary
   const bySido = {};    // 시도 → [{sgg, summary}]
   for (const [sido, bucket] of Object.entries(regions)) {
-    const common = bucket['(광역 공통)'] || [];
     for (const [sgg, list] of Object.entries(bucket)) {
       if (!isRealSgg(sgg)) continue;
-      const merged = [...list, ...common].filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
+      // 광역 사업은 권역별로 갈라 얹는다 — 페이지 본문(build-pages.js)과 같은 기준이어야
+      // 「지원사업 N개」 title과 집계 문장이 실제 표와 어긋나지 않는다.
+      const merged = [...list, ...commonFor(bucket, sido, sgg)].filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
       const s = summarize(merged, list);
       perRegion[`${sido}|${sgg}`] = s;
       (bySido[sido] = bySido[sido] || []).push({ sgg, summary: s });
