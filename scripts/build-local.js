@@ -11,7 +11,10 @@ const { normRegion, isCommonKey } = require('./regions');
 const src = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'benefits.json'), 'utf8'));
 
 // 육아·출산과 무관한 노이즈 제외(장애인·저소득 일반·노인 등 성인 대상이 섞여 옴)
-const INCLUDE = /출산|출생|산후|산모|임신|임산부|난임|육아|양육|보육|어린이집|유아|아동|영유아|기저귀|분유|첫만남|다자녀|입학|돌봄|모유|태아/;
+// 2026-09-07: 「아이」 누락으로 14건이 통째로 빠져 있었다(「아픈아이 병원동행」·「아이맘 교통비」 등).
+// 광주 광산구는 자체 사업이 그 1건뿐이라 지역 페이지 자체가 안 만들어지고 있었다.
+// 전수 확인 결과 편입 14건 모두 육아 관련이고 오탐은 0건이었다.
+const INCLUDE = /출산|출생|산후|산모|임신|임산부|난임|육아|양육|보육|어린이집|유아|아동|영유아|기저귀|분유|첫만남|다자녀|입학|돌봄|모유|태아|아이/;
 const EXCLUDE = /노인|어르신|경로|장애인\s*활동|중증장애|한부모.*자립정착|성인|청년\s*월세|어업|농업인?\s*수당|귀농/;
 
 function cleanAmt(s) {
@@ -56,6 +59,34 @@ for (const s of src.items) {
     tel: s.detail && s.detail.contacts && s.detail.contacts[0] ? cleanAmt(s.detail.contacts[0]) : null,
   });
   kept++;
+}
+
+// ── 수동 큐레이션 병합 (2026-09-07) ──
+// 복지로에 아예 등재되지 않은 시군구 자체 출산지원금을 손으로 채운다.
+// 🔴 목포시가 계기다 — 첫째 150만원~다섯째 550만원을 실제로 주는데 복지로에는 시 자체 사업이 2건뿐이라
+//    페이지 금액이 0원이었고, 네이버 「목포 출산지원금」이 노출 100건에 CTR 1.0%로 최하위였다.
+//    즉 순위 문제가 아니라 **찾는 숫자가 페이지에 없는 것**이 원인이었다.
+const MANUAL_FILE = path.join(__dirname, '..', 'data', 'local-manual.json');
+let manualCount = 0;
+if (fs.existsSync(MANUAL_FILE)) {
+  const manual = JSON.parse(fs.readFileSync(MANUAL_FILE, 'utf8'));
+  for (const it of manual.items || []) {
+    const [rawSido, rawSgg] = String(it.region || '').split('|');
+    if (!rawSido || !rawSgg) { console.warn(`[build-local] ⚠️ 수동 항목 region이 「시도|시군구」 형식이 아님: ${it.id}`); continue; }
+    const { sido, sgg } = normRegion(rawSido, rawSgg);
+    const bucket = (bySido[sido] = bySido[sido] || {});
+    const arr = (bucket[sgg] = bucket[sgg] || []);
+    if (arr.some((x) => x.id === it.id)) continue;
+    // 복지로에 같은 사업이 뒤늦게 등재되면 표에 두 번 나온다. 이름이 겹치면 사람이 확인하도록 경고만 낸다.
+    const dup = arr.find((x) => x.nm && it.nm && (x.nm.includes(it.nm) || it.nm.includes(x.nm)));
+    if (dup) console.warn(`[build-local] ⚠️ 수동 항목과 이름이 겹치는 공시 사업 발견 — 중복 확인 필요: ${sido} ${sgg} 「${it.nm}」 vs 「${dup.nm}」`);
+    const { region, source, asOf, ...rest } = it;
+    // 정렬용 조회수는 그 지역 최댓값 +1 — 자체 대표 사업이라 표 맨 위에 와야 한다(임의의 큰 수를 넣지 않는다).
+    const maxHot = arr.reduce((a, x) => Math.max(a, x.hot || 0), 0);
+    arr.push({ ...rest, hot: rest.hot != null ? rest.hot : maxHot + 1, mod: (asOf || '').replace(/-/g, ''), manual: true, src: source || null });
+    manualCount++;
+  }
+  if (manualCount) console.log(`[build-local] 수동 큐레이션 ${manualCount}건 병합 (복지로 미등재분)`);
 }
 
 // ── 전남광주통합특별시 광역 사업 권역 분리 (2026-09-07) ──
@@ -134,8 +165,23 @@ const out = {
 const js = 'window.LOCAL_BENEFITS = ' + JSON.stringify(out) + ';\n';
 fs.writeFileSync(outPath, js);
 
-if (carried.length)
+if (carried.length) {
   console.warn(`[build-local] ⚠️ 소스에서 통째로 누락된 시도 ${carried.length}곳 — 직전 데이터 유지: ${carried.join(', ')}`);
+  // 이월은 하루 이틀 장애를 넘기라고 만든 장치인데, F는 지자체 데이터가 수동 갱신이라
+  // 아무도 재수집을 돌리지 않으면 낡은 데이터가 무한정 서빙된다.
+  // 🔴 실제로 전남광주가 2026-08-01 결손 뒤 55일간 7/14 데이터로 연명했다(09-07 발견).
+  //    그래서 이월이 길어지면 경고 수위를 올려 재수집을 강제한다.
+  const days = (d) => Math.floor((Date.now() - new Date(d).getTime()) / 86400000);
+  for (const sido of carried) {
+    const n = staleAsOf[sido] ? days(staleAsOf[sido]) : null;
+    if (n != null && n >= 14)
+      console.warn(
+        `[build-local] 🔴 ${sido} 데이터가 ${n}일째 이월 중입니다(수집일 ${staleAsOf[sido]}). ` +
+          `먼저 DATA_GO_KR_KEY=... node scripts/fetch-benefits.js 로 재수집하고, ` +
+          `그래도 이 경고가 남으면 소스(복지로)가 그 시도를 아직 안 주는 것이니 API 응답의 ctpvNm 분포를 직접 확인하세요.`
+      );
+  }
+}
 
 const sidoCount = Object.keys(bySido).length;
 // 광역 버킷((광역 공통)·권역별)은 시군구가 아니므로 세지 않는다 — 실제 페이지 수와 맞춘다.

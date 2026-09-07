@@ -92,7 +92,7 @@ function localSection(sido, sgg, list) {
       <td class="bAmt">${amount ? esc(amount) : '<span class="bDim">공고 확인 필요</span>'}</td>
       <td>${pay}<span class="bDim"> · ${cyc}</span></td>
       <td>${esc(critShort(b))}</td>
-      <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">복지로 →</a>` : ''}</td>
+      <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
     </tr>`;
   }).join('');
   return `<div class="tblWrap"><table class="bTable">
@@ -256,7 +256,12 @@ function page(sido, sgg, list, nearby) {
 
   <div class="card">
     <h2 class="secTitle">🏙️ ${ST.i_ga(esc(sgg))} 주는 지자체 지원금 <span style="color:var(--dim);font-weight:600;font-size:13px">${list.length}개</span></h2>
-    <p class="sub" style="margin:0 0 14px">출처: 한국사회보장정보원 공공데이터(복지로) · 조회 많은 순</p>
+    <p class="sub" style="margin:0 0 14px">출처: 한국사회보장정보원 공공데이터(복지로)${
+      // 복지로에 없어 지자체 공식 페이지에서 직접 확인해 넣은 항목이 섞이면 출처를 정확히 병기한다.
+      list.some((b) => b.manual)
+        ? ` · ${[...new Set(list.filter((b) => b.manual).map((b) => b.src).filter(Boolean))].map(esc).join(' · ')}`
+        : ''
+    } · 조회 많은 순</p>
     ${localSection(sido, sgg, list)}
   </div>
 
