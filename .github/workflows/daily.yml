@@ -13,6 +13,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 30   # 어느 스텝이든 매달리면 강제 종료(C naebaeka 2026-07-13 무한대기 사고 교훈)
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,12 +25,21 @@ jobs:
       # 산후조리원 공공데이터 갱신 (2026-09-13). 키가 필요 없는 공개 파일이다.
       # ⚠️ 실패해도 워크플로를 멈추지 않는다 — 스크립트가 결손·오류 시 data/postpartum.json을 건드리지 않고 exit 1 하므로,
       #    여기서는 경고만 남기고 기존 데이터로 계속 빌드한다(가이드 예약발행이 이 단계 때문에 막히면 안 된다).
-      # ⚠️ 복지로 지원사업(fetch-benefits.js)은 DATA_GO_KR_KEY가 필요하고 이 저장소에 secret이 없어 여기서 돌리지 않는다.
       - name: Refresh postpartum centers (keeps existing data on failure)
         run: |
           timeout 180 node scripts/fetch-postpartum.js || echo "::warning::산후조리원 데이터 갱신 실패 — 기존 data/postpartum.json 으로 빌드"
+      # 복지로 지자체 지원사업 갱신 (2026-09-13) — 저장소 secret DATA_GO_KR_KEY가 있을 때만.
+      # 전에는 수동 갱신뿐이라 전남광주가 55일간 옛 데이터로 나갔다(build-local.js 주석). --incremental은 커밋된
+      # benefits.json을 출발점으로 새·수정 항목만 받고(일 한도 1,000), 실패·급감 시 파일을 건드리지 않는다.
+      - name: Refresh local benefits (skips without secret, keeps existing data on failure)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          if [ -z "$DATA_GO_KR_KEY" ]; then echo "::notice::DATA_GO_KR_KEY secret 없음 — 지원사업 갱신 건너뜀"; exit 0; fi
+          timeout 900 node scripts/fetch-benefits.js --incremental --limit 400 || echo "::warning::지원사업 갱신 실패 — 기존 data/benefits.json 으로 빌드"
       - name: Build pages + guides (date-gated · pages first so guide sitemap merges)
         run: |
+          node scripts/build-local.js
           node scripts/build-pages.js
           node scripts/build-guides.js
           node scripts/stamp-assets.js
