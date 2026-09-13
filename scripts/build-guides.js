@@ -10,6 +10,8 @@ const fs = require('fs');
 const path = require('path');
 const GUIDES = require('../lib/guides');
 const lastmod = require('./lastmod');
+// region.css 링크에 콘텐츠 해시를 붙인다 — CF Pages가 CSS를 4시간 캐시하므로(자세한 이유는 _asset-hash.js)
+const { assetUrl } = require('./_asset-hash');
 
 const ORIGIN = process.env.SITE_ORIGIN || 'https://babyhyetaek.com';
 const GA = 'G-6CZCXLHZVB';
@@ -31,7 +33,7 @@ function head(title, desc, url, extraLd) {
 <meta property="og:type" content="article"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${ORIGIN}/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="stylesheet" href="/assets/region.css">
+<link rel="stylesheet" href="${assetUrl('/assets/region.css')}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA}');</script>
 ${extraLd || ''}

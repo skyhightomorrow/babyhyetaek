@@ -91,6 +91,24 @@ function localFor(sido, sgg) {
   return { list, meta: db };
 }
 
+/* ── 연락처 원문에서 전화번호 추출 (2026-09-13) ──
+ * 원문이 「과천시 가족아동과 02-3677-2259」·「태안군청 … 0416702722」·「기장군 … 051 709 4652」처럼 제각각이라
+ * 지역번호를 명시한 정규식으로 끊는다(국번 자리수가 모호한 붙여쓴 번호도 지역번호부터 맞춰야 바르게 갈린다).
+ * 「032-120」 같은 콜센터 단축번호·「000-0000」 자리표시는 버튼을 만들지 않는다. scripts/build-pages.js와 같은 규칙. */
+const TEL_RE = /(?<!\d)(?:(02|0[3-6][1-5]|01[016-9]|070)[-\s.)]?(\d{3,4})[-\s.]?(\d{4})|(1[5-9]\d{2})-(\d{4}))(?!\d)/g;
+function phonesIn(text) {
+  const out = [];
+  const s = String(text || '');
+  let m;
+  TEL_RE.lastIndex = 0;
+  while ((m = TEL_RE.exec(s))) {
+    const num = m[1] ? `${m[1]}-${m[2]}-${m[3]}` : `${m[4]}-${m[5]}`;
+    if (/-0{3,4}-|-0000$/.test(num)) continue;
+    if (out.indexOf(num) === -1) out.push(num);
+  }
+  return out;
+}
+
 /* ── 상태 + 렌더 ── */
 const S = { step: 0, sido: '', sgg: '', order: 1, multi: false, useLeave: false, wage: 0 };
 const $ = (s, r = document) => r.querySelector(s);
@@ -321,10 +339,17 @@ function renderResult() {
     const renderItem = (b) => {
       const item = el('div', 'locItem');
       const modTxt = b.mod ? `갱신 ${b.mod.slice(0, 4)}.${b.mod.slice(4, 6)}` : '';
+      // 담당부서 전화 버튼 (2026-09-13) — 지역 페이지(build-pages.js phonesIn)와 같은 추출 규칙
+      const tels = phonesIn(b.tel);
       item.innerHTML =
         `<div class="locNm">${b.nm}</div>` +
         (b.amt ? `<div class="locAmt">${b.amt}</div>` : (b.dgst ? `<div class="locDgst">${b.dgst}</div>` : '')) +
-        `<div class="locMeta">${b.law ? `📜 ${b.law}` : ''} ${modTxt ? `· ${modTxt}` : ''} ${b.link ? `· <a href="${b.link}" target="_blank" rel="noopener">복지로 상세 →</a>` : ''}</div>`;
+        `<div class="locMeta">${b.law ? `📜 ${b.law}` : ''} ${modTxt ? `· ${modTxt}` : ''} ${b.link ? `· <a href="${b.link}" target="_blank" rel="noopener">복지로 상세 →</a>` : ''}</div>` +
+        (tels.length ? `<div>${tels.map((t) => `<a class="telBtn" href="tel:${t.replace(/-/g, '')}" data-call="1">📞 ${t}</a>`).join('')}</div>` : '');
+      item.addEventListener('click', (e) => {
+        const a = e.target.closest && e.target.closest('a[data-call]');
+        if (a && typeof window.gtag === 'function') window.gtag('event', 'call_click', { region: `${S.sido} ${S.sgg}`, target: 'benefit' });
+      });
       return item;
     };
     const INIT = 12;

@@ -5,8 +5,12 @@
   "description": "아기혜택(가칭) — 육아 지원금 타임라인 (대시보드 F)",
   "scripts": {
     "fetch": "node scripts/fetch-benefits.js",
+    "fetch-postpartum": "node scripts/fetch-postpartum.js",
     "build-local": "node scripts/build-local.js",
-    "build": "node scripts/build-local.js && node scripts/build-pages.js && node scripts/build-guides.js",
+    "build": "node scripts/build-local.js && node scripts/build-pages.js && node scripts/build-guides.js && node scripts/stamp-assets.js",
     "serve": "npx -y serve public -l 8630"
+  },
+  "dependencies": {
+    "proj4": "^2.22.0"
   }
 }

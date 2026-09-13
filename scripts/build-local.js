@@ -6,7 +6,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { normRegion, isCommonKey } = require('./regions');
+const { normRegion, isCommonKey, PENDING_SGG } = require('./regions');
 
 const src = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'benefits.json'), 'utf8'));
 
@@ -126,6 +126,14 @@ if (bySido[UNIFIED]) {
   if (gj.length) bucket['(광역 공통·광주)'] = gj;
   if (jn.length) bucket['(광역 공통·전남)'] = jn;
   console.log(`[build-local] 전남광주 광역 분리 — 광주 ${gj.length} · 전남 ${jn.length} · 양쪽 ${both.length} · 시군 귀속 ${owned}`);
+}
+
+// ── 신설 구 빈 버킷 (2026-09-13, regions.js PENDING_SGG) ──
+// 검단구는 복지로 자체 사업이 0건이라 키 자체가 없어 홈 위저드에서 고를 수 없었다.
+// 빈 배열만 만들어 두면 위저드가 광역 공통 사업 + 국가 수당을 보여주고, build-pages가 안내문을 붙인 페이지를 만든다.
+for (const [sido, m] of Object.entries(PENDING_SGG)) {
+  if (!bySido[sido]) continue; // 시도가 통째로 빠진 날은 아래 이월 로직에 맡긴다
+  for (const sgg of Object.keys(m)) bySido[sido][sgg] = bySido[sido][sgg] || [];
 }
 
 // 각 시군구 내 조회수순 정렬

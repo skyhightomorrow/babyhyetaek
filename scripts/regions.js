@@ -51,4 +51,27 @@ function commonFor(bucket, sido, sgg) {
   return bucket[key] ? [...base, ...bucket[key]] : base;
 }
 
-module.exports = { SIDO_RENAME, SGG_RENAME, normRegion, legacyNames, GWANGJU_GU, UNIFIED_SIDO, isCommonKey, commonFor };
+// ── 원천 데이터에 아직 없는 신설 구 (2026-09-13) ──
+// 영종구·제물포구·서해구는 복지로가 새 이름으로 사업을 주기 시작해서 페이지가 저절로 생겼다.
+// 검단구는 서구에서 갈라졌는데 복지로 검단 사업이 0건이라 페이지도, 홈 위저드 선택지도 없었다
+// (검단구 주민은 자기 동네를 고를 수가 없었다).
+// → 빈 버킷을 만들어 인천 광역 공통 사업 + 국가 수당만으로 페이지를 세우고, 자체 사업이 아직 없다는 사실을 페이지에 밝힌다.
+// ⚠️ 지원사업을 지어 넣지 말 것. 복지로에 검단구 사업이 들어오면 own이 1 이상이 되어 일반 페이지로 저절로 넘어간다.
+const PENDING_SGG = {
+  인천광역시: {
+    검단구: { since: '2026-07-01', from: '서구', sibling: '서해구' },
+  },
+};
+
+// 시도 약칭 + 표시 순서(행정표준코드 순). 검색에서 「인천 검단」·「경기 수원」처럼 약칭으로 쳐도 맞게 하고,
+// 홈 「우리 동네 혜택 찾기」 목록 순서로 쓴다. 여기 없는 시도는 목록 끝에 붙는다.
+const SIDO_SHORT = {
+  서울특별시: '서울', 부산광역시: '부산', 대구광역시: '대구', 인천광역시: '인천', 대전광역시: '대전', 울산광역시: '울산',
+  세종특별자치시: '세종', 경기도: '경기', 강원특별자치도: '강원', 충청북도: '충북', 충청남도: '충남',
+  전북특별자치도: '전북', 전남광주통합특별시: '전남광주', 경상북도: '경북', 경상남도: '경남', 제주특별자치도: '제주',
+};
+
+/** 신설됐지만 원천 데이터에 자체 사업이 없는 시군구 정보 (없으면 null) */
+const pendingInfo = (sido, sgg) => (PENDING_SGG[sido] && PENDING_SGG[sido][sgg]) || null;
+
+module.exports = { SIDO_RENAME, SGG_RENAME, normRegion, legacyNames, GWANGJU_GU, UNIFIED_SIDO, isCommonKey, commonFor, PENDING_SGG, pendingInfo, SIDO_SHORT };

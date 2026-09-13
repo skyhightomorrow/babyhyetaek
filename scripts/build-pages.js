@@ -6,12 +6,15 @@
  *
  * 사용: node scripts/build-pages.js
  * 전제: public/local-benefits.js (build-local.js가 먼저 생성)
+ * 선택: data/postpartum.json (fetch-postpartum.js) — 없으면 산후조리원 섹션만 빠지고 빌드는 계속된다.
  */
 const fs = require('fs');
 const { guardPages } = require('./_page-guard');
 const path = require('path');
 const { NATIONAL } = require('../lib/national');
 const lastmod = require('./lastmod');
+// JS/CSS 링크에 콘텐츠 해시를 붙인다 — CF Pages가 JS/CSS를 max-age=14400(4시간) 캐시하므로(_asset-hash.js 참고)
+const { assetUrl } = require('./_asset-hash');
 
 const ORIGIN = process.env.SITE_ORIGIN || 'https://babyhyetaek.com';
 const YEAR = 2026;
@@ -28,7 +31,7 @@ const DB = JSON.parse(lbRaw.replace(/^window\.LOCAL_BENEFITS\s*=\s*/, '').replac
 // 공공데이터포털은 아직 옛 이름을 주므로 빌드 시점에 현행 명칭으로 바꿔 페이지를 만든다.
 // 옛 URL은 public/_redirects에서 301로 넘긴다.
 // (맵 본체는 build-local.js와 공유 — scripts/regions.js)
-const { normRegion, legacyNames, isCommonKey, commonFor } = require('./regions');
+const { normRegion, legacyNames, isCommonKey, commonFor, PENDING_SGG, pendingInfo, SIDO_SHORT } = require('./regions');
 // 조건 표·집계 문장용 (2026-08-17). 지역 페이지가 "나열"에서 "집계·해석"으로 넘어가는 부분.
 const ST = require('./_local-stats');
 
@@ -42,6 +45,53 @@ let STATS = { perRegion: {}, bySido: {}, amounts: [] };
 const man = (n) => Math.round(n / 10000).toLocaleString('ko-KR') + '만원';
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const slug = (sido, sgg) => `${sido}-${sgg}`.replace(/[()]/g, '').replace(/\s+/g, '');
+// 검색 키 정규화 — public/assets/region-search.js 의 norm()과 같은 규칙(소문자·공백 제거)
+const nk = (s) => String(s || '').toLowerCase().replace(/\s+/g, '');
+// <script type="application/json"> 안에 넣을 JSON — 상호에 「</script>」가 섞여도 태그가 닫히지 않게
+const jsonForScript = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
+
+// 신설 구인데 복지로 자체 사업이 아직 0건인 곳(검단구) — 안내문을 붙이고 집계 순위에서 뺀다
+const isPendingEmpty = (sido, sgg, bucket) => !!pendingInfo(sido, sgg) && !(bucket[sgg] || []).length;
+
+// ── 산후조리원 (2026-09-13) ──
+// data/postpartum.json 이 없거나 깨져도 빌드는 멈추지 않는다 — 섹션만 빠진다(지원금 페이지가 부가 데이터 때문에 사라지면 안 된다).
+let PP = null;
+try {
+  PP = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'postpartum.json'), 'utf8'));
+  if (!PP || !Array.isArray(PP.items) || !PP.items.length) PP = null;
+} catch {
+  PP = null;
+}
+if (!PP) console.warn('[build-pages] ⚠️ data/postpartum.json 없음 — 산후조리원 섹션 없이 빌드 (node scripts/fetch-postpartum.js)');
+const ppBy = {};
+const ppBySido = {};
+if (PP) {
+  for (const it of PP.items) {
+    (ppBy[`${it.sido}|${it.sgg}`] = ppBy[`${it.sido}|${it.sgg}`] || []).push(it);
+    (ppBySido[it.sido] = ppBySido[it.sido] || []).push(it);
+  }
+}
+
+// ── 연락처 원문에서 전화번호 추출 (2026-09-13) ──
+// 원문이 「과천시 가족아동과 02-3677-2259」·「태안군청 … 0416702722」·「기장군 … 051 709 4652」처럼 제각각이다.
+// 지역번호를 명시해야 붙여 쓴 번호(0222316375 = 02-2231-6375)가 바르게 갈린다.
+// 「032-120」 같은 콜센터 단축번호·「000-0000」 자리표시·지역번호 없는 「940-5736」은 버튼을 만들지 않는다
+// (잘못 걸리는 전화 버튼은 없는 것보다 나쁘다). public/app.js 의 phonesIn과 같은 규칙.
+const TEL_RE = /(?<!\d)(?:(02|0[3-6][1-5]|01[016-9]|070)[-\s.)]?(\d{3,4})[-\s.]?(\d{4})|(1[5-9]\d{2})-(\d{4}))(?!\d)/g;
+function phonesIn(text) {
+  const out = [];
+  const s = String(text || '');
+  let m;
+  TEL_RE.lastIndex = 0;
+  while ((m = TEL_RE.exec(s))) {
+    const num = m[1] ? `${m[1]}-${m[2]}-${m[3]}` : `${m[4]}-${m[5]}`;
+    if (/-0{3,4}-|-0000$/.test(num)) continue;
+    if (!out.includes(num)) out.push(num);
+  }
+  return out;
+}
+const telBtn = (num, target) =>
+  `<a class="telBtn" href="tel:${num.replace(/-/g, '')}" data-ga="call" data-target="${target}">📞 ${esc(num)}</a>`;
 
 // 국가수당 헤드라인(첫째·단태·육아휴직 제외) = 첫만남200+바우처100+0세1320+1세720+2~8세840
 const NAT_HEADLINE =
@@ -83,6 +133,7 @@ function localSection(sido, sgg, list) {
     const pay = b.pvsn ? esc(b.pvsn) : '—';
     const cyc = b.cyc ? esc(b.cyc) : '—';
     const how = b.how ? esc(b.how) : (b.aply ? esc(b.aply) : '—');
+    const tels = phonesIn(b.tel);
     return `<tr>
       <th scope="row">
         <span class="bNm">${esc(b.nm)}</span>
@@ -92,7 +143,7 @@ function localSection(sido, sgg, list) {
       <td class="bAmt">${amount ? esc(amount) : '<span class="bDim">공고 확인 필요</span>'}</td>
       <td>${pay}<span class="bDim"> · ${cyc}</span></td>
       <td>${esc(critShort(b))}</td>
-      <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
+      <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${tels.map((t) => telBtn(t, 'benefit')).join('')}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
     </tr>`;
   }).join('');
   return `<div class="tblWrap"><table class="bTable">
@@ -155,6 +206,58 @@ function analysisSection(sido, sgg, key, STATS) {
   </div>`;
 }
 
+// ── 우리 동네 산후조리원 섹션 (2026-09-13) ──
+// 지원금 표가 "얼마 받나"에 답한다면 이 섹션은 "어디로 가나"에 답한다. 요금은 원본에 없으므로 쓰지 않는다.
+function ppCard(c) {
+  // 카카오맵 링크 URL 규칙: /link/map/이름,위도,경도 — 이름에 쉼표가 있으면 좌표로 잘못 읽히므로 공백으로 바꾼다
+  const href = c.lat != null
+    ? `https://map.kakao.com/link/map/${encodeURIComponent(c.nm.replace(/,/g, ' '))},${c.lat},${c.lng}`
+    : `https://map.kakao.com/link/search/${encodeURIComponent(c.addr)}`;
+  return `<div class="ppItem"><div class="ppNm">${esc(c.nm)}</div><div class="ppAddr">${esc(c.addr)}</div>${
+    c.cap ? `<div class="ppMeta">임산부실 정원 ${c.cap}명</div>` : ''
+  }<div class="ppBtns">${c.tel ? telBtn(c.tel, 'postpartum') : ''}<a class="mapLink" href="${href}" target="_blank" rel="noopener" data-ga="map" data-target="postpartum">카카오맵에서 보기</a></div></div>`;
+}
+
+function postpartumSection(sido, sgg) {
+  if (!PP) return '';
+  const own = ppBy[`${sido}|${sgg}`] || [];
+  const src = `<p class="ppSrc">출처: 공공데이터포털 전국산후조리원표준데이터(지자체 인허가 정보) · 기준일 ${esc(PP.sourceUpdatedAt || PP.fetchedAt)} · 요금 정보는 포함되지 않아요</p>`;
+  if (own.length) {
+    const pts = own.filter((c) => c.lat != null).map((c) => ({ nm: c.nm, lat: c.lat, lng: c.lng, tel: c.tel }));
+    const noPin = own.length - pts.length;
+    return `<div class="card" id="postpartum">
+    <h2 class="secTitle">🍼 우리 동네 산후조리원 ${own.length}곳</h2>
+    <p class="sub" style="margin:0 0 12px">${esc(sgg)}에 영업 중으로 신고된 산후조리원이에요. 예약 전 전화로 운영 여부와 요금을 확인하세요.</p>
+    ${pts.length ? `<button type="button" class="ppMapBtn" id="ppMapBtn" aria-expanded="false" aria-controls="ppMap">지도로 보기</button>
+    <div id="ppMap" class="ppMap" hidden></div>
+    <script type="application/json" id="ppData">${jsonForScript(pts)}</script>${noPin ? `<p class="ppSrc" style="margin-top:8px">※ ${noPin}곳은 원본에 좌표가 없어 지도에 표시되지 않아요(목록에는 있어요).</p>` : ''}` : ''}
+    <div class="ppList">${own.map(ppCard).join('')}</div>
+    ${src}
+  </div>`;
+  }
+  // 0곳 — 없다고 정직하게 쓰고, 같은 시도에서 조리원이 있는 지역을 「곳 수 + 그 지역 페이지 링크」로만 보여준다.
+  // ⚠️ 처음엔 시도 전체 카드를 접어 넣었는데, 0곳 페이지 90개에 같은 긴 목록(경기 156곳, 한 페이지 124KB)이
+  //    반복돼 중복 콘텐츠가 됐다(애드센스 저가치 판정 위험). 상세는 조리원이 있는 지역 페이지 한 곳에만 둔다.
+  const bySgg = {};
+  for (const c of ppBySido[sido] || []) bySgg[c.sgg] = (bySgg[c.sgg] || 0) + 1;
+  const others = Object.entries(bySgg).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+  return `<div class="card" id="postpartum">
+    <h2 class="secTitle">🍼 우리 동네 산후조리원 0곳</h2>
+    <p class="sub" style="margin:0">${esc(sgg)}에는 영업 중으로 신고된 산후조리원이 없어요.${others.length ? ` 가까운 ${esc(sido)} 다른 지역을 확인해 보세요.` : ''}</p>
+    ${others.length ? `<div class="nearby" style="margin-top:10px">${others.map(([s, n]) => SLUGS.has(slug(sido, s))
+      ? `<a href="/r/${encodeURIComponent(slug(sido, s))}#postpartum">${esc(s)} ${n}곳</a>`
+      : `<span>${esc(s)} ${n}곳</span>`).join('')}</div>` : ''}
+    ${src}
+  </div>`;
+}
+
+// 다른 지역·지원사업 검색 — /r/?q= 로 보낸다(허브의 region-search.js가 받아 바로 거른다). JS 없이도 동작하는 GET 폼.
+const miniSearch = () => `<form class="rSearchBox" action="/r/" method="get" role="search" style="margin:0">
+      <label for="rq" class="srOnly">지역·지원사업 검색</label>
+      <input id="rq" name="q" type="search" placeholder="다른 지역·지원사업 (예: 첫만남)" autocomplete="off">
+      <button type="submit">검색</button>
+    </form>`;
+
 // 개편된 지역에는 안내를 붙인다. 지원사업·조례 이름에는 옛 지자체명이 그대로 남아 있어
 // (예: '전라남도 출생기본수당 지원 조례') 그대로 두는 것이 정확한데, 설명이 없으면 이용자가 혼동한다.
 function mergeNote(sido, sgg) {
@@ -162,12 +265,28 @@ function mergeNote(sido, sgg) {
     return `<p class="disclaimer">※ 2026년 7월 1일 <b>광주광역시와 전라남도가 전남광주통합특별시로 통합</b>됐습니다(전남광주통합특별시 설치를 위한 특별법). 아래 지원사업 이름에 '전라남도'가 남아 있는 것은 <b>조례의 정식 명칭</b>이기 때문이며, ${esc(sgg)} 주민이 그대로 신청할 수 있습니다.</p>`;
   if (sido === '인천광역시' && (sgg === '제물포구' || sgg === '서해구'))
     return `<p class="disclaimer">※ 2026년 7월 1일 인천 자치구가 개편돼 <b>${sgg === '제물포구' ? '동구가 제물포구로' : '서구가 서해구와 검단구로'}</b> 바뀌었습니다. 지원사업 이름에 옛 구 이름이 남아 있을 수 있습니다.</p>`;
+  if (sido === '인천광역시' && sgg === '영종구')
+    return `<p class="disclaimer">※ 2026년 7월 1일 인천 자치구가 개편돼 <b>옛 중구의 영종도·용유도 지역이 영종구</b>가 됐습니다. 지원사업 이름에 옛 구 이름(중구)이 남아 있을 수 있습니다.</p>`;
   return '';
 }
 
-function page(sido, sgg, list, nearby) {
+// 신설 구(검단구) 안내 — 자체 사업이 복지로에 없다는 사실을 페이지 맨 앞에서 밝힌다.
+// ⚠️ "검단구도 서해구 사업을 받는다"고 단정하지 않는다 — 분리 후 적용 여부는 확인된 근거가 없다.
+function pendingNotice(sido, sgg, info, siblingExists) {
+  const [y, m, d] = info.since.split('-').map(Number);
+  const sib = siblingExists
+    ? `<a href="/r/${encodeURIComponent(slug(sido, info.sibling))}">${esc(info.sibling)}(옛 ${esc(info.from)}) 페이지</a>`
+    : `${esc(info.sibling)}(옛 ${esc(info.from)}) 지역 정보`;
+  return `<div class="notice">📌 <b>${esc(sgg)}는 ${y}년 ${m}월 ${d}일 인천 ${esc(info.from)}에서 분리돼 새로 생긴 구</b>예요.
+    ${esc(sgg)}가 직접 운영하는 지원사업은 아직 복지로 공공데이터에 등록되지 않아, 이 페이지에는 <b>${esc(sido)} 공통 지원사업과 국가 수당만</b> 정리했어요.
+    분리 전 ${esc(info.from)} 사업이 궁금하면 ${sib}를 참고하되, ${esc(sgg)} 주민에게 그대로 적용되는지는 ${esc(sgg)}청·주민센터에 확인하세요.</div>`;
+}
+
+function page(sido, sgg, list, nearby, own) {
   const key = `${sido}|${sgg}`;
-  const s = STATS.perRegion[key] || { n: list.length, cash: 0, localCurrency: 0, online: 0, once: 0, monthly: 0, headline: null };
+  const pInfo = own.length ? null : pendingInfo(sido, sgg);
+  // 집계에서 빠진 지역(신설 구)은 그 페이지 목록으로 직접 요약한다 — 기본값 0으로 두면 "전부 방문 신청" 같은 거짓 문장이 나온다
+  const s = STATS.perRegion[key] || ST.summarize(list, own);
   const head = s.headline;
 
   // ── title·description: 지역 고유 숫자를 앞으로 (2026-08-17) ──
@@ -176,7 +295,9 @@ function page(sido, sgg, list, nearby) {
   // 순위가 아니라 CTR이 병목이므로 이 변경이 1차 지표다.
   const title = head
     ? `${sgg} 출산지원금 ${YEAR} — 첫째 ${man(head.won)} + 국가 ${man(NAT_HEADLINE)}`
-    : `${sgg} 출산지원금·육아 지원금 ${YEAR} — 지원사업 ${s.n}개 + 국가 ${man(NAT_HEADLINE)}`;
+    : pInfo
+      ? `${sgg} 출산지원금·육아 지원금 ${YEAR} — ${SIDO_SHORT[sido] || sido} 공통 ${s.n}개 + 국가 ${man(NAT_HEADLINE)}`
+      : `${sgg} 출산지원금·육아 지원금 ${YEAR} — 지원사업 ${s.n}개 + 국가 ${man(NAT_HEADLINE)}`;
 
   const payHint = s.localCurrency > 0
     ? `${s.localCurrency}개는 지역화폐로 지급됩니다.`
@@ -185,7 +306,9 @@ function page(sido, sgg, list, nearby) {
   // "받을 수 있는"(=자체+광역 s.n)과 "직접 운영하는"(=s.own)을 섞지 말 것 — 위 summarize 주석 참고.
   const desc = head
     ? `${sido} ${sgg} 첫째 아이 출산지원금 ${man(head.won)}. ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산.`
-    : `${sido} ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산해 확인하세요.`;
+    : pInfo
+      ? `${sido} ${sgg}(${YEAR}년 ${info2kr(pInfo.since)} ${pInfo.from}에서 분리 신설)에서 받을 수 있는 ${sido} 공통 육아·출산 지원사업 ${s.n}개와 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}을 정리했습니다. ${sgg} 자체 사업은 아직 공공데이터에 없습니다.`
+      : `${sido} ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산해 확인하세요.`;
 
   const url = `${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`;
   const nearbyLinks = nearby.map((n) => `<a href="/r/${encodeURIComponent(slug(sido, n))}">${esc(n)}</a>`).join('');
@@ -198,7 +321,9 @@ function page(sido, sgg, list, nearby) {
     q: `${sgg}에서 아이를 낳으면 지원금을 얼마나 받나요?`,
     a: head
       ? `${ST.eun(sgg)} 첫째 아이 기준 ${man(head.won)}을 지급합니다(${head.nm}). 여기에 국가 수당이 8세까지 약 ${man(NAT_HEADLINE)} 더해집니다. 둘째·셋째는 가산되는 경우가 많아 공고를 확인하세요.`
-      : `국가 수당이 첫째 기준 8세까지 약 ${man(NAT_HEADLINE)}이고, 여기에 ${sgg}에서 받을 수 있는 지원사업 ${s.n}개가 추가됩니다. 금액은 사업마다 달라 아래 표에서 확인하세요.`,
+      : pInfo
+        ? `국가 수당이 첫째 기준 8세까지 약 ${man(NAT_HEADLINE)}이고, ${sido} 공통 지원사업 ${s.n}개를 받을 수 있습니다. ${ST.eun(sgg)} ${pInfo.since.slice(0, 4)}년 신설된 구라 자체 출산지원금은 아직 공공데이터에 등록되지 않았으니 ${sgg}청에 확인하세요.`
+        : `국가 수당이 첫째 기준 8세까지 약 ${man(NAT_HEADLINE)}이고, 여기에 ${sgg}에서 받을 수 있는 지원사업 ${s.n}개가 추가됩니다. 금액은 사업마다 달라 아래 표에서 확인하세요.`,
   });
   faq.push({
     q: `${sgg} 출산지원금은 어디에 신청하나요?`,
@@ -221,6 +346,10 @@ function page(sido, sgg, list, nearby) {
     })),
   };
 
+  const localTitle = pInfo
+    ? `🏙️ ${esc(sgg)} 주민이 받을 수 있는 ${esc(sido)} 공통 지원금 <span class="cnt">${list.length}개</span>`
+    : `🏙️ ${ST.i_ga(esc(sgg))} 주는 지자체 지원금 <span class="cnt">${list.length}개</span>`;
+
   return `<!DOCTYPE html>
 <html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -231,18 +360,20 @@ function page(sido, sgg, list, nearby) {
 <meta property="og:type" content="article"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${ORIGIN}/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="stylesheet" href="/assets/region.css">
+<link rel="stylesheet" href="${assetUrl('/assets/region.css')}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CZCXLHZVB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CZCXLHZVB');</script>
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
-</head><body>
+</head><body data-region="${esc(sido)} ${esc(sgg)}">
 <div class="shell">
   <header>
     <div class="logo"><a href="/" style="color:inherit">베이비<b>혜택</b></a></div>
-    <div class="crumb"><a href="/">홈</a> › ${esc(sido)} › ${esc(sgg)}</div>
+    <div class="crumb"><a href="/">홈</a> › <a href="/r/">지역별</a> › ${esc(sido)} › ${esc(sgg)}</div>
   </header>
   <h1>${esc(sido)} ${esc(sgg)}<br>출산·육아 지원금 (${YEAR})</h1>
   <p class="sub">${esc(sgg)}에 사는 우리 집이 아이 태어나서 8세까지 받는 지원금을 국가 수당 + 지자체 지원금으로 정리했어요.</p>
+
+  ${pInfo ? pendingNotice(sido, sgg, pInfo, SLUGS.has(slug(sido, pInfo.sibling))) : ''}
 
   <div class="card">
     <div class="freshBadge">${YEAR}년 기준 · 지자체 데이터 ${esc((DB.staleAsOf || {})[sido] || DB.builtAt)} 갱신</div>
@@ -255,7 +386,7 @@ function page(sido, sgg, list, nearby) {
   <div class="adSlot"><span>광고 영역</span></div>
 
   <div class="card">
-    <h2 class="secTitle">🏙️ ${ST.i_ga(esc(sgg))} 주는 지자체 지원금 <span style="color:var(--dim);font-weight:600;font-size:13px">${list.length}개</span></h2>
+    <h2 class="secTitle">${localTitle}</h2>
     <p class="sub" style="margin:0 0 14px">출처: 한국사회보장정보원 공공데이터(복지로)${
       // 복지로에 없어 지자체 공식 페이지에서 직접 확인해 넣은 항목이 섞이면 출처를 정확히 병기한다.
       list.some((b) => b.manual)
@@ -266,6 +397,8 @@ function page(sido, sgg, list, nearby) {
   </div>
 
   ${analysisSection(sido, sgg, key, STATS)}
+
+  ${postpartumSection(sido, sgg)}
 
   <div class="card">
     <h2 class="secTitle">❓ ${esc(sgg)} 출산지원금 자주 묻는 질문</h2>
@@ -278,13 +411,24 @@ function page(sido, sgg, list, nearby) {
     <p class="sub" style="margin:14px 0 0;font-size:12px">아동수당은 ${YEAR}년 9세 미만까지(2030년 13세까지 단계적 확대). 부모급여는 가정양육 현금 기준.</p>
   </div>
 
-  ${nearbyLinks ? `<div class="card"><h2 class="secTitle">📍 ${esc(sido)} 다른 지역</h2><div class="nearby">${nearbyLinks}</div></div>` : ''}
+  <div class="card">
+    ${nearbyLinks ? `<h2 class="secTitle">📍 ${esc(sido)} 다른 지역</h2><div class="nearby" style="margin-bottom:16px">${nearbyLinks}</div>` : ''}
+    <h2 class="secTitle">🔎 다른 지역·지원사업 찾기</h2>
+    ${miniSearch()}
+  </div>
 
   ${mergeNote(sido, sgg)}
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 지자체 지원금은 복지로·주민센터에서 최종 확인하세요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
   <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
+<script src="${assetUrl('/assets/region-page.js')}" defer></script>
 </body></html>`;
+}
+
+// '2026-07-01' → '7월 1일'
+function info2kr(ymd) {
+  const [, m, d] = ymd.split('-').map(Number);
+  return `${m}월 ${d}일`;
 }
 
 // ── 빌드 ──
@@ -299,11 +443,25 @@ function page(sido, sgg, list, nearby) {
       dst[n.sgg] = [...(dst[n.sgg] || []), ...list];
     }
   }
+  // 신설 구 빈 버킷 — build-local.js도 만들지만, 옛 local-benefits.js로 빌드돼도 페이지가 빠지지 않게 여기서도 보장한다(멱등)
+  for (const [sido, m] of Object.entries(PENDING_SGG)) {
+    if (!merged[sido]) continue;
+    for (const sgg of Object.keys(m)) merged[sido][sgg] = merged[sido][sgg] || [];
+  }
   DB.sido = merged;
 }
 
 // 정규화가 끝난 뒤 집계 — 개편 전 이름으로 흩어진 지역이 합쳐진 상태여야 순위·분포가 맞는다.
-STATS = ST.buildIndex(DB.sido, isRealSgg);
+// 자체 사업 0건인 신설 구는 집계에서 뺀다 — 넣으면 "직접 운영하는 사업 0개로 12곳 중 12위"라는,
+// 사실은 데이터 미등록인 것을 지자체가 안 하는 것처럼 보이게 하는 문장이 나온다.
+{
+  const statsView = {};
+  for (const [sido, bucket] of Object.entries(DB.sido)) {
+    statsView[sido] = {};
+    for (const [sgg, list] of Object.entries(bucket)) if (!isPendingEmpty(sido, sgg, bucket)) statsView[sido][sgg] = list;
+  }
+  STATS = ST.buildIndex(statsView, isRealSgg);
+}
 console.log(`[build-pages] 집계 — 지역 ${Object.keys(STATS.perRegion).length}곳 · 첫째 금액 확인 ${STATS.amounts.length}곳`);
 
 // 옛 이름으로 이미 색인된 URL이 있으므로 (구슬러그 → 신슬러그) 쌍을 모아 _redirects를 쓴다.
@@ -320,17 +478,14 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
 }
 
 const outDir = path.join(PUB, 'r');
+// 이번 빌드가 만들 슬러그 전체 — 페이지 삭제 가드와 「형제 구 페이지가 실제로 있는가」 판정에 같이 쓴다
+const SLUGS = new Set();
+for (const [sido, bucket] of Object.entries(DB.sido)) {
+  for (const sgg of Object.keys(bucket).filter(isRealSgg)) SLUGS.add(slug(sido, sgg));
+}
 // 지우기 전에 무엇이 사라질지 본다. 2026-08-01에 이 자리에서 /r/ 22개가 조용히 삭제됐다.
 // 정상 churn은 0건(50커밋 실측)이라 허용 5면 충분하다.
-{
-  const willBuild = [];
-  for (const [sido, bucket] of Object.entries(DB.sido)) {
-    for (const sgg of Object.keys(bucket).filter(isRealSgg)) {
-      willBuild.push(slug(sido, sgg));
-    }
-  }
-  guardPages(outDir, willBuild, { label: '지역', max: 5 });
-}
+guardPages(outDir, SLUGS, { label: '지역', max: 5 });
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -338,20 +493,52 @@ fs.mkdirSync(outDir, { recursive: true });
 const urls = [`${ORIGIN}/`];
 const files = [path.join(PUB, 'index.html')];
 let count = 0;
+let ppPages = 0;
 const hubIndex = []; // [sido, sggs[]] — 허브 페이지용 (지역 페이지가 홈에서 고아가 되지 않도록)
 for (const [sido, bucket] of Object.entries(DB.sido)) {
   const sggs = Object.keys(bucket).filter(isRealSgg);
   for (const sgg of sggs) {
     // 광역 사업은 권역별로 갈라 붙인다 — 전남광주는 옛 광주/전남 사업이 섞여 있다(regions.js).
-    const list = [...(bucket[sgg] || []), ...commonFor(bucket, sido, sgg)]
+    const own = bucket[sgg] || [];
+    const list = [...own, ...commonFor(bucket, sido, sgg)]
       .filter((x, i, a) => a.findIndex((y) => y.id === x.id) === i);
     const nearby = sggs.filter((s) => s !== sgg).slice(0, 12);
-    fs.writeFileSync(path.join(outDir, `${slug(sido, sgg)}.html`), page(sido, sgg, list, nearby));
+    fs.writeFileSync(path.join(outDir, `${slug(sido, sgg)}.html`), page(sido, sgg, list, nearby, own));
     urls.push(`${ORIGIN}/r/${encodeURIComponent(slug(sido, sgg))}`);
     files.push(path.join(outDir, `${slug(sido, sgg)}.html`));
     count++;
+    if ((ppBy[`${sido}|${sgg}`] || []).length) ppPages++;
   }
   if (sggs.length) hubIndex.push([sido, sggs]);
+}
+if (PP) console.log(`[build-pages] 산후조리원 ${PP.items.length}곳(기준일 ${PP.sourceUpdatedAt}) — 1곳 이상인 지역 페이지 ${ppPages}/${count}`);
+
+// 시도 표시 순서 — 행정표준코드 순(regions.js SIDO_SHORT), 목록에 없는 시도는 끝에
+const sidoRank = (s) => { const i = Object.keys(SIDO_SHORT).indexOf(s); return i < 0 ? 99 : i; };
+const sidoKey = (sido) => nk(sido + (SIDO_SHORT[sido] || ''));
+
+// ── 허브 검색 색인 (2026-09-13) → public/assets/benefit-index.js ──
+// 허브 검색은 사업 "이름"과 "지역"만 있으면 된다. local-benefits.js(1.2MB)를 허브에서 받게 하지 않으려고 따로 뽑는다.
+// regions: [시도, 표시명, 슬러그('' = 시군구 페이지 없음)] · items: [사업명, regions 인덱스]
+{
+  const regions = [];
+  const items = [];
+  for (const [sido, bucket] of Object.entries(DB.sido).sort((a, b) => sidoRank(a[0]) - sidoRank(b[0]))) {
+    for (const [k, list] of Object.entries(bucket)) {
+      if (!list.length) continue;
+      const label = isRealSgg(k) ? k : k.replace(/^\(광역 공통\)$/, '시도 공통').replace(/^\(광역 공통·(.+)\)$/, '옛 $1 권역 공통');
+      const ri = regions.push([sido, label, isRealSgg(k) ? slug(sido, k) : '']) - 1;
+      const seen = new Set();
+      for (const b of list) {
+        if (!b.nm || seen.has(b.nm)) continue;
+        seen.add(b.nm);
+        items.push([b.nm, ri]);
+      }
+    }
+  }
+  const js = 'window.BENEFIT_INDEX=' + JSON.stringify({ regions, items }) + ';\n';
+  fs.writeFileSync(path.join(PUB, 'assets', 'benefit-index.js'), js);
+  console.log(`[build-pages] 검색 색인 assets/benefit-index.js — 사업 ${items.length}건 · ${(Buffer.byteLength(js) / 1024).toFixed(0)}KB`);
 }
 
 // ── 지역 허브 (/r/) ──
@@ -362,8 +549,8 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
   const desc = `전국 ${count}개 시군구의 ${YEAR}년 출산지원금·육아 지원금을 지역별로 정리했습니다. 우리 동네를 골라 국가 수당과 지자체 지원금을 합친 8세까지 총액을 확인하세요.`;
   const url = `${ORIGIN}/r/`;
   const groups = hubIndex.slice().sort((a, b) => b[1].length - a[1].length).map(([sido, sggs]) =>
-    `<div class="card"><h2 class="secTitle">${esc(sido)} <span style="color:var(--dim);font-weight:600;font-size:13px">${sggs.length}곳</span></h2>
-<div class="nearby">${sggs.map((s) => `<a href="/r/${encodeURIComponent(slug(sido, s))}">${esc(s)}</a>`).join('')}</div></div>`).join('\n');
+    `<div class="card" id="sido-${esc(sido)}" data-key="${esc(sidoKey(sido))}"><h2 class="secTitle">${esc(sido)} <span class="cnt">${sggs.length}곳</span></h2>
+<div class="nearby">${sggs.map((s) => `<a href="/r/${encodeURIComponent(slug(sido, s))}" data-q="${esc(nk(sido + (SIDO_SHORT[sido] || '') + s))}">${esc(s)}</a>`).join('')}</div></div>`).join('\n');
 
   const hub = `<!DOCTYPE html>
 <html lang="ko"><head>
@@ -375,7 +562,7 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
 <meta property="og:type" content="website"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${ORIGIN}/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="stylesheet" href="/assets/region.css">
+<link rel="stylesheet" href="${assetUrl('/assets/region.css')}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CZCXLHZVB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CZCXLHZVB');</script>
 </head><body>
@@ -386,15 +573,53 @@ for (const [sido, bucket] of Object.entries(DB.sido)) {
   </header>
   <h1>우리 동네<br>출산·육아 지원금 (${YEAR})</h1>
   <p class="sub">전국 ${count}개 시군구별로 국가 수당과 지자체 지원금을 합친 8세까지 총액을 정리했어요. 사는 지역을 골라보세요.</p>
+  <form class="rSearchBox" action="/r/" method="get" role="search">
+    <label for="rSearch" class="srOnly">지역·지원사업 검색</label>
+    <input id="rSearch" name="q" type="search" placeholder="시군구·지원사업 이름 (예: 검단구, 첫만남)" autocomplete="off">
+  </form>
+  <div id="rResults" aria-live="polite"></div>
 ${groups}
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
   <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
+<script src="${assetUrl('/assets/benefit-index.js')}"></script>
+<script src="${assetUrl('/assets/region-search.js')}"></script>
 </body></html>`;
   fs.writeFileSync(path.join(outDir, 'index.html'), hub);
   urls.push(url);
   files.push(path.join(outDir, 'index.html'));
   console.log(`[build-pages] 지역 허브 /r/ 생성 — ${hubIndex.length}개 시도 · ${count}개 시군구 링크`);
+}
+
+// ── 홈 「우리 동네 혜택 찾기」 (2026-09-13) ──
+// 시도 <details> → 시군구 링크. JS 없이 2번 클릭으로 지역 페이지에 닿는다.
+// 홈 위저드는 <select>라 크롤러가 지역 페이지로 따라가지 못하므로, 이 목록이 홈→지역 페이지의 정적 링크 경로가 된다.
+// index.html은 손으로 쓴 파일이라 마커 사이만 갈아 끼운다. lastmod 판정(아래 sitemap) 전에 해야 홈 날짜가 맞는다.
+{
+  const idxPath = path.join(PUB, 'index.html');
+  const START = '<!-- REGION-FINDER:START -->';
+  const END = '<!-- REGION-FINDER:END -->';
+  const src = fs.readFileSync(idxPath, 'utf8');
+  const a = src.indexOf(START);
+  const b = src.indexOf(END);
+  if (a < 0 || b < a) {
+    console.warn('[build-pages] ⚠️ index.html에 REGION-FINDER 마커가 없어 「우리 동네 혜택 찾기」를 갱신하지 못했습니다');
+  } else {
+    const blocks = hubIndex.slice().sort((x, y) => sidoRank(x[0]) - sidoRank(y[0])).map(([sido, sggs]) =>
+      `    <details class="rfSido"><summary>${esc(sido)}<span>${sggs.length}곳</span></summary><div class="rfList">${
+        sggs.slice().sort((p, q) => p.localeCompare(q, 'ko')).map((s) => `<a href="/r/${encodeURIComponent(slug(sido, s))}">${esc(s)}</a>`).join('')
+      }</div></details>`).join('\n');
+    const html = `${START}
+  <section class="regionEntry" id="region-finder">
+    <h2>우리 동네 혜택 찾기</h2>
+    <p>시·도를 누르고 시·군·구를 고르면 그 지역 지원금과 산후조리원 정보로 바로 가요.</p>
+${blocks}
+    <a class="rfAll" href="/r/">지역·지원사업 이름으로 검색하기 →</a>
+  </section>
+  `;
+    const next = src.slice(0, a) + html + src.slice(b);
+    if (next !== src) fs.writeFileSync(idxPath, next);
+  }
 }
 
 // sitemap — lastmod는 페이지 내용이 실제로 바뀐 URL만 오늘 날짜로 올라간다(scripts/lastmod.js 주석 참고)

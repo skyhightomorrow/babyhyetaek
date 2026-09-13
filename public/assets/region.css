@@ -67,3 +67,44 @@ footer a{color:var(--mut)}
 .faq dt{font-size:14px;font-weight:700;margin-top:14px}
 .faq dt:first-child{margin-top:0}
 .faq dd{font-size:13.5px;color:var(--mut);line-height:1.62;margin-top:6px}
+
+/* ── 전화 버튼·산후조리원·검색 (2026-09-13) ──
+   모바일에서 엄지로 누르기 쉽게 버튼 높이 36px 이상, 긴 주소·상호는 줄바꿈(가로 넘침 금지). */
+.telBtn{display:inline-flex;align-items:center;gap:4px;min-height:36px;margin-top:6px;padding:7px 12px;border-radius:999px;
+  background:var(--brand-soft);border:1px solid #ffd7de;color:var(--brand-d);font-size:12.5px;font-weight:700;white-space:nowrap}
+.telBtn:hover{background:#ffe6ea}
+.bTable .telBtn{margin-right:4px}
+.cnt{color:var(--dim);font-weight:600;font-size:13px}
+.ppList{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.ppItem{padding:14px;background:#fafbfc;border:1px solid var(--line);border-radius:12px;overflow-wrap:anywhere}
+.ppNm{font-size:14.5px;font-weight:700;line-height:1.4}
+.ppAddr{font-size:12.5px;color:var(--mut);margin-top:4px;line-height:1.5}
+.ppMeta{font-size:11.5px;color:var(--dim);margin-top:3px}
+.ppBtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.mapLink{display:inline-flex;align-items:center;min-height:36px;margin-top:6px;padding:7px 12px;border-radius:999px;
+  background:#fff;border:1px solid var(--line2);color:var(--mut);font-size:12.5px;font-weight:600;white-space:nowrap}
+.mapLink:hover{border-color:var(--accent);color:var(--accent)}
+.ppMapBtn{font:inherit;width:100%;min-height:44px;margin-top:4px;border-radius:12px;border:1.5px solid var(--accent);
+  background:#fff;color:var(--accent);font-size:14.5px;font-weight:700;cursor:pointer}
+.ppMapBtn:hover{background:#f5f3ff}
+.ppMap{width:100%;height:320px;margin-top:10px;border-radius:12px;border:1px solid var(--line2);overflow:hidden;background:#f3f4f7}
+.ppMapMsg{padding:24px 16px;text-align:center;color:var(--mut);font-size:13px}
+.ppInfo{padding:6px 8px;font-size:12px;line-height:1.45;min-width:140px;max-width:220px;white-space:normal}
+.ppSrc{font-size:11.5px;color:var(--dim);margin-top:12px;line-height:1.55}
+.ppSido{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#fafbfc}
+.ppSido summary{cursor:pointer;padding:13px 14px;font-size:14px;font-weight:700;color:var(--ink)}
+.ppSido .ppList{padding:0 10px 10px;margin-top:0}
+.ppSido .ppItem{background:#fff}
+.notice{font-size:13.5px;line-height:1.65;color:var(--ink);background:#fff8e8;border:1px solid #f5e1ad;border-radius:12px;padding:13px 15px;margin-bottom:14px}
+.notice a{font-weight:700}
+
+.rSearchBox{display:flex;gap:8px;margin:0 0 14px}
+.rSearchBox input{flex:1;min-width:0;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--line2);border-radius:12px;background:#fff;color:var(--ink)}
+.rSearchBox input:focus{outline:none;border-color:var(--brand)}
+.rSearchBox button{font:inherit;font-size:15px;font-weight:700;padding:0 16px;border:none;border-radius:12px;background:var(--brand);color:#fff;cursor:pointer;white-space:nowrap}
+.rSearchBox button:hover{background:var(--brand-d)}
+.rHit{display:block;color:var(--ink)}
+.rHit .locNm,.rHit .locMeta{display:block}
+.rHit:hover{border-color:var(--brand)}
+.rCount{color:var(--dim);font-weight:600;font-size:13px}
+.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}

@@ -18,10 +18,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      # proj4(산후조리원 좌표 변환) 설치 — 페이지 빌드 자체는 의존성이 없다
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      # 산후조리원 공공데이터 갱신 (2026-09-13). 키가 필요 없는 공개 파일이다.
+      # ⚠️ 실패해도 워크플로를 멈추지 않는다 — 스크립트가 결손·오류 시 data/postpartum.json을 건드리지 않고 exit 1 하므로,
+      #    여기서는 경고만 남기고 기존 데이터로 계속 빌드한다(가이드 예약발행이 이 단계 때문에 막히면 안 된다).
+      # ⚠️ 복지로 지원사업(fetch-benefits.js)은 DATA_GO_KR_KEY가 필요하고 이 저장소에 secret이 없어 여기서 돌리지 않는다.
+      - name: Refresh postpartum centers (keeps existing data on failure)
+        run: |
+          timeout 180 node scripts/fetch-postpartum.js || echo "::warning::산후조리원 데이터 갱신 실패 — 기존 data/postpartum.json 으로 빌드"
       - name: Build pages + guides (date-gated · pages first so guide sitemap merges)
         run: |
           node scripts/build-pages.js
           node scripts/build-guides.js
+          node scripts/stamp-assets.js
         env:
           SITE_ORIGIN: https://babyhyetaek.com
       - name: Commit if changed
