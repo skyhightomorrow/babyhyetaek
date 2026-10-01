@@ -103,7 +103,7 @@ const NAT_HEADLINE =
 function natTable() {
   return `<table class="natTable">
     <tr><td>첫만남이용권 <span class="muted">출생 1회</span></td><td>${man(NATIONAL.firstMeet.firstChild)}~${man(NATIONAL.firstMeet.laterChild)}</td></tr>
-    <tr><td>임신·출산 진료비 바우처 <span class="muted">국민행복카드</span></td><td>${man(NATIONAL.pregnancyVoucher.single)}~${man(NATIONAL.pregnancyVoucher.multi)}</td></tr>
+    <tr><td>임신·출산 진료비 바우처 <span class="muted">국민행복카드</span></td><td>${man(NATIONAL.pregnancyVoucher.single)}<span class="muted"> · 다태아는 태아당 100만원</span></td></tr>
     <tr><td>부모급여 <span class="muted">0세 월100만·1세 월50만</span></td><td>1,800만원</td></tr>
     <tr><td>아동수당 <span class="muted">월10만·9세 미만</span></td><td>1,080만원</td></tr>
     <tr><td>육아휴직급여 <span class="muted">근로자·통상임금 기준</span></td><td>별도</td></tr>
@@ -114,13 +114,32 @@ function natTable() {
 // ⚠️ 이 비율로 집계 문장을 만들지 말 것 — 지역 간 편차가 75~100%로 거의 없다(2026-08-17 실측).
 const NO_INCOME_TEST = /제한\s*없|해당\s*없|무관|기준\s*없|전\s*계층|모든\s*가구/;
 
+// 🔴 «제한 없음»이 한 번 나왔다고 소득 무관으로 줄이지 말 것. 「거주지 제한 없음」이나
+//    「기본은 중위소득 150% 이하, 예외 대상만 무관」도 소득 무관으로 나가고 있었다(2026-10-01 점검).
 function critShort(b) {
   if (!b.crit) return '—';
   const t = String(b.crit).trim();
-  if (NO_INCOME_TEST.test(t)) return '소득 무관';
+  const m0 = t.match(/기준\s*중위소득\s*([0-9]+)\s*%/);
+  if (m0) return `중위소득 ${m0[1]}% 이하`;
+  const incomeFree = /(소득|재산)[^.·,]{0,14}(제한\s*없|무관|기준\s*없)/.test(t) || (t.length <= 14 && NO_INCOME_TEST.test(t)) || /전\s*계층|모든\s*가구/.test(t);
+  if (incomeFree) return '소득 무관';
   const m = t.match(/기준\s*중위소득\s*([0-9]+)\s*%/);
   if (m) return `중위소득 ${m[1]}% 이하`;
   return t.length > 22 ? t.slice(0, 22) + '…' : t;
+}
+
+// 「2020.12.31.까지 출생아」처럼 이미 지난 출생연도로 대상을 묶은 사업 — 새로 태어난 아이는 받지 못한다
+function endedCohort(b) {
+  // 지급대상(target)에 적힌 경우만 본다. 지원내용에는 출생연도 구간별 금액표(광양 등)나
+  // «○○ 이전 출생아에게는 미지급»(송파) 같은 반대 뜻의 문장이 섞여 있어 오탐이 난다.
+  const t = String(b.target || '');
+  // 날짜 뒤에 «이후·부터»가 오면 새 기준과 옛 기준을 나란히 적은 것(수원 등)이라 종료 사업이 아니다
+  if (/20\d{2}[^가-힣]{0,14}(이후|부터)|\d{1,2}일\s*(이후|부터)|미지급/.test(`${t} ${b.amt || ''}`)) return '';
+  const m = t.match(/(20\d{2})\s*[.년]\s*\d{1,2}\s*[.월]\s*\d{1,2}\s*[.일]?\s*(?:이전|까지)\s*(?:에\s*)?(?:출생|출산)/);
+  // 대상 문구에 올해 이후 연도가 함께 나오면(«2026년 1월 1일 출생아부터 적용하며, 2025년 … 이전 출생아는 종전대로») 현행 사업이다
+  if ((t.match(/20\d{2}/g) || []).some((y) => Number(y) >= YEAR)) return '';
+  if (m && Number(m[1]) < YEAR) return `${m[1]}년까지 태어난 아이만 대상 — 지금 태어나는 아이는 해당하지 않습니다`;
+  return '';
 }
 
 // 조건 표 — 2026-08-17 신설. D 면허반납 성공의 1번 요소(금액·지급수단·신청처를 한 표에 모으기)를 옮긴 것.
@@ -134,13 +153,17 @@ function localSection(sido, sgg, list) {
     const cyc = b.cyc ? esc(b.cyc) : '—';
     const how = b.how ? esc(b.how) : (b.aply ? esc(b.aply) : '—');
     const tels = phonesIn(b.tel);
+    // 지급대상 — 수집은 하면서 화면에 한 번도 내보내지 않던 필드다. 금액만 보이면 «둘째 이후만»,
+    // «○○년까지 출생아만» 같은 조건이 빠져 누구나 받는 것처럼 읽힌다(2026-10-01 점검: 해운대구·제천시).
+    const target = b.target && b.target !== amount ? b.target : '';
+    const ended = endedCohort(b);
     return `<tr>
       <th scope="row">
         <span class="bNm">${esc(b.nm)}</span>
         ${b.law ? `<span class="bLaw">📜 ${esc(b.law)}</span>` : ''}
         ${mod ? `<span class="bLaw">갱신 ${mod}</span>` : ''}
       </th>
-      <td class="bAmt">${amount ? esc(amount) : '<span class="bDim">공고 확인 필요</span>'}</td>
+      <td class="bAmt">${ended ? `<b class="bWarn">⚠️ ${esc(ended)}</b><br>` : ''}${amount ? esc(amount) : '<span class="bDim">공고 확인 필요</span>'}${target ? `<span class="bTarget"><b>대상</b> ${esc(target)}</span>` : ''}</td>
       <td>${pay}<span class="bDim"> · ${cyc}</span></td>
       <td>${esc(critShort(b))}</td>
       <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${tels.map((t) => telBtn(t, 'benefit')).join('')}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
@@ -305,7 +328,7 @@ function page(sido, sgg, list, nearby, own) {
   const applyHint = s.online === 0 ? '신청은 전부 주민센터 방문입니다.' : `${s.online}개는 온라인 신청이 됩니다.`;
   // "받을 수 있는"(=자체+광역 s.n)과 "직접 운영하는"(=s.own)을 섞지 말 것 — 위 summarize 주석 참고.
   const desc = head
-    ? `${sido} ${sgg} 첫째 아이 출산지원금 ${man(head.won)}. ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산.`
+    ? `${sido} ${sgg} 첫째 아이 출산지원금 ${man(head.won)}${head.note ? `(${head.note})` : ''}. ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산.`
     : pInfo
       ? `${sido} ${sgg}(${YEAR}년 ${info2kr(pInfo.since)} ${pInfo.from}에서 분리 신설)에서 받을 수 있는 ${sido} 공통 육아·출산 지원사업 ${s.n}개와 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}을 정리했습니다. ${sgg} 자체 사업은 아직 공공데이터에 없습니다.`
       : `${sido} ${sgg}에서 받을 수 있는 육아·출산 지원사업 ${s.n}개의 금액·지급수단·소득기준·신청처를 한 표에 정리했습니다. ${payHint} ${applyHint} 국가 수당(부모급여·첫만남이용권·아동수당) 8세까지 ${man(NAT_HEADLINE)}과 합산해 확인하세요.`;
@@ -320,7 +343,7 @@ function page(sido, sgg, list, nearby, own) {
   faq.push({
     q: `${sgg}에서 아이를 낳으면 지원금을 얼마나 받나요?`,
     a: head
-      ? `${ST.eun(sgg)} 첫째 아이 기준 ${man(head.won)}을 지급합니다(${head.nm}). 여기에 국가 수당이 8세까지 약 ${man(NAT_HEADLINE)} 더해집니다. 둘째·셋째는 가산되는 경우가 많아 공고를 확인하세요.`
+      ? `${sgg} 안내 기준으로 첫째 아이는 총 ${man(head.won)}입니다(${head.nm}${head.note ? ` — ${head.note}` : ''}). 거주 기간 요건이 있고 나눠서 지급하거나 지역화폐로 주는 곳이 많으니, 아래 표의 지원 내용과 대상을 확인하세요. 여기에 국가 수당이 8세까지 약 ${man(NAT_HEADLINE)} 더해집니다. 둘째·셋째는 금액이 달라집니다.`
       : pInfo
         ? `국가 수당이 첫째 기준 8세까지 약 ${man(NAT_HEADLINE)}이고, ${sido} 공통 지원사업 ${s.n}개를 받을 수 있습니다. ${ST.eun(sgg)} ${pInfo.since.slice(0, 4)}년 신설된 구라 자체 출산지원금은 아직 공공데이터에 등록되지 않았으니 ${sgg}청에 확인하세요.`
         : `국가 수당이 첫째 기준 8세까지 약 ${man(NAT_HEADLINE)}이고, 여기에 ${sgg}에서 받을 수 있는 지원사업 ${s.n}개가 추가됩니다. 금액은 사업마다 달라 아래 표에서 확인하세요.`,

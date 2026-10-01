@@ -108,3 +108,7 @@ footer a{color:var(--mut)}
 .rHit:hover{border-color:var(--brand)}
 .rCount{color:var(--dim);font-weight:600;font-size:13px}
 .srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+.bTarget{display:block;color:var(--dim);font-size:12px;margin-top:6px;line-height:1.55}
+.bTarget b{font-weight:700;margin-right:4px}
+.bWarn{color:#b4232a;font-size:12.5px}

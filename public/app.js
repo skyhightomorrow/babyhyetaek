@@ -7,9 +7,9 @@ const man = (n) => Math.round(n / 10000).toLocaleString('ko-KR') + '만원';
 /* ── 2026 국가 수당 (national.js 미러 — 검증 2026-07-15) ── */
 const N = {
   firstMeet: { first: WON(200), later: WON(300) },
-  pregVoucher: { single: WON(100), multi: WON(140) },
+  pregVoucher: { single: WON(100), perFetus: WON(100) }, // 다태아는 태아당 100만원 (옛 «다태아 140만»은 2023년까지)
   parentPay: { age0: WON(100), age1: WON(50) },
-  childPay: { amt: WON(10), untilMonths: 108, nonMetro: WON(2) },
+  childPay: { amt: WON(10), untilMonths: 108, nonMetro: WON(0.5) }, // 비수도권 +5천원(인구감소 우대 +1만·특별 +2만)
   leave: [
     { fromM: 1, toM: 3, rate: 1.0, cap: WON(250) },
     { fromM: 4, toM: 6, rate: 1.0, cap: WON(200) },
@@ -32,18 +32,22 @@ function calcLeave(wage) {
 
 function buildPlan(input) {
   const { order, multi, useLeave, wage } = input; // order: 1=첫째, 2=둘째+
+  // 🔴 «쌍둥이 이상»을 골라도 바우처만 바뀌고 나머지는 아이 1명분으로 계산되던 것을 고쳤다(2026-10-01).
+  //    다태아는 쌍둥이(2명) 기준으로 계산한다 — 아이마다 받는 수당은 2명분이다.
+  const kids = multi ? 2 : 1;
   const oneTime = [];
   oneTime.push({
     label: '첫만남이용권',
-    amount: order >= 2 ? N.firstMeet.later : N.firstMeet.first,
+    // 출생순위별: 첫 출산이 쌍둥이면 첫째 200만 + 둘째 300만
+    amount: order >= 2 ? N.firstMeet.later * kids : (multi ? N.firstMeet.first + N.firstMeet.later : N.firstMeet.first),
     when: '출생 직후',
-    note: order >= 2 ? '둘째 이상' : '첫째',
+    note: (order >= 2 ? '둘째 이상' : '첫째') + (multi ? ' · 쌍둥이 2명분' : ''),
   });
   oneTime.push({
     label: '임신·출산 진료비 바우처',
-    amount: multi ? N.pregVoucher.multi : N.pregVoucher.single,
+    amount: multi ? N.pregVoucher.perFetus * kids : N.pregVoucher.single,
     when: '임신 확인 후',
-    note: (multi ? '다태아' : '단태아') + ' · 국민행복카드',
+    note: (multi ? '쌍둥이(태아당 100만원)' : '단태아') + ' · 국민행복카드',
   });
 
   // 월별 단계
@@ -56,6 +60,7 @@ function buildPlan(input) {
       { label: '아동수당', m: N.childPay.amt } ] },
   ];
   phases.forEach((p) => {
+    p.items.forEach((it) => { it.m *= kids; });   // 부모급여·아동수당은 아이마다 받는다
     p.perMonth = p.items.reduce((a, it) => a + it.m, 0);
     p.subtotal = p.perMonth * p.months;
   });
@@ -173,11 +178,11 @@ function renderExamples() {
     </div>
     <div class="exScenario high">
       <span class="stag">많이 받을 때</span>
-      <div class="cond">둘째 이상 · 다태아 · 육아휴직 사용(월 통상임금 350만원 가정)</div>
+      <div class="cond">둘째 이상 · 쌍둥이(2명분) · 육아휴직 사용(월 통상임금 350만원 가정)</div>
       <div class="big">약 ${man(high.total)}</div>
       <div class="exBd">${bdRows(high)}</div>
     </div>
-    <div class="exRegionNote">🏙️ 여기에 <b>우리 동네 지자체 지원금</b>이 더해져요. 첫째부터 수십만~수백만원, 셋째 이상은 1,000만원이 넘는 곳도 있어요. 비수도권은 아동수당도 매월 2만원 더 나와요. 위에서 지역을 선택하면 실제 지원금을 확인할 수 있어요.</div>
+    <div class="exRegionNote">🏙️ 여기에 <b>우리 동네 지자체 지원금</b>이 더해져요. 첫째부터 수십만~수백만원, 셋째 이상은 1,000만원이 넘는 곳도 있어요. 비수도권은 아동수당도 매월 5천원~2만원 더 나와요. 위에서 지역을 선택하면 실제 지원금을 확인할 수 있어요.</div>
   </div>`;
 }
 
@@ -290,7 +295,7 @@ function renderResult() {
   // 헤드라인
   const hero = el('div', 'card heroCard');
   hero.appendChild(el('div', 'freshBadge', `2026년 기준 · 지자체 데이터 ${meta ? meta.builtAt : ''} 갱신`));
-  hero.appendChild(el('p', 'heroLbl', `${S.sido} ${S.sgg} · ${S.order >= 2 ? '둘째 이상' : '첫째'}${S.multi ? ' · 다태아' : ''} 기준`));
+  hero.appendChild(el('p', 'heroLbl', `${S.sido} ${S.sgg} · ${S.order >= 2 ? '둘째 이상' : '첫째'}${S.multi ? ' · 쌍둥이' : ''} 기준`));
   hero.appendChild(el('div', 'heroNum', man(plan.grandTotal)));
   hero.appendChild(el('p', 'heroCap', `아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b>${S.useLeave ? ' (육아휴직급여 포함)' : ''}<br>여기에 <b>${S.sido} ${S.sgg}</b>가 주는 아래 지원금이 <b>추가</b>돼요.`));
   wrap.appendChild(hero);
@@ -302,9 +307,9 @@ function renderResult() {
     { nm: '첫만남이용권', when: '출생 직후 · 1회', where: '주민센터·복지로·정부24 (출생신고 때)', amt: plan.oneTime[0].amount, slug: 'cheotmannam-voucher' },
     { nm: '임신·출산 진료비 바우처', when: '임신 확인 후 ~ 출생 후 24개월', where: '국민행복카드 (카드사·복지로)', amt: plan.oneTime[1].amount, slug: 'imsin-chulsan-voucher' },
     { nm: '부모급여', when: '출생 ~ 생후 24개월 · 매월 25일', where: '주민센터·복지로', amt: sumBenefit('부모급여'), slug: 'bumo-geumyeo-guide' },
-    { nm: '아동수당', when: '출생 ~ 만 8세 전 · 매월 25일', where: '주민센터·복지로', amt: sumBenefit('아동수당'), slug: 'adong-sudang-2026' },
+    { nm: '아동수당', when: '출생 ~ 만 9세 전 · 매월 25일', where: '주민센터·복지로', amt: sumBenefit('아동수당'), slug: 'adong-sudang-2026' },
   ];
-  if (S.useLeave && plan.leave.total > 0) comps.push({ nm: '육아휴직급여', when: '휴직한 달부터 · 최대 12개월', where: '고용24 (회사에 육아휴직 신청 후)', amt: plan.leave.total, slug: 'yuga-hyujik-geumyeo-2026' });
+  if (S.useLeave && plan.leave.total > 0) comps.push({ nm: '육아휴직급여', when: '휴직한 달부터 · 12개월 기준(요건 충족 시 최대 18개월)', where: '고용24 (회사에 육아휴직 신청 후)', amt: plan.leave.total, slug: 'yuga-hyujik-geumyeo-2026' });
 
   const bd = el('div', 'card');
   bd.appendChild(el('span', 'secBadge nat', '국가지원금 · 전국 공통'));
@@ -323,7 +328,8 @@ function renderResult() {
   bd.appendChild(bdTotal);
   const metro = ['서울특별시', '경기도', '인천광역시'].includes(S.sido);
   let src = '부모급여는 가정양육 현금 기준(어린이집 이용 시 보육료 바우처로 차감). 아동수당은 2026년 9세 미만까지 지급(2030년 13세까지 단계 확대)이라 실제로는 더 오래 받을 수 있어요.';
-  if (!metro) src += ` ${S.sido}는 비수도권이라, 인구감소지역이면 아동수당이 매월 2만원 더 나올 수 있어요(위 합계엔 미포함).`;
+  if (!metro) src += ` ${S.sido}는 비수도권이라 아동수당이 매월 5천원 더 나오고, 인구감소지역이면 1만~2만원(지역사랑상품권으로 받으면 1만원 더) 추가돼요(위 합계엔 미포함).`;
+  else src += ' 수도권이라도 인구감소지역으로 지정된 시·군은 아동수당이 더 나와요.';
   bd.appendChild(el('p', 'srcNote', src));
   wrap.appendChild(bd);
 

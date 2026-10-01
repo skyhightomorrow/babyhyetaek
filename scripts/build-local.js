@@ -23,8 +23,10 @@ function cleanAmt(s) {
     .replace(/&#13;|&#10;/g, ' ')
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
-    .replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240);
+    .replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
+
+const cut = (s, len) => (s && s.length > len ? s.slice(0, len) + '…' : s);
 
 const bySido = {};
 let kept = 0;
@@ -41,9 +43,9 @@ for (const s of src.items) {
   bySido[sido][sgg].push({
     id: s.servId,
     nm: s.servNm,
-    dgst: cleanAmt(s.dgst),
-    amt: s.detail ? cleanAmt(s.detail.benefit) : null,
-    how: s.detail ? cleanAmt(s.detail.how) : null,
+    dgst: cut(cleanAmt(s.dgst), 240),
+    amt: s.detail ? cut(cleanAmt(s.detail.benefit), 700) : null,   // 240자에서 자르면 출생연도 구간이 여럿인 지역(광양 등)은 현행 구간이 잘려 나간다
+    how: s.detail ? cut(cleanAmt(s.detail.how), 240) : null,
     law: s.detail && s.detail.laws && s.detail.laws[0] ? s.detail.laws[0] : null,
     since: s.detail ? s.detail.since : null,
     mod: s.lastMod || (s.detail && s.detail.lastMod) || null,
@@ -54,9 +56,9 @@ for (const s of src.items) {
     pvsn: s.pvsn || null,          // 지급수단: 현금지급 / 지역화폐 / 현물지급 / 바우처 …
     cyc: s.cyc || null,            // 주기: 1회성 / 월 / 년 …
     aply: s.aply || null,          // 신청방식: 방문 / 인터넷 …
-    crit: s.detail ? cleanAmt(s.detail.crit) : null,   // 소득기준 (표 컬럼 전용 — 집계 문장 금지, 지역 간 편차 없음)
-    target: s.detail ? cleanAmt(s.detail.target) : null,
-    tel: s.detail && s.detail.contacts && s.detail.contacts[0] ? cleanAmt(s.detail.contacts[0]) : null,
+    crit: s.detail ? cut(cleanAmt(s.detail.crit), 240) : null,   // 소득기준 (표 컬럼 전용 — 집계 문장 금지, 지역 간 편차 없음)
+    target: s.detail ? cut(cleanAmt(s.detail.target), 320) : null,
+    tel: s.detail && s.detail.contacts && s.detail.contacts[0] ? cut(cleanAmt(s.detail.contacts[0]), 240) : null,
   });
   kept++;
 }
