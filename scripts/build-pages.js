@@ -152,7 +152,7 @@ function localSection(sido, sgg, list) {
     const pay = b.pvsn ? esc(b.pvsn) : '—';
     const cyc = b.cyc ? esc(b.cyc) : '—';
     const how = b.how ? esc(b.how) : (b.aply ? esc(b.aply) : '—');
-    const tels = phonesIn(b.tel);
+    const tels = b.telOf ? [] : phonesIn(b.tel);
     // 지급대상 — 수집은 하면서 화면에 한 번도 내보내지 않던 필드다. 금액만 보이면 «둘째 이후만»,
     // «○○년까지 출생아만» 같은 조건이 빠져 누구나 받는 것처럼 읽힌다(2026-10-01 점검: 해운대구·제천시).
     const target = b.target && b.target !== amount ? b.target : '';
@@ -166,7 +166,7 @@ function localSection(sido, sgg, list) {
       <td class="bAmt">${ended ? `<b class="bWarn">⚠️ ${esc(ended)}</b><br>` : ''}${amount ? esc(amount) : '<span class="bDim">공고 확인 필요</span>'}${target ? `<span class="bTarget"><b>대상</b> ${esc(target)}</span>` : ''}</td>
       <td>${pay}<span class="bDim"> · ${cyc}</span></td>
       <td>${esc(critShort(b))}</td>
-      <td>${how}${b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${tels.map((t) => telBtn(t, 'benefit')).join('')}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
+      <td>${how}${b.telOf ? `<span class="bDim">시·도 사업 — 문의는 거주지 시·군·구청(보건소)으로</span>` : b.tel ? `<span class="bDim">${esc(b.tel)}</span>` : ''}${tels.map((t) => telBtn(t, 'benefit')).join('')}${b.link ? `<a class="bLink" href="${esc(b.link)}" target="_blank" rel="noopener">${b.manual ? '공식 안내 →' : '복지로 →'}</a>` : ''}</td>
     </tr>`;
   }).join('');
   return `<div class="tblWrap"><table class="bTable">
@@ -371,7 +371,7 @@ function page(sido, sgg, list, nearby, own) {
 
   const localTitle = pInfo
     ? `🏙️ ${esc(sgg)} 주민이 받을 수 있는 ${esc(sido)} 공통 지원금 <span class="cnt">${list.length}개</span>`
-    : `🏙️ ${ST.i_ga(esc(sgg))} 주는 지자체 지원금 <span class="cnt">${list.length}개</span>`;
+    : `🏙️ ${esc(sgg)} 주민이 받을 수 있는 지자체 지원금 <span class="cnt">${list.length}개</span>`;
 
   return `<!DOCTYPE html>
 <html lang="ko"><head>
@@ -405,8 +405,6 @@ function page(sido, sgg, list, nearby, own) {
     <p class="sumCap">아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b><br>여기에 아래 <b>${esc(sgg)} 지자체 지원금</b>이 추가돼요.</p>
     <a class="cta" href="/">내 조건으로 정확히 계산하기 →</a>
   </div>
-
-  <div class="adSlot"><span>광고 영역</span></div>
 
   <div class="card">
     <h2 class="secTitle">${localTitle}</h2>
@@ -442,7 +440,7 @@ function page(sido, sgg, list, nearby, own) {
 
   ${mergeNote(sido, sgg)}
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 지자체 지원금은 복지로·주민센터에서 최종 확인하세요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
-  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
+  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/about">소개</a> · <a href="/terms">이용안내·정정 요청</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
 <script src="${assetUrl('/assets/region-page.js')}" defer></script>
 </body></html>`;
@@ -603,7 +601,7 @@ const sidoKey = (sido) => nk(sido + (SIDO_SHORT[sido] || ''));
   <div id="rResults" aria-live="polite"></div>
 ${groups}
   <p class="disclaimer">※ 참고용 정보입니다. 실제 수급 여부·금액은 소득/재산 기준, 거주 요건, 신청 시기, 조례 개정에 따라 달라질 수 있어요. 본 서비스는 정부·지자체 공식 서비스가 아닙니다.</p>
-  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
+  <footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/terms">이용안내·정정 요청</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer>
 </div>
 <script src="${assetUrl('/assets/benefit-index.js')}"></script>
 <script src="${assetUrl('/assets/region-search.js')}"></script>

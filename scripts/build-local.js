@@ -138,6 +138,39 @@ for (const [sido, m] of Object.entries(PENDING_SGG)) {
   for (const sgg of Object.keys(m)) bySido[sido][sgg] = bySido[sido][sgg] || [];
 }
 
+// ── (광역 공통)에 섞인 기초지자체 사업 귀속 (2026-10-01) ──
+// 복지로 원본에는 시군구(sgg)가 비어 있는데 담당부서는 특정 시·군·구인 사업이 있다
+// (예: 경기도 「산모신생아 건강관리 지원사업(추가형)」 — 담당 「하남시 미사보건센터」).
+// sgg가 비면 (광역 공통)으로 들어가 그 시도의 모든 시군구 페이지에 「○○시가 주는 지원금」으로 실렸다
+// (같은 날 점검: 광역 공통 128건 중 20건. 양주시 페이지에 하남시·구리시 사업이 나가고 있었다).
+// 담당부서가 그 시도의 특정 시군구 이름으로 시작하면 그 시군구 사업으로 옮긴다.
+// 사업명에 광역 이름이 들어간 것(「전라남도 임산부 …」「부산형 …」)은 광역 사업이 맞으므로 공통에 두되,
+// 문의처가 한 시군구 것임을 표시(telOf)해 다른 지역 주민이 남의 동네 부서에 전화하지 않게 한다.
+{
+  let moved = 0, flagged = 0;
+  for (const [sido, bucket] of Object.entries(bySido)) {
+    const owners = Object.keys(bucket)
+      .filter((k) => !k.startsWith('(광역 공통') && !/교육청/.test(k) && k.trim().length >= 2)
+      .sort((a, b) => b.length - a.length);
+    const short = sido.replace(/(특별자치도|특별자치시|통합특별시|광역시|특별시|도)$/, '');
+    const wide = new RegExp(`${sido}|${short}형|전라남도|전라북도|경상남도|경상북도|충청남도|충청북도`);
+    for (const key of Object.keys(bucket)) {
+      if (!key.startsWith('(광역 공통')) continue;
+      const stay = [];
+      for (const it of bucket[key]) {
+        const tel = String(it.tel || '').trim();
+        const owner = owners.find((n) => tel.startsWith(n.split(' ')[0]));
+        if (!owner) { stay.push(it); continue; }
+        if (wide.test(it.nm || '')) { stay.push({ ...it, telOf: owner }); flagged++; continue; }
+        if (!bucket[owner].some((x) => x.id === it.id)) bucket[owner].push(it);
+        moved++;
+      }
+      bucket[key] = stay;
+    }
+  }
+  if (moved || flagged) console.log(`[build-local] 광역 공통 정리 — 시군구로 귀속 ${moved}건 · 광역 유지(문의처 표시) ${flagged}건`);
+}
+
 // 각 시군구 내 조회수순 정렬
 for (const sido of Object.values(bySido))
   for (const arr of Object.values(sido)) arr.sort((a, b) => b.hot - a.hot);

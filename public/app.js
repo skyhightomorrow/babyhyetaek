@@ -297,7 +297,7 @@ function renderResult() {
   hero.appendChild(el('div', 'freshBadge', `2026년 기준 · 지자체 데이터 ${meta ? meta.builtAt : ''} 갱신`));
   hero.appendChild(el('p', 'heroLbl', `${S.sido} ${S.sgg} · ${S.order >= 2 ? '둘째 이상' : '첫째'}${S.multi ? ' · 쌍둥이' : ''} 기준`));
   hero.appendChild(el('div', 'heroNum', man(plan.grandTotal)));
-  hero.appendChild(el('p', 'heroCap', `아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b>${S.useLeave ? ' (육아휴직급여 포함)' : ''}<br>여기에 <b>${S.sido} ${S.sgg}</b>가 주는 아래 지원금이 <b>추가</b>돼요.`));
+  hero.appendChild(el('p', 'heroCap', `아이 태어나서 8세까지 받는 <b>국가 지원금 합계</b>${S.useLeave ? ' (육아휴직급여 포함)' : ''}<br>여기에 <b>${S.sido} ${S.sgg}</b> 주민이 받을 수 있는 아래 지자체 지원금이 <b>추가</b>돼요.`));
   wrap.appendChild(hero);
 
   // 구성 항목 breakdown (혜택별 합계 + 발행된 가이드로 링크)
@@ -336,7 +336,7 @@ function renderResult() {
   // 지자체 지원금
   const loc = el('div', 'card');
   loc.appendChild(el('span', 'secBadge local', '지역지원금 · 우리 동네'));
-  loc.appendChild(el('h3', 'secTitle', `🏙️ ${S.sido} ${S.sgg}가 주는 추가 지원금`));
+  loc.appendChild(el('h3', 'secTitle', `🏙️ ${S.sido} ${S.sgg} 주민이 받을 수 있는 추가 지원금`));
   if (list.length === 0) {
     loc.appendChild(el('p', 'qsub', '이 지역의 공공데이터 상세가 아직 확인되지 않았어요. 곧 보강됩니다.'));
   } else {
@@ -346,7 +346,7 @@ function renderResult() {
       const item = el('div', 'locItem');
       const modTxt = b.mod ? `갱신 ${b.mod.slice(0, 4)}.${b.mod.slice(4, 6)}` : '';
       // 담당부서 전화 버튼 (2026-09-13) — 지역 페이지(build-pages.js phonesIn)와 같은 추출 규칙
-      const tels = phonesIn(b.tel);
+      const tels = b.telOf ? [] : phonesIn(b.tel); // telOf: 문의처가 다른 시군구 것인 광역 사업(build-local.js)
       item.innerHTML =
         `<div class="locNm">${b.nm}</div>` +
         (b.amt ? `<div class="locAmt">${b.amt}</div>` : (b.dgst ? `<div class="locDgst">${b.dgst}</div>` : '')) +

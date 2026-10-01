@@ -41,7 +41,7 @@ ${extraLd || ''}
 </head><body><div class="shell">`;
 }
 
-const footer = `<footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer></div></body></html>`;
+const footer = `<footer>baby<b>hyetaek</b>.com · <a href="/">홈</a> · <a href="/guide/">가이드</a> · <a href="/about">소개</a> · <a href="/terms">이용안내·정정 요청</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/contact">문의</a></footer></div></body></html>`;
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
@@ -62,7 +62,6 @@ published.forEach((g, i) => {
 <div class="card"><div class="gdate">${g.date} · 작성 Jason Jung</div><div class="guideBody">${g.body}</div>
 <p style="margin-top:18px"><a class="cta" href="/">우리 동네 지원금 계산해보기 →</a></p>
 <div class="authorBox">작성: <a href="/about">Jason Jung</a> · 베이비혜택 운영자 (1인 개발) · ${g.date} 발행. 지원금 수치는 법정 기준과 공공데이터를 근거로 작성하며, 오류 제보는 <a href="/contact">문의</a>로 받고 있어요.</div></div>
-<div class="adSlot"><span>광고 영역</span></div>
 ${relatedHtml}
 <p class="disclaimer">※ 제도와 금액은 개정될 수 있어요. 신청 전 복지로(bokjiro.go.kr)와 주민센터에서 최신 정보를 확인하세요.</p>` + footer;
   fs.writeFileSync(path.join(OUT, `${g.slug}.html`), html);
